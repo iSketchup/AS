@@ -25,4 +25,10 @@
 - Colorpicker HEX
 - Eyedrop tool
 - Ebenen
-- 
+
+
+## Arbeitsteilung
+
+| Luis | Dome |
+| - | - |
+| kjhkd | dhfoshf |
