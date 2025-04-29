@@ -31,4 +31,7 @@
 
 | Luis | Dome |
 | - | - |
-|  | |
+|Tools| PixelScreen|
+|Farbpallette|serializierung bild|
+|serializierung animation|Eyedrop Tool|
+|Layers|Animation von Sprite sheet |
