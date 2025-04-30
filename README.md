@@ -8,24 +8,25 @@
 
 
 - Projektitel: AS (Animation Spriter)
-- Projetkidee: Pixelart editor mit funktion Animtions zu machen.
+- Projetkidee: Pixelart editor mit Funktion Animation zu machen.
 
 ## Must Haves 
 
-- Pixelart Editor
-- Brush und eraser
+- Pixel Art Editor
+- Brush und Eraser
 - Farbpallete
-- Animation mit Sprite sheets
-- Serialisierung von Animation zum Sprite sheet (in Metadaten)
-
+- Serialisierung von sprites
+- Colorpicker HEX
+- cmaera zoom
 
 ## Nice to Have
 
+- Animation mit Sprite sheets
 - Ladbare Farbpallete
-- Colorpicker HEX
 - Eyedrop tool
-- Ebenen
-
+- Layers
+- Serializierung von Animation zum Sprite sheet (in Metadaten)
+- bleibende settings
 
 ## Arbeitsteilung
 
