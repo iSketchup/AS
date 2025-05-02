@@ -14,10 +14,10 @@
 
 - Pixel Art Editor
 - Brush und Eraser
-- Farbpallete
+- Farbpallete (Wrappanel)
 - Serialisierung von sprites
 - Colorpicker HEX
-- cmaera zoom
+- camera zoom
 
 ## Nice to Have
 
