@@ -21,6 +21,7 @@
 - Serialisierung von sprites
 - Colorpicker HEX
 - camera zoom
+- Copy/Paste Buttons
 
 ## Nice to Have
 
