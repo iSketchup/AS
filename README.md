@@ -33,13 +33,13 @@
 
 ## Arbeitsteilung
 
-| Luis | Dome |
-| - | - |
-|Tools| PixelScreen|
-|Farbpallette|Serializierung Bild|
-|Serializierung animation|Eyedrop Tool|
-|Layers|Animation von Sprite sheet |
-|||
+| Luis                     | Dome                       |
+| ------------------------ | -------------------------- |
+| Tools                    | PixelScreen                |
+| Farbpallette             | Serializierung Bild        |
+| Serializierung animation | Eyedrop Tool               |
+| Layers                   | Animation von Sprite sheet |
+|                          |                            |
 
 
 ## Collage mit mindestens zwei Screenshots

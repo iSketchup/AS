@@ -1,9 +1,15 @@
 {
 	"nodes":[
-		{"id":"a92581f7c6d3272b","type":"text","text":"Tool","x":-125,"y":-30,"width":105,"height":60},
-		{"id":"ac224ab47c71bb53","type":"text","text":"Panel","x":117,"y":-26,"width":123,"height":50},
-		{"id":"d1d1d43fc6481334","type":"text","text":"Colorpallet","x":405,"y":-35,"width":250,"height":60},
-		{"id":"58d108cf59352d7a","x":140,"y":-32,"width":250,"height":60,"type":"text","text":"Color"}
+		{"id":"58d108cf59352d7a","x":405,"y":160,"width":250,"height":60,"type":"text","text":"Color"},
+		{"id":"d1d1d43fc6481334","type":"text","text":"Colorpallet","x":405,"y":-26,"width":250,"height":60},
+		{"id":"1fb6eb77bf968ca0","x":-460,"y":-30,"width":250,"height":60,"type":"text","text":"Board"},
+		{"id":"b67a502bfddb064a","x":-460,"y":130,"width":250,"height":60,"type":"text","text":"Pixel"},
+		{"id":"a92581f7c6d3272b","type":"text","text":"Tool","x":-124,"y":-36,"width":105,"height":60},
+		{"id":"92c28ef537727857","x":-196,"y":-200,"width":250,"height":50,"type":"text","text":"Button (gibts schon)"}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"30246f3a592ea837","fromNode":"58d108cf59352d7a","fromSide":"top","toNode":"d1d1d43fc6481334","toSide":"bottom"},
+		{"id":"acc77b2190476173","fromNode":"b67a502bfddb064a","fromSide":"top","toNode":"1fb6eb77bf968ca0","toSide":"bottom"},
+		{"id":"3c5fd1bf155ea795","fromNode":"92c28ef537727857","fromSide":"bottom","toNode":"a92581f7c6d3272b","toSide":"top"}
+	]
 }
