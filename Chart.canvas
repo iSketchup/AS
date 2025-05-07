@@ -2,16 +2,16 @@
 	"nodes":[
 		{"id":"d78f3429f1510beb","x":80,"y":-240,"width":250,"height":60,"type":"text","text":"Main"},
 		{"id":"d2f6cb27a09dd50b","x":80,"y":60,"width":250,"height":60,"color":"1","type":"text","text":"[[AS]]"},
-		{"id":"b4a27642ec159bed","x":910,"y":-210,"width":250,"height":60,"color":"2","type":"text","text":"Pen\n"},
-		{"id":"1bec9b112790081f","type":"text","text":"Eresar","x":910,"y":-90,"width":250,"height":60,"color":"2"},
-		{"id":"a92581f7c6d3272b","type":"text","text":"Tool","x":705,"y":-140,"width":105,"height":29,"color":"4"},
-		{"id":"99eba42c0ceeeb4c","x":785,"y":90,"width":250,"height":60,"color":"4","type":"text","text":"Colorpicker"},
-		{"id":"d1d1d43fc6481334","type":"text","text":"Colorpallet","x":560,"y":285,"width":250,"height":50,"color":"4"},
-		{"id":"5612ecc0c1200c54","x":80,"y":275,"width":250,"height":60,"color":"4","type":"text","text":"Animation"},
-		{"id":"1fb6eb77bf968ca0","x":80,"y":520,"width":250,"height":50,"color":"2","type":"text","text":"Bild"},
-		{"id":"b67a502bfddb064a","x":80,"y":720,"width":250,"height":60,"color":"3","type":"text","text":"Pixel"},
-		{"id":"7c4fa9edce66e1dc","x":-300,"y":60,"width":250,"height":29,"color":"4","type":"text","text":"TAB User Contropll"},
-		{"id":"c383300d16cdf98f","x":-300,"y":275,"width":250,"height":60,"color":"2","type":"text","text":"Animaiton Pane"}
+		{"id":"b4a27642ec159bed","x":910,"y":-210,"width":250,"height":60,"color":"2","type":"text","text":"[[Pen]]"},
+		{"id":"1bec9b112790081f","type":"text","text":"[[Eresar]]","x":910,"y":-90,"width":250,"height":60,"color":"2"},
+		{"id":"a92581f7c6d3272b","type":"text","text":"[[Tool]]","x":705,"y":-140,"width":105,"height":29,"color":"4"},
+		{"id":"99eba42c0ceeeb4c","x":785,"y":90,"width":250,"height":60,"color":"4","type":"text","text":"[[Colorpicker]]"},
+		{"id":"d1d1d43fc6481334","type":"text","text":"[[Colorpallet]]","x":560,"y":285,"width":250,"height":50,"color":"4"},
+		{"id":"5612ecc0c1200c54","x":80,"y":275,"width":250,"height":60,"color":"4","type":"text","text":"[[Animation]]"},
+		{"id":"1fb6eb77bf968ca0","x":80,"y":520,"width":250,"height":50,"color":"2","type":"text","text":"[[Bild]]"},
+		{"id":"b67a502bfddb064a","x":80,"y":720,"width":250,"height":60,"color":"3","type":"text","text":"[[Pixel]]"},
+		{"id":"7c4fa9edce66e1dc","x":-300,"y":60,"width":250,"height":60,"color":"4","type":"text","text":"[[TAB User Contropll]]"},
+		{"id":"c383300d16cdf98f","x":-300,"y":275,"width":250,"height":60,"color":"2","type":"text","text":"[[Animaiton Pane]]"}
 	],
 	"edges":[
 		{"id":"7e28da5e43687b0c","fromNode":"d2f6cb27a09dd50b","fromSide":"bottom","toNode":"5612ecc0c1200c54","toSide":"top","toEnd":"none"},
