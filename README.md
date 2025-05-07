@@ -33,15 +33,8 @@
 - bleibende settings
 
 ## Arbeitsteilung
-
-| Luis                     | Dome                       |
-| ------------------------ | -------------------------- |
-| Tools                    | PixelScreen                |
-| Farbpallette             | Serializierung Bild        |
-| Serializierung animation | Eyedrop Tool               |
-| Layers                   | Animation von Sprite sheet |
-|                          |                            |
-
+#### Luis:
+![[Chart.canvas|Chart]]
 
 ## Collage mit mindestens zwei Screenshots
 
