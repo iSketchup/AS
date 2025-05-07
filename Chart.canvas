@@ -1,19 +1,19 @@
 {
 	"nodes":[
-		{"id":"f9a188da479a28d2","x":580,"y":-220,"width":640,"height":585,"type":"group","label":"Dome SIGMA"},
-		{"id":"1815ad3941592967","x":-320,"y":255,"width":670,"height":545,"type":"group","label":"Luis"},
+		{"id":"f9a188da479a28d2","type":"group","x":580,"y":-220,"width":640,"height":585,"label":"Dome SIGMA"},
+		{"id":"1815ad3941592967","type":"group","x":-320,"y":255,"width":670,"height":545,"label":"Luis"},
 		{"id":"d78f3429f1510beb","type":"text","text":"Main","x":80,"y":-240,"width":250,"height":60},
 		{"id":"d2f6cb27a09dd50b","type":"text","text":"[[AS]]","x":80,"y":60,"width":250,"height":60,"color":"1"},
-		{"id":"5612ecc0c1200c54","type":"text","text":"[[Animation]]","x":80,"y":275,"width":250,"height":60,"color":"4"},
-		{"id":"1fb6eb77bf968ca0","type":"text","text":"[[Bild]]","x":80,"y":520,"width":250,"height":50,"color":"2"},
-		{"id":"b67a502bfddb064a","type":"text","text":"[[Pixel]]","x":80,"y":720,"width":250,"height":60,"color":"3"},
 		{"id":"c383300d16cdf98f","type":"text","text":"[[Animaiton Pane]]","x":-300,"y":275,"width":250,"height":60,"color":"2"},
-		{"id":"d1d1d43fc6481334","type":"text","text":"[[Colorpallet]]","x":600,"y":295,"width":250,"height":50,"color":"4"},
 		{"id":"a92581f7c6d3272b","type":"text","text":"[[Tool]]","x":745,"y":-130,"width":105,"height":29,"color":"4"},
 		{"id":"b4a27642ec159bed","type":"text","text":"[[Pen]]","x":950,"y":-200,"width":250,"height":60,"color":"2"},
 		{"id":"1bec9b112790081f","type":"text","text":"[[Ereser]]","x":950,"y":-80,"width":250,"height":60,"color":"2"},
 		{"id":"7c4fa9edce66e1dc","type":"text","text":"[[TAB User Controll]]","x":950,"y":265,"width":250,"height":60,"color":"4"},
-		{"id":"99eba42c0ceeeb4c","type":"text","text":"[[Colorpicker]]","x":825,"y":80,"width":250,"height":50,"color":"4"}
+		{"id":"99eba42c0ceeeb4c","type":"text","text":"[[Colorpicker]]","x":825,"y":80,"width":250,"height":50,"color":"4"},
+		{"id":"5612ecc0c1200c54","type":"text","text":"[[Animation]]","x":80,"y":275,"width":250,"height":60,"color":"4"},
+		{"id":"1fb6eb77bf968ca0","type":"text","text":"[[Bild]]","x":80,"y":520,"width":250,"height":50,"color":"2"},
+		{"id":"b67a502bfddb064a","type":"text","text":"[[Pixel]]","x":80,"y":720,"width":250,"height":60,"color":"3"},
+		{"id":"d1d1d43fc6481334","type":"text","text":"[[Colorpallet]]","x":600,"y":295,"width":250,"height":50,"color":"4"}
 	],
 	"edges":[
 		{"id":"7e28da5e43687b0c","fromNode":"d2f6cb27a09dd50b","fromSide":"bottom","toNode":"5612ecc0c1200c54","toSide":"top","toEnd":"none"},
