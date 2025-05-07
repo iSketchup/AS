@@ -7,6 +7,7 @@
 +Pic(width: int, height: int)
 
 ---- 
-
 +SerializeToCsv():  string
 +ToString(): string
+
+---
