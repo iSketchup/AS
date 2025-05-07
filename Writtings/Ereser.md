@@ -7,4 +7,4 @@
 +Ereaser(EreaserSize)
 
 ---
-+Erease(Grid grid)
++Erease(Grid grid) void

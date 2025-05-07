@@ -7,4 +7,4 @@
 +Pen(double Pensize, Brush Color)
 
 ---
-+Draw(Grid grid)
++Draw(Grid grid) void
