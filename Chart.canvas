@@ -10,8 +10,8 @@
 		{"id":"5612ecc0c1200c54","x":80,"y":275,"width":250,"height":60,"color":"4","type":"text","text":"[[Animation]]"},
 		{"id":"1fb6eb77bf968ca0","x":80,"y":520,"width":250,"height":50,"color":"2","type":"text","text":"[[Bild]]"},
 		{"id":"b67a502bfddb064a","x":80,"y":720,"width":250,"height":60,"color":"3","type":"text","text":"[[Pixel]]"},
-		{"id":"7c4fa9edce66e1dc","x":-300,"y":60,"width":250,"height":60,"color":"4","type":"text","text":"[[TAB User Contropll]]"},
-		{"id":"c383300d16cdf98f","x":-300,"y":275,"width":250,"height":60,"color":"2","type":"text","text":"[[Animaiton Pane]]"}
+		{"id":"c383300d16cdf98f","x":-300,"y":275,"width":250,"height":60,"color":"2","type":"text","text":"[[Animaiton Pane]]"},
+		{"id":"7c4fa9edce66e1dc","x":-320,"y":60,"width":250,"height":60,"color":"4","type":"text","text":"[[TAB User Contropll]]"}
 	],
 	"edges":[
 		{"id":"7e28da5e43687b0c","fromNode":"d2f6cb27a09dd50b","fromSide":"bottom","toNode":"5612ecc0c1200c54","toSide":"top","toEnd":"none"},
