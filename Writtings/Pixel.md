@@ -1,10 +1,11 @@
 ----
 +X: int {get; }
 +Y: int {get; }
-+Color: Color {get; set;}
++Color: Brush {get; set;}
 
 ----
 +Pixel(int )
 
 ----
 
++Serialize()
