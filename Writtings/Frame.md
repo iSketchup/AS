@@ -1,5 +1,5 @@
 ----
-+Board: Pixel``[,,]``{get; set;}
++Board: gbra ``[,,]``{get; set;}
 -With: int
 -Height: int
 
