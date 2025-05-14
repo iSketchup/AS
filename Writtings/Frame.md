@@ -1,5 +1,5 @@
 ----
-+Board: Pixel``[][]``{get; set;}
++Board: Pixel``[,,]``{get; set;}
 -With: int
 -Height: int
 
@@ -9,5 +9,7 @@
 ---- 
 +SerializeToCsv():  string
 +ToString(): string
++Update(Pixel``[,,]``): void
++GetImg(): image
 
 ---
