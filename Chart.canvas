@@ -7,7 +7,7 @@
 		{"id":"a92581f7c6d3272b","type":"text","text":"[[Tool]]","x":745,"y":-130,"width":105,"height":29,"color":"4"},
 		{"id":"99eba42c0ceeeb4c","type":"text","text":"[[Colorpicker]]","x":825,"y":80,"width":250,"height":50,"color":"4"},
 		{"id":"5612ecc0c1200c54","type":"text","text":"[[Animation]]","x":80,"y":275,"width":250,"height":60,"color":"4"},
-		{"id":"1fb6eb77bf968ca0","type":"text","text":"[[Pic]]","x":80,"y":520,"width":250,"height":50,"color":"2"},
+		{"id":"1fb6eb77bf968ca0","type":"text","text":"[[Frame]]","x":80,"y":520,"width":250,"height":50,"color":"2"},
 		{"id":"b67a502bfddb064a","type":"text","text":"[[Pixel]]","x":80,"y":720,"width":250,"height":60,"color":"3"},
 		{"id":"b4a27642ec159bed","type":"text","text":"[[Pen]]","x":950,"y":-200,"width":250,"height":60,"color":"2"},
 		{"id":"1bec9b112790081f","type":"text","text":"[[Ereser]]","x":950,"y":-80,"width":250,"height":60,"color":"2"},
