@@ -1,8 +1,7 @@
+-- -
+-Animation: Animation
+-- -
++As()
 
-| Konstruktor |
-| ----------- |
-|             |
-| Properties  |
-| - Animation |
-| Funktionen  |
-|             |
+---
+-eventlistener
