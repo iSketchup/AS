@@ -20,9 +20,25 @@ namespace AS
     /// </summary>
     public partial class TAB : UserControl
     {
-        public TAB()
+
+        private ListView listView;
+        private List<Button> ButtonList;
+        public TAB(List buttonlist)
         {
             InitializeComponent();
+            listView = new ListView();
+           
+
+        }
+
+        private void ButtonTAB_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonTAB_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }
