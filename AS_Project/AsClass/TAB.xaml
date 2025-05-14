@@ -7,6 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="400">
     <Grid>
-        <Button x:Name="ButtonTAB" Content="File" FontSize="30" Background="Beige" Click="ButtonTAB_Click" GotMouseCapture="ButtonTAB_GotMouseCapture" />
+        <Button x:Name="ButtonTAB" Content="File" FontSize="30" Background="Beige" Click="ButtonTAB_Click"/>
+        <Popup x:Name="Popup"  PlacementTarget="{Binding ElementName=ButtonTAB}" StaysOpen="False" IsOpen="False" />
+        <Border BorderBrush="Black" BorderThickness="2" Background="LightBlue">
+            <ListView x:Name="ListviewButton" />
+        </Border>
+
     </Grid>
 </UserControl>
