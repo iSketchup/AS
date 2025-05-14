@@ -21,21 +21,18 @@ namespace AS
     public partial class TAB : UserControl
     {
 
+        private ListView listView;
         private List<Button> ButtonList;
-        public TAB(List<Button> buttons)
+
+
+        public TAB(List buttonlist)
         {
             InitializeComponent();
+            
+            this.ButtonList = buttonlist;
 
-            this.ButtonList = buttons;
+           
 
-
-        }
-
-        private void ButtonTAB_Click(object sender, RoutedEventArgs e)
-        {
-            Popup.IsOpen = true;
-            ListviewButton.Items.Clear();
-            ListviewButton.ItemsSource = ButtonList;
 
         }
 

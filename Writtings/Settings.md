@@ -1,0 +1,9 @@
++Width
++Height
++FPS
+
+---
++Settings()
+
+---
+
