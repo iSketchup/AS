@@ -14,7 +14,7 @@ namespace AsClass
         public byte G { get; set; }
         public byte B { get; set; }
         public byte A { get; set; }
-    
+
         public RGBA(byte r, byte g, byte b, byte a)
         {
             R = r;
@@ -28,7 +28,7 @@ namespace AsClass
             R = r;
             G = g;
             B = b;
-            A = 255; 
+            A = 255;
         }
         public byte[] GetBGRA()
         {
@@ -42,3 +42,4 @@ namespace AsClass
 
 
     }
+}
