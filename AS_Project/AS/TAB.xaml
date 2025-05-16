@@ -11,7 +11,7 @@
         <ToggleButton x:Name="TogglePopupButton" Height="30" Width="150" HorizontalAlignment="Left" Background="DarkCyan">
             <StackPanel>
 
-                <Label Content="File" />
+                <Label x:Name="TabContent"  />
 
                 <Popup Name="myPopup" IsOpen="{Binding IsChecked, ElementName=TogglePopupButton}">
                     <Border BorderThickness="1">

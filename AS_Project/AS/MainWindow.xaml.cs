@@ -26,6 +26,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        ControlTabFile.TabContent.Content = "File";
 
         foreach (Button button in As.FileButtons)
         {
