@@ -18,27 +18,20 @@ namespace AS
     /// <summary>
     /// Interaction logic for TAB.xaml
     /// </summary>
-    public partial class TAB : UserControl
+    public partial class ContolTab : UserControl
     {
 
-        private List<Button> ButtonList;
-        public TAB(List<Button> buttons)
+
+        public ContolTab()
         {
             InitializeComponent();
-
-            this.ButtonList = buttons;
-
-
         }
 
-        private void ButtonTAB_Click(object sender, RoutedEventArgs e)
-        {
-            Popup.IsOpen = true;
-            ListviewButton.Items.Clear();
-            ListviewButton.ItemsSource = ButtonList;
+      
 
-        }
 
-        
+
+
+
     }
 }

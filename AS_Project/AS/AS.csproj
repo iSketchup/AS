@@ -12,4 +12,10 @@
     <ProjectReference Include="..\AsClass\AsClass.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="TAB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

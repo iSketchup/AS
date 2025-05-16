@@ -20,9 +20,16 @@ namespace AS;
 public partial class MainWindow : Window
 {
    public As As = new As();
+    
+   
 
     public MainWindow()
     {
         InitializeComponent();
+
+        foreach (Button button in As.FileButtons)
+        {
+            ControlTabFile.StackPanelButtons.Children.Add(button);
+        }
     }
 }

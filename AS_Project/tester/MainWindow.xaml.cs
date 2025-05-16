@@ -1,4 +1,5 @@
-﻿using AsClass;
+﻿using AS;
+using AsClass;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,6 +19,7 @@ namespace tester
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
