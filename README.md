@@ -45,9 +45,10 @@
 
 ## 2 Projektzeitplan
 
-| Datum | Aufgabe | Bearbeiter | Status (%) |
-| ----- | ------- | ---------- | ---------- |
-|       |         |            |            |
+| Datum | Aufgabe            | Bearbeiter | Status (%) |
+| ----- | ------------------ | ---------- | ---------- |
+| 16.05 | TAB Usercontrol    | Dominik    | 60%        |
+| 16.05 | Klassen/Frame/RGBA | Luis       | 70%        |
 
 
 ## 3 Lastenheft

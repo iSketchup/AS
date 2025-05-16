@@ -2,14 +2,14 @@
 
 namespace AsClass
 {
-    public class AS
+    public class As
     {
         public List<Button> FileButtons = new List<Button>();
         public List<Button> FrameButtons = new List<Button>();
 
         public List<Button> SettingButtons = new List<Button>();
 
-        public AS()
+        public As()
         {
 
             FillButtonLists(FileButtons, FrameButtons, SettingButtons);
