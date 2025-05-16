@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AsClass
+﻿namespace AsClass
 {
 
     public class RGBA
@@ -14,6 +7,22 @@ namespace AsClass
         public byte G { get; set; }
         public byte B { get; set; }
         public byte A { get; set; }
+
+        public byte[] bgra;
+
+        private byte[] _rgba;
+        public byte[] rgba
+        {
+            get
+            {
+                return _rgba;
+            }
+            set
+            {
+                _rgba = value;
+                bgra = GetBGRA();
+            }
+        }
 
         public RGBA(byte r, byte g, byte b, byte a)
         {
@@ -30,7 +39,7 @@ namespace AsClass
             B = b;
             A = 255;
         }
-        public byte[] GetBGRA()
+        private byte[] GetBGRA()
         {
             return new byte[] { B, G, R, A };
         }
