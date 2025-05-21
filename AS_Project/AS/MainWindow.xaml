@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-
-        <Grid>
+        WindowState="Maximized"
+       WindowStyle="None"
+        Title="MainWindow" Width="2560"  Height="1600">
+    <Viewbox >
+        <Grid >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto" MinHeight="300"/>
@@ -18,10 +20,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition  Width="auto" MinWidth="500"/>
-                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-
-            <GridSplitter Grid.Column="1" Grid.Row="1" Height="10" Width="10" Background="Blue" HorizontalAlignment="Left"/>
 
             <Menu  Grid.Row="0"  Grid.Column="0" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3" >
                 <MenuItem Header="File">
@@ -37,6 +37,8 @@
 
                 </MenuItem>
                 <Button x:Name="ButtonSettings"  Content="Settings" />
+
+            
 
 
             </Menu>
@@ -83,7 +85,7 @@
 
                 </ListView>
 
-                
+
 
 
 
@@ -91,9 +93,14 @@
 
             <Image x:Name="image" Grid.Row="1" Grid.Column="1" />
 
+            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12"  Height="30" Width="30"/>
+
 
         </Grid>
 
+    </Viewbox>
+
+   
    
    
 </Window>
