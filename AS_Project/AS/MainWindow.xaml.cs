@@ -36,4 +36,9 @@ public partial class MainWindow : Window
         }
         */
     }
+
+    private void ButtonExita_Click(object sender, RoutedEventArgs e)
+    {
+       this.Close();
+    }
 }

@@ -93,7 +93,7 @@
 
             <Image x:Name="image" Grid.Row="1" Grid.Column="1" />
 
-            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12"  Height="30" Width="30"/>
+            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12" Margin="5" Height="30" Width="30" Click="ButtonExita_Click"/>
 
 
         </Grid>
