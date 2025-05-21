@@ -54,7 +54,7 @@ namespace AsClass
                     {
 
                         byte* pixel = buffer + y * stritde + x * 4;
-                        pixel[3] = beep;
+                        pixel[3] = 255;
 
                         if (((x / 10) + (y / 10)) % 2 == 0)
                         {
