@@ -14,6 +14,7 @@ namespace AsClass
         public byte[,] board { get; set; }
 
         public Image img = new Image();
+        public WriteableBitmap wb;
         public Frame(int width, int height, int layers)
         {
             this.width = width;
@@ -36,20 +37,49 @@ namespace AsClass
 
         public void BoardInit()
         {
-            for (int layer = 0; layer < layers; layer++)
+
+            wb = new WriteableBitmap(width, height, 96, 96, PixelFormats.Bgra32, null);
+
+            int stritde = wb.BackBufferStride;
+
+            wb.Lock();
+
+            unsafe
             {
-                for (int row = 0; row < height; row++)
+                byte* buffer = (byte*)wb.BackBuffer;
+
+                for (int y = 0; y < 100; y++)
                 {
-                    for (int col = 0; col < width; col++)
-                    { }
+                    for (int x = 0; x < 100; x++)
+                    {
+
+                        byte* pixel = buffer + y * stritde + x * 4;
+                        pixel[3] = beep;
+
+                        if (((x / 10) + (y / 10)) % 2 == 0)
+                        {
+                            pixel[0] = 153;
+                            pixel[1] = 153;
+                            pixel[2] = 153;
+                        }
+                        else
+                        {
+                            pixel[0] = 204;
+                            pixel[1] = 204;
+                            pixel[2] = 204;
+                        }
+
+
+
+                    }
                 }
+
+                wb.AddDirtyRect(new Int32Rect(0, 0, 100, 100));
+
+
+
             }
-
-            WriteableBitmap wb = new(width, height, 96, 96, PixelFormats.Bgra32, null);
-            Int32Rect rect = new(0, 0, width, height);
-
-            wb.WritePixels(rect, board, 100, 1);
-            img.Source = wb;
+            wb.Unlock();
         }
     }
 }
