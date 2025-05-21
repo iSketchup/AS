@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <Viewbox >
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -19,12 +18,12 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition  Width="auto" MinWidth="500"/>
-                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
 
-            <GridSplitter Grid.Column="0" Grid.Row="1" />
+            <GridSplitter Grid.Column="1" Grid.Row="1" Height="10" Width="10" Background="Blue" HorizontalAlignment="Left"/>
 
-            <Menu  Grid.Row="0"  Grid.Column="1" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" >
+            <Menu  Grid.Row="0"  Grid.Column="0" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3" >
                 <MenuItem Header="File">
                     <Button x:Name="ButtonNew" Content="New"/>
                     <Button x:Name="ButtonSave" Content="Save"/>
@@ -90,11 +89,11 @@
 
             </StackPanel>
 
-            <Image x:Name="image" />
+            <Image x:Name="image" Grid.Row="1" Grid.Column="1" />
 
 
         </Grid>
 
-    </Viewbox>
+   
    
 </Window>
