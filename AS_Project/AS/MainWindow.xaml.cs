@@ -19,12 +19,15 @@ namespace AS;
 /// </summary>
 public partial class MainWindow : Window
 {
-    
+     
    
 
     public MainWindow()
     {
         InitializeComponent();
+
+        AS_Main Sigma = new AsClass.AS_Main(image);
+
         /*ControlTabFile.TabContent.Content = "File";
 
         foreach (Button button in As.FileButtons)

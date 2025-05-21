@@ -10,7 +10,7 @@
     
         <Image x:Name="img"/>
 
-        <Slider x:Name="beep" Minimum="1" Maximum="255" Canvas.Left="347" Canvas.Top="154" HorizontalAlignment="Left" VerticalAlignment="Center" Width="229" ValueChanged="beep_ValueChanged"></Slider>
+        <Slider x:Name="beep" Minimum="1" Maximum="255" Value="255" Canvas.Left="347" Canvas.Top="154" HorizontalAlignment="Left" VerticalAlignment="Center" Width="229" ValueChanged="beep_ValueChanged"></Slider>
 
     </Canvas>
 </Window>

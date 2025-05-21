@@ -10,29 +10,19 @@ namespace AsClass
     {
         public int width { get; set; }
         public int height { get; set; }
-        public int layers { get; set; }
-        public byte[,] board { get; set; }
+        public int layers { get; set; } = 1;
 
-        public Image img = new Image();
+
+        public Image img;
         public WriteableBitmap wb;
-        public Frame(int width, int height, int layers)
+        public Frame(int width, int height, Image img)
         {
             this.width = width;
             this.height = height;
-            this.layers = layers;
-            this.board = new byte[height * width, 4];
+            this.img = img;
 
             BoardInit();
-        }
-
-        public Frame(int width, int height)
-        {
-            this.width = width;
-            this.height = height;
-            this.layers = 1;
-            this.board = new byte[height * width, 4];
-
-            BoardInit();
+            this.img.Source = wb;
         }
 
         public void BoardInit()
@@ -48,9 +38,9 @@ namespace AsClass
             {
                 byte* buffer = (byte*)wb.BackBuffer;
 
-                for (int y = 0; y < 100; y++)
+                for (int y = 0; y < height; y++)
                 {
-                    for (int x = 0; x < 100; x++)
+                    for (int x = 0; x < width; x++)
                     {
 
                         byte* pixel = buffer + y * stritde + x * 4;
@@ -74,7 +64,7 @@ namespace AsClass
                     }
                 }
 
-                wb.AddDirtyRect(new Int32Rect(0, 0, 100, 100));
+                wb.AddDirtyRect(new Int32Rect(0, 0, height, width));
 
 
 
