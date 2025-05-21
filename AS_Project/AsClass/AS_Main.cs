@@ -10,7 +10,7 @@ namespace AsClass
         {
             VisibleImg = img;
 
-            Frame frame = new Frame(100, 100, img);
+            Frame frame = new Frame(500, 300, img);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace AsClass
 
             wb = new WriteableBitmap(width, height, 96, 96, PixelFormats.Bgra32, null);
 
-            int stritde = wb.BackBufferStride;
+            int stride = wb.BackBufferStride;
 
             wb.Lock();
 
@@ -38,12 +38,12 @@ namespace AsClass
             {
                 byte* buffer = (byte*)wb.BackBuffer;
 
-                for (int y = 0; y < height; y++)
+                for (int x = 0; x < width; x++)
                 {
-                    for (int x = 0; x < width; x++)
+                    for (int y = 0; y < height; y++)
                     {
 
-                        byte* pixel = buffer + y * stritde + x * 4;
+                        byte* pixel = buffer + y * stride + x * 4;
                         pixel[3] = 255;
 
                         if (((x / 10) + (y / 10)) % 2 == 0)
@@ -64,7 +64,7 @@ namespace AsClass
                     }
                 }
 
-                wb.AddDirtyRect(new Int32Rect(0, 0, height, width));
+                wb.AddDirtyRect(new Int32Rect(0, 0, width, height));
 
 
 
