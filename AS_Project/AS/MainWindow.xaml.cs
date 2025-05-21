@@ -19,18 +19,18 @@ namespace AS;
 /// </summary>
 public partial class MainWindow : Window
 {
-   public As As = new As();
     
    
 
     public MainWindow()
     {
         InitializeComponent();
-        ControlTabFile.TabContent.Content = "File";
+        /*ControlTabFile.TabContent.Content = "File";
 
         foreach (Button button in As.FileButtons)
         {
             ControlTabFile.StackPanelButtons.Children.Add(button);
         }
+        */
     }
 }
