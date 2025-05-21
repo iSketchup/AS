@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:tester"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas x:Name="x">
+    <Canvas x:Name="x" Background="AliceBlue">
+    
+        <Image x:Name="img"/>
 
-       
-
+        <Slider x:Name="beep" Minimum="1" Maximum="255" Canvas.Left="347" Canvas.Top="154" HorizontalAlignment="Left" VerticalAlignment="Center" Width="229" ValueChanged="beep_ValueChanged"></Slider>
 
     </Canvas>
 </Window>
