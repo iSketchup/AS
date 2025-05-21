@@ -41,14 +41,7 @@ namespace AsClass
                 for (int row = 0; row < height; row++)
                 {
                     for (int col = 0; col < width; col++)
-                    {
-                        if ((col + height * row) / 10 % 2 == 0)
-                        {
-                            board[row + width * col,] = { 153, 153, 153, 255 };
-                        }
-                        else
-                            board[row + width * col] = new RGBA(153, 153, 153, 255);
-                    }
+                    { }
                 }
             }
 
