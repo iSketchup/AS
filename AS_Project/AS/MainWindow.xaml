@@ -67,9 +67,9 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="34"  Margin="20 20 0 10"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="40" Margin="10 20 0 10 " Padding="15 0 15 0"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="34 " Margin="10 20 0 10 "/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 "/>
 
 
                 <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40">
