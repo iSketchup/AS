@@ -8,7 +8,7 @@
         WindowState="Maximized"
        WindowStyle="None"
         Title="MainWindow" Width="2560"  Height="1600">
-    <Viewbox >
+    <Viewbox Stretch="Fill" >
         <Grid x:Name="Grid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
