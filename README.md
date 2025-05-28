@@ -45,10 +45,13 @@
 
 ## 2 Projektzeitplan
 
-| Datum | Aufgabe            | Bearbeiter | Status (%) |
-| ----- | ------------------ | ---------- | ---------- |
-| 16.05 | TAB Usercontrol    | Dominik    | 60%        |
-| 16.05 | Klassen/Frame/RGBA | Luis       | 70%        |
+| Datum | Aufgabe              | Bearbeiter | Status (%) |
+| ----- | -------------------- | ---------- | ---------- |
+| 16.05 | TAB Usercontrol      | Dominik    | 60%        |
+| 16.05 | Klassen/Frame/RGBA   | Luis       | 70%        |
+| 21.05 | GUI Layout/Menü      | Dominik    | 90%        |
+| 21.05 | Bitmap fürs zeichnen | Luis       | 100%       |
+|       |                      |            |            |
 
 
 ## 3 Lastenheft

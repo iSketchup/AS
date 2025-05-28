@@ -43,4 +43,9 @@ public partial class MainWindow : Window
     {
        this.Close();
     }
+
+    private void SliderPenSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        LabelPensize.Content = $"Pen Size: {Math.Floor( SliderPenSize.Value)}"; 
+    }
 }
