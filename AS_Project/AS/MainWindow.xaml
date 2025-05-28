@@ -90,7 +90,7 @@
 
             </StackPanel>
 
-            <Image x:Name="image" Grid.Row="1" Grid.Column="1" />
+            <Image x:Name="image" Grid.Row="1" Grid.Column="1" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
 
             <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12"  Height="20" Width="20" Click="ButtonExita_Click"/>
 

@@ -8,17 +8,22 @@ namespace AsClass
 
     public class Frame
     {
-        public int width { get; set; }
-        public int height { get; set; }
-        public int layers { get; set; } = 1;
+
+        private readonly int defaultBgPixelSize = 16;
+
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public int Layers { get; set; } = 1;
 
 
         public Image img;
         public WriteableBitmap wb;
+
+
         public Frame(int width, int height, Image img)
         {
-            this.width = width;
-            this.height = height;
+            this.Width = width;
+            this.Height = height;
             this.img = img;
 
             BoardInit();
@@ -28,7 +33,7 @@ namespace AsClass
         public void BoardInit()
         {
 
-            wb = new WriteableBitmap(width, height, 96, 96, PixelFormats.Bgra32, null);
+            wb = new WriteableBitmap(Width, Height, 96, 96, PixelFormats.Bgra32, null);
 
             int stride = wb.BackBufferStride;
 
@@ -38,15 +43,15 @@ namespace AsClass
             {
                 byte* buffer = (byte*)wb.BackBuffer;
 
-                for (int x = 0; x < width; x++)
+                for (int x = 0; x < Width; x++)
                 {
-                    for (int y = 0; y < height; y++)
+                    for (int y = 0; y < Height; y++)
                     {
 
                         byte* pixel = buffer + y * stride + x * 4;
                         pixel[3] = 255;
 
-                        if (((x / 10) + (y / 10)) % 2 == 0)
+                        if (((x / defaultBgPixelSize) + (y / defaultBgPixelSize)) % 2 == 0)
                         {
                             pixel[0] = 153;
                             pixel[1] = 153;
@@ -64,7 +69,7 @@ namespace AsClass
                     }
                 }
 
-                wb.AddDirtyRect(new Int32Rect(0, 0, width, height));
+                wb.AddDirtyRect(new Int32Rect(0, 0, Width, Height));
 
 
 
