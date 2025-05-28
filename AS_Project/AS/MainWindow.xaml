@@ -50,9 +50,9 @@
 
 
             <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0" Margin="5" Grid.Row="1"   >
-                <Button x:Name="ButtonBrush" Content="Brush"  Padding="8" Margin="10"/>
-                <Button x:Name="ButtonEaraser" Content="Earaser" Padding="8" Margin="10"/>
-                <Button x:Name="ButtonFill" Content="Fill" Padding="8" Margin="10" />
+                <Button x:Name="ButtonBrush" Content="Brush"  Padding="8" Margin="10" BorderThickness="0"/>
+                <Button x:Name="ButtonEaraser" Content="Earaser" Padding="8" Margin="10" BorderThickness="0"/>
+                <Button x:Name="ButtonFill" Content="Fill" Padding="8" Margin="10" BorderThickness="0"/>
             </StackPanel>
 
             <StackPanel x:Name="StackPanelColorPallet" Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center"  >
@@ -73,9 +73,9 @@
             </StackPanel>
 
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 "/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30" BorderThickness="0"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 " BorderThickness="0"/>
 
 
                 <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" >
@@ -100,7 +100,7 @@
             </Canvas>
 
 
-            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="12"  Height="20" Width="20" Click="ButtonExita_Click"/>
+            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="10"  Height="17" Width="16" Click="ButtonExita_Click" BorderThickness="0" />
 
 
         </Grid>
