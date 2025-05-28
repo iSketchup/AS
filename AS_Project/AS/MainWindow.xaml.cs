@@ -27,7 +27,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        AS_Main Sigma = new AsClass.AS_Main(image);
+        AS_Main Sigma = new AsClass.AS_Main(imageDraw, imageBackground);
 
 
         Log.Logger = new LoggerConfiguration()
