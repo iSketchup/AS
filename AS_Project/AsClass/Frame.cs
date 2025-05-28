@@ -11,7 +11,7 @@ namespace AsClass
 
         static readonly int defaultBgPixelSize = 32;
 
-        static WriteableBitmap BackgroundMaker(int Width, int Height)
+        static public  WriteableBitmap BackgroundMaker(int Width, int Height)
         {
 
             WriteableBitmap wb = new WriteableBitmap(Width, Height, 96, 96, PixelFormats.Bgra32, null);
@@ -63,7 +63,7 @@ namespace AsClass
         public int Width { get; set; }
         public int Height { get; set; }
         public int Layers { get; set; } = 1;
-
+        
 
         public Image img;
         public WriteableBitmap wb;
