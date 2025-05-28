@@ -1,4 +1,5 @@
 ﻿using AsClass;
+using Serilog;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,13 +29,14 @@ public partial class MainWindow : Window
 
         AS_Main Sigma = new AsClass.AS_Main(image);
 
-        /*ControlTabFile.TabContent.Content = "File";
 
-        foreach (Button button in As.FileButtons)
-        {
-            ControlTabFile.StackPanelButtons.Children.Add(button);
-        }
-        */
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .WriteTo.File("AS.log")
+            .MinimumLevel.Debug()
+            .CreateLogger();
+
+
     }
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
