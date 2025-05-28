@@ -45,9 +45,9 @@
 
 
             <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0" Margin="5" Grid.Row="1"   >
-                <Button Content="Brush"  Padding="5" Margin="10"/>
-                <Button Content="Earaser" Padding="5" Margin="10"/>
-                <Button Content="Colorpicker" Padding="5" Margin="10" />
+                <Button x:Name="ButtonBrush" Content="Brush"  Padding="5" Margin="10"/>
+                <Button x:Name="ButtonEaraser" Content="Earaser" Padding="5" Margin="10"/>
+                <Button x:Name="ButtonFill" Content="Fill" Padding="5" Margin="10" />
             </StackPanel>
 
             <StackPanel x:Name="StackPanelColorPallet" Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center"  >
@@ -62,7 +62,7 @@
 
 
             <StackPanel x:Name="SackPanelHEX" Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" >
-                <Label x:Name="LabelHexCode" Content="#FFFFEA" Padding="3" />
+                <Label x:Name="LabelHexCode" Content="#FFFFEA" Padding="3" /> 
 
 
             </StackPanel>
