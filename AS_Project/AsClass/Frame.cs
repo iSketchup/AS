@@ -9,31 +9,12 @@ namespace AsClass
     public class Frame
     {
 
-        private readonly int defaultBgPixelSize = 16;
+        static readonly int defaultBgPixelSize = 32;
 
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public int Layers { get; set; } = 1;
-
-
-        public Image img;
-        public WriteableBitmap wb;
-
-
-        public Frame(int width, int height, Image img)
-        {
-            this.Width = width;
-            this.Height = height;
-            this.img = img;
-
-            BoardInit();
-            this.img.Source = wb;
-        }
-
-        public void BoardInit()
+        static WriteableBitmap BackgroundMaker(int Width, int Height)
         {
 
-            wb = new WriteableBitmap(Width, Height, 96, 96, PixelFormats.Bgra32, null);
+            WriteableBitmap wb = new WriteableBitmap(Width, Height, 96, 96, PixelFormats.Bgra32, null);
 
             int stride = wb.BackBufferStride;
 
@@ -53,9 +34,9 @@ namespace AsClass
 
                         if (((x / defaultBgPixelSize) + (y / defaultBgPixelSize)) % 2 == 0)
                         {
-                            pixel[0] = 153;
-                            pixel[1] = 153;
-                            pixel[2] = 153;
+                            pixel[0] = 123;
+                            pixel[1] = 123;
+                            pixel[2] = 123;
                         }
                         else
                         {
@@ -75,6 +56,28 @@ namespace AsClass
 
             }
             wb.Unlock();
+
+            return wb;
         }
+
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public int Layers { get; set; } = 1;
+
+
+        public Image img;
+        public WriteableBitmap wb;
+
+
+        public Frame(int width, int height, Image img)
+        {
+            this.Width = width;
+            this.Height = height;
+            this.img = img;
+
+            this.img.Source = wb;
+        }
+
+        
     }
 }
