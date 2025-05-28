@@ -20,14 +20,19 @@ namespace AS;
 /// </summary>
 public partial class MainWindow : Window
 {
-     
-   
+    private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 89, 255, 217));
+    private Brush ButtonColor = new SolidColorBrush(Color.FromArgb(255, 172, 34, 255));
+
+
 
     public MainWindow()
     {
         InitializeComponent();
 
         AS_Main Sigma = new AsClass.AS_Main(imageDraw, imageBackground);
+
+        // Set the background color of the window
+        SetBackroundColor();
 
 
         Log.Logger = new LoggerConfiguration()
@@ -53,9 +58,34 @@ public partial class MainWindow : Window
 
 
 
-    private void SetBackroundColor(Brush brushButtonBackround, Brush brushButton)
+    private void SetBackroundColor()
     {
-       
+
+
+       Grid.Background = BackroundColor;
+
+        // Buttons
+
+        Menue.Background = ButtonColor;
+        ButtonExita.Background = ButtonColor;
+        ButtonBrush.Background = ButtonColor;
+        ButtonEaraser.Background = ButtonColor;
+        ButtonFill.Background = ButtonColor;
+        LabelPensize.Background = ButtonColor;
+        listviewFrames.Background = ButtonColor;
+        ButtonsNextFrane.Background = ButtonColor;
+        ButtonPreviuosFrame.Background = ButtonColor;
+        ButtonStopFrame.Background = ButtonColor;
+
+
+
+
+
+
+    }
+
+    private void MenuItem_Click(object sender, RoutedEventArgs e)
+    {
 
     }
 }
