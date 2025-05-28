@@ -48,4 +48,14 @@ public partial class MainWindow : Window
     {
         LabelPensize.Content = $"Pen Size: {Math.Floor( SliderPenSize.Value)}"; 
     }
+
+
+
+
+
+    private void SetBackroundColor(Brush brushButtonBackround, Brush brushButton)
+    {
+       
+
+    }
 }

@@ -15,7 +15,7 @@ namespace AsClass
 
         public int FPS { get; set; } = 5;
 
-        public Brush Backroundcolor { get; set; } = Brushes.White;
+       
 
 
         public Settings()
@@ -23,12 +23,12 @@ namespace AsClass
 
         }
 
-        public Settings(double frameWidth, double frameHeight, int fps, Brush backroundcolor)
+        public Settings(double frameWidth, double frameHeight, int fps)
         {
             FrameWidth = frameWidth;
             FrameHeight = frameHeight;
             FPS = fps;
-            Backroundcolor = backroundcolor;
         }
+           
     }
 }

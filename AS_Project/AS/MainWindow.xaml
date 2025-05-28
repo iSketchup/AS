@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
 
-            <Menu  Grid.Row="0"  Grid.Column="0" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3" >
+            <Menu  Grid.Row="0"  Grid.Column="0" x:Name="Menue" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3" >
                 <MenuItem Header="File">
                     <Button x:Name="ButtonNew" Content="New"/>
                     <Button x:Name="ButtonSave" Content="Save"/>
@@ -44,13 +44,13 @@
             </Menu>
 
 
-            <StackPanel Orientation="Vertical" Grid.Column="0" Margin="5" Grid.Row="1"   >
+            <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0" Margin="5" Grid.Row="1"   >
                 <Button Content="Brush"  Padding="5" Margin="10"/>
                 <Button Content="Earaser" Padding="5" Margin="10"/>
                 <Button Content="Colorpicker" Padding="5" Margin="10" />
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center"  >
+            <StackPanel x:Name="StackPanelColorPallet" Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center"  >
                 
                 <Label Content="Pensize: 1" Padding="5" Margin="10" x:Name="LabelPensize" HorizontalAlignment="Center"/>
                 <Slider x:Name="SliderPenSize" Maximum="30" Minimum="1" Value="1"  Margin="10 0 0 10" ValueChanged="SliderPenSize_ValueChanged"/>
@@ -61,13 +61,13 @@
 
 
 
-            <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" >
+            <StackPanel x:Name="SackPanelHEX" Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" >
                 <Label x:Name="LabelHexCode" Content="#FFFFEA" Padding="3" />
 
 
             </StackPanel>
 
-            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30"/>
                 <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0"/>
                 <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 "/>
