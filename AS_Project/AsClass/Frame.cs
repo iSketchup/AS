@@ -8,6 +8,9 @@ namespace AsClass
 
     public class Frame
     {
+
+        private readonly int defaultBgPixelSize = 10;
+
         public int width { get; set; }
         public int height { get; set; }
         public int layers { get; set; } = 1;
@@ -15,6 +18,8 @@ namespace AsClass
 
         public Image img;
         public WriteableBitmap wb;
+
+
         public Frame(int width, int height, Image img)
         {
             this.width = width;
@@ -46,7 +51,7 @@ namespace AsClass
                         byte* pixel = buffer + y * stride + x * 4;
                         pixel[3] = 255;
 
-                        if (((x / 10) + (y / 10)) % 2 == 0)
+                        if (((x / defaultBgPixelSize) + (y / defaultBgPixelSize)) % 2 == 0)
                         {
                             pixel[0] = 153;
                             pixel[1] = 153;
