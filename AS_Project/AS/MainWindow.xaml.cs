@@ -20,8 +20,8 @@ namespace AS;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 89, 255, 217));
-    private Brush ButtonColor = new SolidColorBrush(Color.FromArgb(255, 172, 34, 255));
+    private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+    private Brush ButtonColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
 
 
 
