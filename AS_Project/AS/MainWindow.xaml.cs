@@ -23,13 +23,13 @@ public partial class MainWindow : Window
     private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
     private Brush ButtonColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
 
-
+    private AS_Main Sigma;
 
     public MainWindow()
     {
         InitializeComponent();
 
-        AS_Main Sigma = new AsClass.AS_Main(imageDraw, imageBackground);
+        Sigma = new (imageDraw, imageBackground);
 
         // Set the background color of the window
         SetBackroundColor();
@@ -86,6 +86,13 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
+        
+    }
 
+
+    private void MouseLeftDown(object sender, MouseButtonEventArgs e)
+    {
+        Point pos = e.GetPosition((IInputElement)sender);
+        Sigma.frame.Pixelmade(pos.X, pos.Y);
     }
 }
