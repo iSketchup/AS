@@ -61,8 +61,8 @@ public partial class MainWindow : Window
     private void SetBackroundColor()
     {
 
-
-       Grid.Background = BackroundColor;
+        Log.Debug("Setting background color");
+        Grid.Background = BackroundColor;
 
         // Buttons
 
