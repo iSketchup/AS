@@ -54,6 +54,8 @@
 | 28.05 | Bitmap bezeichenbar machen | Luis       | 40%        |
 | 28.05 | GUI Layout/Menü/Klassen    | Dominik    | 100%       |
 | 28.05 | Backround Colors           | Dominik    | 100%       |
+| 03.06 | ColorPallet/Colorpicker    | Dominik    | 40%        |
+| 03.06 | Bitmap zeichenbar machen   | Luis       | 100%       |
 
 
 ## 3 Lastenheft
