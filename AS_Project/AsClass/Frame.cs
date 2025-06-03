@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -76,6 +77,39 @@ namespace AsClass
             this.img = img;
 
             this.img.Source = wb;
+        }
+
+        public void Pixelmade(int x, int y)
+        {
+            int stride = wb.BackBufferStride;
+
+            wb.Lock();
+
+            unsafe
+            {
+                byte* buffer = (byte*)wb.BackBuffer;
+
+
+
+
+
+                        byte* pixel = buffer + y * stride + x * 4;
+                        pixel[3] = 255;
+
+                        
+                            pixel[0] = 0;
+                            pixel[1] = 0;
+                            pixel[2] = 255;
+                        
+
+                wb.AddDirtyRect(new Int32Rect(0, 0, Width, Height));
+
+
+
+            }
+            wb.Unlock();
+
+            ;
         }
 
 

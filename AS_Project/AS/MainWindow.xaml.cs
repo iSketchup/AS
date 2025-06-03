@@ -88,4 +88,10 @@ public partial class MainWindow : Window
     {
 
     }
+
+
+    private void MouseLeftDown(object sender, MouseButtonEventArgs e)
+    {
+        (Image)sender.Source = BackgroundMaker(100, 500);
+    }
 }
