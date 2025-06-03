@@ -93,6 +93,6 @@ public partial class MainWindow : Window
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
         Point pos = e.GetPosition((IInputElement)sender);
-        Sigma.frame.Pixelmade(pos.X, pos.Y);
+        Sigma.frame.Pixelmade(pos);
     }
 }

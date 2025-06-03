@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -76,11 +75,19 @@ namespace AsClass
             this.Height = height;
             this.img = img;
 
+            wb = BackgroundMaker(width, height);
+
             this.img.Source = wb;
         }
 
-        public void Pixelmade(int x, int y)
+        public void Pixelmade(Point pos)
         {
+
+
+            int x_true = (int)pos.X;
+            int y_true = (int)pos.Y;
+
+
             int stride = wb.BackBufferStride;
 
             wb.Lock();
@@ -91,16 +98,20 @@ namespace AsClass
 
 
 
-
+                for (int y = y_true; y < y_true + 10; y++)
+                {
+                    for (int x = x_true; x < x_true + 10; x++)
+                    {
 
                         byte* pixel = buffer + y * stride + x * 4;
                         pixel[3] = 255;
 
-                        
-                            pixel[0] = 0;
-                            pixel[1] = 0;
-                            pixel[2] = 255;
-                        
+
+                        pixel[0] = 0;
+                        pixel[1] = 0;
+                        pixel[2] = 255;
+                    }
+                }
 
                 wb.AddDirtyRect(new Int32Rect(0, 0, Width, Height));
 
