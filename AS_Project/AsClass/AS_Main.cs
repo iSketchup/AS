@@ -11,7 +11,7 @@ namespace AsClass
         public AS_Main(Image imageDraw, Image imageBackground,WrapPanel wrapPanel)
         {
             VisibleImg = imageDraw;
-            frame = new Frame(500, 150, imageDraw);
+            frame = new Frame(500, 240, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel);
 
