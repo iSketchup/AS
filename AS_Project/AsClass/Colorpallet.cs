@@ -42,9 +42,9 @@ namespace AsClass
                 Button button = new Button
                 {
                     Background = new SolidColorBrush(color),
-                    Width = 30,
-                    Height = 30,
-                    Margin = new System.Windows.Thickness(2)
+                    Width = 10,
+                    Height = 10,
+                   
                 };
 
                 button.Click += (s, e) =>

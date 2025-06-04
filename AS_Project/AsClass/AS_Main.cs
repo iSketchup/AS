@@ -6,11 +6,14 @@ namespace AsClass
     {
         public Image VisibleImg;
         public Frame frame;
+        public Colorpallet colorpallet;
 
-        public AS_Main(Image imageDraw, Image imageBackground)
+        public AS_Main(Image imageDraw, Image imageBackground,WrapPanel wrapPanel)
         {
             VisibleImg = imageDraw;
-            frame = new Frame(500, 300, imageDraw);
+            frame = new Frame(500, 230, imageDraw);
+
+            colorpallet = new Colorpallet(wrapPanel);
 
 
             imageBackground.Source = Frame.BackgroundMaker(500, 300);

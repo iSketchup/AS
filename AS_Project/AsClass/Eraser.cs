@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AsClass
 {
-    public class Earaser
+    public class Eraser
     {
         double Size { get; set; } = 5;
 
-        public Earaser()
+        public Eraser()
         {
         }
 
-        public Earaser(double size)
+        public Eraser(double size)
         {
             Size = size;
         }

@@ -25,11 +25,13 @@ public partial class MainWindow : Window
 
     private AS_Main Sigma;
 
+   
+
     public MainWindow()
     {
         InitializeComponent();
 
-        Sigma = new (imageDraw, imageBackground);
+        Sigma = new (imageDraw, imageBackground,WrapColorPallet);
 
         // Set the background color of the window
         SetBackroundColor();
@@ -40,6 +42,10 @@ public partial class MainWindow : Window
             .WriteTo.File("AS.log")
             .MinimumLevel.Debug()
             .CreateLogger();
+
+
+        Sigma.colorpallet.initializeColorPallet();
+
 
 
     }
@@ -69,8 +75,8 @@ public partial class MainWindow : Window
         Menue.Background = ButtonColor;
         ButtonExita.Background = ButtonColor;
         ButtonBrush.Background = ButtonColor;
-        ButtonEaraser.Background = ButtonColor;
-        ButtonFill.Background = ButtonColor;
+        ButtonEraser.Background = ButtonColor;
+        ButtonEyedropper.Background = ButtonColor;
         LabelPensize.Background = ButtonColor;
         listviewFrames.Background = ButtonColor;
         ButtonsNextFrane.Background = ButtonColor;
