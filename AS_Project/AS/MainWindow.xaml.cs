@@ -106,6 +106,11 @@ public partial class MainWindow : Window
 
     private void ButtonBrush_Click(object sender, RoutedEventArgs e)
     {
+        Sigma.ButtonBrush_Click(sender, e);
+    }
 
+    private void ButtonEraser_Click(object sender, RoutedEventArgs e)
+    {
+        ButtonEraser_Click(sender, e);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace AsClass
@@ -12,14 +13,14 @@ namespace AsClass
     {
         public double Size { get; set; } = 5;
 
-        public Brush color { get; set; } =
+        public SolidColorBrush color { get; set; } =
             new SolidColorBrush(Color.FromRgb(0, 0, 0));       // Black; 
 
         public Pen()
         {
 
         }
-        public Pen(int size, Brush color)
+        public Pen(int size, SolidColorBrush color)
         {
             Size = size;
             this.color = color;
@@ -28,6 +29,11 @@ namespace AsClass
         public void ChangeColor(SolidColorBrush newColor)
         {
             color = newColor;
+        }
+
+        public void Draw(Frame frame, Point point)
+        {
+            frame.ChangePixelColor(point, color);
         }
     }
 }

@@ -99,7 +99,7 @@
                 <Button x:Name="ButtonBrush"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Width="40" Height="40" Click="ButtonBrush_Click"  >
                     <Image Source="Assets/pencil.png" Width="20" Height="20" IsHitTestVisible="False"/>
                 </Button>
-                <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
+                <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEraser_Click"  >
                     <Image Source="Assets/eraser.png" Width="20" Height="20" IsHitTestVisible="False" />
                 </Button>
                 <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}"  >

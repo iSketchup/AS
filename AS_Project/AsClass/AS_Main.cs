@@ -9,15 +9,15 @@ namespace AsClass
     {
         public Image VisibleImg;
         public Frame frame;
-        public Colorpallet colorpallet;
         public Pen pen = new();
+        public Colorpallet colorpallet;
 
         public AS_Main(Image imageDraw, Image imageBackground,WrapPanel wrapPanel)
         {
             VisibleImg = imageDraw;
             frame = new Frame(500, 240, imageDraw);
 
-            colorpallet = new Colorpallet(wrapPanel);
+            colorpallet = new Colorpallet(wrapPanel, pen);
 
 
             imageBackground.Source = Frame.BackgroundMaker(500, 300);
@@ -25,7 +25,15 @@ namespace AsClass
         public void MouseLeftDown(object sender, MouseButtonEventArgs e)
         {
             Point pos = e.GetPosition((IInputElement)sender);
-            frame.ChangePixelColor(pos, new SolidColorBrush(Color.FromArgb(255, 255, 255, 245)));
+            pen.Draw(frame, pos);
+        }
+        public void ButtonBrush_Click(object sender, RoutedEventArgs e)
+        {
+            pen.ChangeColor(new SolidColorBrush(Color.FromArgb(255, 0, 0, 255)));
+        }
+        private void ButtonEraser_Click(object sender, RoutedEventArgs e)
+        {
+            pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
         }
     }
 }
