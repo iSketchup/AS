@@ -10,19 +10,24 @@ namespace AsClass
     
      public class Pen
     {
-        public double Size { get; set; } = 5; 
+        public double Size { get; set; } = 5;
 
-        public Brush Color { get; set; }= Brushes.Black; 
-
+        public Brush color { get; set; } =
+            new SolidColorBrush(Color.FromRgb(0, 0, 0));       // Black; 
 
         public Pen()
         {
+
         }
-        public Pen(double size, Brush color)
+        public Pen(int size, Brush color)
         {
             Size = size;
-            Color = color;
+            this.color = color;
         }
 
+        public void ChangeColor(SolidColorBrush newColor)
+        {
+            color = newColor;
+        }
     }
 }
