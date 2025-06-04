@@ -89,8 +89,8 @@ namespace AsClass
             int x_true = (int)pos.X;
             int y_true = (int)pos.Y;
 
-            x_true = Width - x_true % PixelSize;
-            y_true = Height - y_true % PixelSize;
+            x_true = x_true - x_true % PixelSize;
+            y_true = y_true - y_true % PixelSize;
 
             int stride = wb.BackBufferStride;
 
@@ -98,6 +98,12 @@ namespace AsClass
 
             unsafe
             {
+                if (wb.BackBuffer == IntPtr.Zero)
+                {
+                    wb.Unlock();
+                    throw new InvalidOperationException("WriteableBitmap BackBuffer is not initialized.");
+                }
+
                 byte* buffer = (byte*)wb.BackBuffer;
 
 
