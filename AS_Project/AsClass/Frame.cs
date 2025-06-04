@@ -10,8 +10,8 @@ namespace AsClass
     {
 
         static readonly int defaultBgPixelSize = 32;
-        static int PixelSize = 10;
-
+        static int PixelSize = 4;
+        
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
 
@@ -98,11 +98,6 @@ namespace AsClass
 
             unsafe
             {
-                if (wb.BackBuffer == IntPtr.Zero)
-                {
-                    wb.Unlock();
-                    throw new InvalidOperationException("WriteableBitmap BackBuffer is not initialized.");
-                }
 
                 byte* buffer = (byte*)wb.BackBuffer;
 
@@ -117,7 +112,7 @@ namespace AsClass
                         pixel[3] = col.A;
 
 
-                        pixel[0] = col.B;
+                        pixel[0] = col.B;// farbprobleme hier
                         pixel[1] = col.G;
                         pixel[2] = col.R;
                     }

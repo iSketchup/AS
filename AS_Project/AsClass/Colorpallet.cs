@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace AsClass
 {
     public class Colorpallet
     {
-        private List<Color> Brushes = new List<Color>
-        {
-            Colors.Black,
-            Colors.White,
-            Colors.Red,
-            Colors.Green,
-            Colors.Blue,
-            Colors.Yellow,
-            Colors.Orange,
-            Colors.Purple,
-            Colors.Pink,
-            Colors.Brown,
-            Colors.Gray
-        };
+
+        private List<SolidColorBrush> brushes = new List<SolidColorBrush>
+{
+            new SolidColorBrush(Color.FromRgb(0, 0, 0)),       // Black
+            new SolidColorBrush(Color.FromRgb(255, 255, 255)), // White
+            new SolidColorBrush(Color.FromRgb(255, 0, 0)),     // Red
+            new SolidColorBrush(Color.FromRgb(0, 128, 0)),     // Green
+            new SolidColorBrush(Color.FromRgb(0, 0, 255)),     // Blue
+            new SolidColorBrush(Color.FromRgb(255, 255, 0)),   // Yellow
+            new SolidColorBrush(Color.FromRgb(255, 165, 0)),   // Orange
+            new SolidColorBrush(Color.FromRgb(128, 0, 128)),   // Purple
+            new SolidColorBrush(Color.FromRgb(255, 192, 203)), // Pink
+            new SolidColorBrush(Color.FromRgb(165, 42, 42)),   // Brown
+            new SolidColorBrush(Color.FromRgb(128, 128, 128))  // Gray
+};
 
         public Brush Activecolor { get; set; }
 
@@ -31,20 +27,20 @@ namespace AsClass
 
         public Colorpallet(WrapPanel wrapPanel)
         {
-          this.wrapPanel = wrapPanel;
+            this.wrapPanel = wrapPanel;
         }
 
 
         public void initializeColorPallet()
         {
-            foreach (var color in Brushes)
+            foreach (var color in brushes)
             {
                 Button button = new Button
                 {
-                    Background = new SolidColorBrush(color),
+                    Background = color,
                     Width = 10,
                     Height = 10,
-                   
+
                 };
 
                 button.Click += (s, e) =>
