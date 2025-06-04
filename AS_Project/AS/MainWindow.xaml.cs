@@ -75,7 +75,7 @@ public partial class MainWindow : Window
 
         Menue.Background = ButtonColor;
         ButtonExita.Background = ButtonColor;
-        ButtonBrush.BorderBrush = ButtonColor;
+        //ButtonBrush.BorderBrush = ButtonColor;
         ButtonEraser.Background = ButtonColor;
         ButtonEyedropper.Background = ButtonColor;
         LabelPensize.Background = ButtonColor;
@@ -102,5 +102,10 @@ public partial class MainWindow : Window
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
         Sigma.MouseLeftDown(sender, e);
+    }
+
+    private void ButtonBrush_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }

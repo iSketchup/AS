@@ -15,22 +15,26 @@
         <Style x:Key="ToolButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="40"/>
             <Setter Property="Height" Value="40"/>
-            <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                        CornerRadius="8"
+                        <Border Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="1">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8">
+                            <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        RecognizesAccessKey="True"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
     </Window.Resources>
     
     
@@ -78,6 +82,8 @@
 
                 <MenuItem Header="Settings" />
 
+                <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top"  FontSize="10"  Height="17" Width="16" Click="ButtonExita_Click" BorderThickness="0" />
+
 
 
 
@@ -89,26 +95,26 @@
             </Menu>
 
 
-            <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0"  Grid.Row="1"   >
-                <Button x:Name="ButtonBrush"  Margin="5"  >
-                    <Image Source="Assets/pencil.png" Width="20" Height="20"/>
+            <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0"  Grid.Row="1"  >
+                <Button x:Name="ButtonBrush"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Width="40" Height="40" Click="ButtonBrush_Click"  >
+                    <Image Source="Assets/pencil.png" Width="20" Height="20" IsHitTestVisible="False"/>
                 </Button>
-                <Button x:Name="ButtonEraser"  Margin="5" >
-                    <Image Source="Assets/eraser.png" Width="20" Height="20" />
+                <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
+                    <Image Source="Assets/eraser.png" Width="20" Height="20" IsHitTestVisible="False" />
                 </Button>
-                <Button x:Name="ButtonEyedropper" Margin="5" >
-                    <Image Source="Assets/eyedropper.png" Width="20" Height="20" />
+                <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
+                    <Image Source="Assets/eyedropper.png" Width="20" Height="20" IsHitTestVisible="False" />
                 </Button>
             </StackPanel>
 
             <StackPanel x:Name="StackPanelColorPallet" Orientation="Vertical" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
-                <StackPanel Orientation="Horizontal" Background="White"  >
-                    <Label Height="15" FontSize="4"  Content="Pensize: 1"  x:Name="LabelPensize" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" >
+                    <Label Foreground="White"  Height="15" FontSize="4"  Content="Pensize: 1"  x:Name="LabelPensize" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Slider  x:Name="SliderPenSize"  Height="10"  Width="50" Maximum="30" Minimum="1" Value="1" ValueChanged="SliderPenSize_ValueChanged"  >
                         <Slider.Resources >
                             <Style TargetType="{x:Type Thumb}">
                                 <Setter Property="Background" Value="Black"/>
-                                <Setter Property="Width" Value="10"/>
+                                <Setter Property="Width" Value="5"/>
                                 <Setter Property="Height" Value="5"/>
                             </Style>
                         </Slider.Resources>
@@ -129,9 +135,9 @@
             </StackPanel>
 
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30" BorderThickness="0"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 " BorderThickness="0"/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
 
 
                 <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" >
@@ -158,7 +164,7 @@
             </Canvas>
 
 
-            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="10"  Height="17" Width="16" Click="ButtonExita_Click" BorderThickness="0" />
+            
 
 
 
