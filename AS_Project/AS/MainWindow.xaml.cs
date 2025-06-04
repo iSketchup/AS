@@ -69,6 +69,7 @@ public partial class MainWindow : Window
 
         Log.Debug("Setting background color");
         Grid.Background = BackroundColor;
+     
 
         // Buttons
 
@@ -82,6 +83,7 @@ public partial class MainWindow : Window
         ButtonsNextFrane.Background = ButtonColor;
         ButtonPreviuosFrame.Background = ButtonColor;
         ButtonStopFrame.Background = ButtonColor;
+
        
 
 

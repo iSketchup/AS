@@ -8,8 +8,40 @@
         WindowState="Maximized"
         WindowStyle="None"
         Title="MainWindow" Width="2560"  Height="1600">
+
+    <Window.Resources >
+
+
+        <Style x:Key="ToolButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="8"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    
+    
+    
+    
+    
     <Viewbox Stretch="Fill" >
-        <Grid x:Name="Grid">
+        
+        
+        <Grid x:Name="Grid" >
 
 
 
@@ -25,6 +57,9 @@
                 <ColumnDefinition Width="*" MinWidth="500" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            
+            
+            
 
 
 
