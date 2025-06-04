@@ -99,6 +99,6 @@ public partial class MainWindow : Window
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
         Point pos = e.GetPosition((IInputElement)sender);
-        Sigma.frame.Pixelmade(pos);
+        Sigma.frame.ChangePixelColor(pos, new SolidColorBrush(Color.FromArgb(255, 255, 255, 245)));
     }
 }

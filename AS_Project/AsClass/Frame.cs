@@ -10,6 +10,7 @@ namespace AsClass
     {
 
         static readonly int defaultBgPixelSize = 32;
+        static int PixelSize = 10;
 
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
@@ -80,13 +81,16 @@ namespace AsClass
             this.img.Source = wb;
         }
 
-        public void Pixelmade(Point pos)
+        public void ChangePixelColor(Point pos, SolidColorBrush brush)
         {
 
+            Color col = brush.Color;
 
             int x_true = (int)pos.X;
             int y_true = (int)pos.Y;
 
+            x_true = Width - x_true % PixelSize;
+            y_true = Height - y_true % PixelSize;
 
             int stride = wb.BackBufferStride;
 
@@ -98,18 +102,18 @@ namespace AsClass
 
 
 
-                for (int y = y_true; y < y_true + 10; y++)
+                for (int y = y_true; y < y_true + PixelSize; y++)
                 {
-                    for (int x = x_true; x < x_true + 10; x++)
+                    for (int x = x_true; x < x_true + PixelSize; x++)
                     {
 
                         byte* pixel = buffer + y * stride + x * 4;
-                        pixel[3] = 255;
+                        pixel[3] = col.A;
 
 
-                        pixel[0] = 0;
-                        pixel[1] = 0;
-                        pixel[2] = 255;
+                        pixel[0] = col.B;
+                        pixel[1] = col.G;
+                        pixel[2] = col.R;
                     }
                 }
 
