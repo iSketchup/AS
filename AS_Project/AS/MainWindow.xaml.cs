@@ -74,7 +74,7 @@ public partial class MainWindow : Window
 
         Menue.Background = ButtonColor;
         ButtonExita.Background = ButtonColor;
-        ButtonBrush.Background = ButtonColor;
+        ButtonBrush.BorderBrush = ButtonColor;
         ButtonEraser.Background = ButtonColor;
         ButtonEyedropper.Background = ButtonColor;
         LabelPensize.Background = ButtonColor;
@@ -82,6 +82,7 @@ public partial class MainWindow : Window
         ButtonsNextFrane.Background = ButtonColor;
         ButtonPreviuosFrame.Background = ButtonColor;
         ButtonStopFrame.Background = ButtonColor;
+       
 
 
 

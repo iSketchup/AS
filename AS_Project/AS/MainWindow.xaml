@@ -16,14 +16,14 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="8*"  />
-                <RowDefinition Height="3*" MinHeight="100"/>
+                <RowDefinition Height="50"/>
 
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" MinWidth="500" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
             </Grid.ColumnDefinitions>
 
            
@@ -55,13 +55,14 @@
 
 
             <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0"  Grid.Row="1"   >
-                <Button x:Name="ButtonBrush"  Margin="5"  >
+                <Button x:Name="ButtonBrush"  Margin="5 5 5 2.5 " >
                     <Image Source="Assets/pencil.png" Width="20" Height="20"/>
+                    
                 </Button>
-                <Button x:Name="ButtonEraser"  Margin="5" >
+                <Button x:Name="ButtonEraser"  Margin="2.5 5 5 2.5" >
                     <Image Source="Assets/eraser.png" Width="20" Height="20" />
                 </Button>
-                <Button x:Name="ButtonEyedropper" Margin="5" >
+                <Button x:Name="ButtonEyedropper" Margin="2.5 5 5 2.5" >
                     <Image Source="Assets/eyedropper.png" Width="20" Height="20" />
                 </Button>
             </StackPanel>
@@ -81,7 +82,7 @@
                 </StackPanel>
               
 
-                <WrapPanel x:Name="WrapColorPallet" Visibility="Visible" Margin="10"  Height="100" Width="100" Background="Aqua" />
+                <WrapPanel x:Name="WrapColorPallet" Visibility="Visible" Margin="5"  Height="50" Width="100" Background="Aqua" />
                 <Rectangle x:Name="RectangleActiveColor" Stroke="Black" Grid.Column="2" Grid.Row="1" Height="30" Margin="0 20 0 20" Width="100" Fill="Aquamarine" />
             </StackPanel>
 
@@ -94,12 +95,12 @@
             </StackPanel>
 
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30" BorderThickness="0"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 " BorderThickness="0"/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="5 5 0 10" Height="30" BorderThickness="0"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="5 5 0 10 " Padding="15 0 15 0" BorderThickness="0"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="5 5 0 10 " BorderThickness="0"/>
 
 
-                <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" >
+                <ListView x:Name="listviewFrames" Margin="20 5 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" >
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" />
