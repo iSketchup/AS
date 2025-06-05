@@ -12,7 +12,7 @@ namespace AsClass
         public Pen pen = new();
         public Colorpallet colorpallet;
 
-        public AS_Main(Image imageDraw, Image imageBackground,WrapPanel wrapPanel)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel)
         {
             VisibleImg = imageDraw;
             frame = new Frame(500, 240, imageDraw);
@@ -29,11 +29,12 @@ namespace AsClass
         }
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
         {
-            pen.ChangeColor(new SolidColorBrush(Color.FromArgb(255, 0, 0, 255)));
+            pen.ChangeColor(new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)));
         }
-        private void ButtonEraser_Click(object sender, RoutedEventArgs e)
+        public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
+            
         }
     }
 }

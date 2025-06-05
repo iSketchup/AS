@@ -162,13 +162,6 @@
                 <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor" Visibility="Hidden"/>
                 <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseLeftButtonDown="MouseLeftDown"/>
             </Canvas>
-
-
-            
-
-
-
-
         </Grid>
 
     </Viewbox>

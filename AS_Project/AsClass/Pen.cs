@@ -14,7 +14,7 @@ namespace AsClass
         public double Size { get; set; } = 5;
 
         public SolidColorBrush color { get; set; } =
-            new SolidColorBrush(Color.FromRgb(0, 0, 0));       // Black; 
+            new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));       // Black; 
 
         public Pen()
         {
