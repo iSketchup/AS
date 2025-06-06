@@ -44,7 +44,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor,LabelHexCode, colorPicker);
+        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
 
 
 
@@ -103,6 +103,6 @@ public partial class MainWindow : Window
     private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
     {
         Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
-        RectangleActiveColor.Fill = Sigma.pen.color;
+        LabelActiveColor.Background = Sigma.pen.color;
     }
 }

@@ -42,7 +42,7 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet(Rectangle rectangle, Label label , ColorPicker colorPicker)
+        public void initializeColorPallet( Label label , ColorPicker colorPicker)
         {
             foreach (SolidColorBrush color in brushes)
             {
@@ -60,9 +60,7 @@ namespace AsClass
                 button.Click += (s, e) =>
                 {
                     Activecolor = color;
-                    rectangle.Fill = button.Background;
                     label.Content = Activecolor.Color.ToString();
-                    label.Background = new SolidColorBrush(Activecolor.Color);
                     colorPicker.SelectedColor = Activecolor.Color;
 
 
