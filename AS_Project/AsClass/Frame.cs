@@ -111,7 +111,7 @@ namespace AsClass
                         pixel[3] = col.A;
 
 
-                        pixel[0] = col.B;// farbprobleme hier
+                        pixel[0] = col.B;
                         pixel[1] = col.G;
                         pixel[2] = col.R;
                     }
