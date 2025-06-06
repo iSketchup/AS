@@ -190,8 +190,8 @@
 
 
             <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" >
-                <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor" Visibility="Hidden"/>
-                <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseDown="MouseLeftDown"/>
+                <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseDown="MouseLeftDown" MouseUp="MouseLeftUp"/>
             </Canvas>
         </Grid>
 

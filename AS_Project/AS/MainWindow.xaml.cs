@@ -95,10 +95,8 @@ public partial class MainWindow : Window
         Log.Debug("EraserClicked");
     }
 
-    private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+    private void MouseLeftUp(object sender, MouseButtonEventArgs e)
     {
-        Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
-        RectangleActiveColor.Fill = Sigma.pen.color;
-
+        Sigma.MouseLeftUp(sender, e);
     }
-} 
+}

@@ -20,12 +20,12 @@ namespace AsClass
             colorpallet = new Colorpallet(wrapPanel, pen);
 
 
-            imageBackground.Source = Frame.BackgroundMaker(500, 300);
+            imageBackground.Source = Frame.BackgroundMaker(500, 240);
         }
         public void MouseLeftDown(object sender, MouseButtonEventArgs e)
         {
             Point pos = e.GetPosition((IInputElement)sender);
-            pen.Draw(frame, pos);
+            pen.Draw(frame, pos, true);
         }
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
         {
@@ -35,6 +35,12 @@ namespace AsClass
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
             
+        }
+        public void MouseLeftUp(object sender, MouseButtonEventArgs e)
+        {
+
+            Point pos = e.GetPosition((IInputElement)sender);
+            pen.Draw(frame, pos, false);
         }
     }
 }
