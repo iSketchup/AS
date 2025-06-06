@@ -160,7 +160,7 @@
 
 
             <StackPanel x:Name="StackPanelHEX" Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Width="120" >
-                <Label x:Name="LabelHexCode" Content="" Padding="3"   HorizontalAlignment="Center"/>
+                <Label x:Name="LabelHexCode" Content="" Padding="3" Background="White" BorderBrush="Gray"  HorizontalAlignment="Center"/>
                 <xctk:ColorPicker Name="colorPicker" SelectedColorChanged="colorPicker_SelectedColorChanged"  />
 
             </StackPanel>

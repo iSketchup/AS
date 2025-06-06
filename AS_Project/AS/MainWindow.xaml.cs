@@ -99,4 +99,10 @@ public partial class MainWindow : Window
     {
         Sigma.MouseLeftUp(sender, e);
     }
+
+    private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+    {
+        Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
+        RectangleActiveColor.Fill = Sigma.pen.color;
+    }
 }
