@@ -81,15 +81,17 @@ namespace AsClass
             this.img.Source = wb;
         }
 
-        public void ChangePixelColor(Point pos, SolidColorBrush brush)
+        public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)
         {
+            Frame.PixelSize = Size * 4;
+
             Color col = brush.Color;
 
             int x_true = (int)pos.X;
             int y_true = (int)pos.Y;
 
-            x_true = x_true - x_true % PixelSize;
-            y_true = y_true - y_true % PixelSize;
+            x_true = x_true - x_true % 4;
+            y_true = y_true - y_true % 4;
 
             int stride = wb.BackBufferStride;
 

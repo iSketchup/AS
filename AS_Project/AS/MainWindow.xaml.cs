@@ -1,16 +1,9 @@
 ﻿using AsClass;
 using Serilog;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 
 namespace AS;
@@ -21,7 +14,7 @@ namespace AS;
 public partial class MainWindow : Window
 {
     private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
-   
+
 
     private AS_Main Sigma;
     private bool MousButtonPressed = false;
@@ -33,7 +26,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Sigma = new (imageDraw, imageBackground,WrapColorPallet);
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet);
 
         // Set the background color of the window
         SetBackroundColor();
@@ -46,7 +39,11 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
+<<<<<<< Updated upstream
         Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
+=======
+        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
+>>>>>>> Stashed changes
 
         CompositionTarget.Rendering += Loop;
 
@@ -54,12 +51,15 @@ public partial class MainWindow : Window
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
-       this.Close();
+        this.Close();
     }
 
     private void SliderPenSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
     {
-        LabelPensize.Content = $"Pen Size: {Math.Floor( SliderPenSize.Value)}"; 
+        LabelPensize.Content = $"Pen Size: {Math.Floor(SliderPenSize.Value)}";
+        if (this.IsLoaded)
+            Sigma.pen.Size = (int)(SliderPenSize.Value);
+
     }
 
 
@@ -76,7 +76,7 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
-        
+
     }
 
 
@@ -98,8 +98,8 @@ public partial class MainWindow : Window
         Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
         LabelActiveColor.Background = Sigma.pen.color;
     }
-    
-    private void Loop(object s, EventArgs e) 
+
+    private void Loop(object s, EventArgs e)
     {
         if (MousButtonPressed)
             Sigma.Tick();

@@ -11,7 +11,7 @@ namespace AsClass
     
      public class Pen
     {
-        public double Size { get; set; } = 5;
+        public int Size { get; set; } = 1;
 
         public SolidColorBrush color { get; set; } =
             new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));       // Black; 
@@ -33,7 +33,7 @@ namespace AsClass
 
         public void Draw(Frame frame, Point point)
         {
-                frame.ChangePixelColor(point, color);
+                frame.ChangePixelColor(point, color, Size);
         }
     }
 }
