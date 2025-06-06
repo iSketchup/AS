@@ -83,7 +83,6 @@ namespace AsClass
 
         public void ChangePixelColor(Point pos, SolidColorBrush brush)
         {
-
             Color col = brush.Color;
 
             int x_true = (int)pos.X;
