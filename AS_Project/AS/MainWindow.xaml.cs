@@ -21,7 +21,7 @@ namespace AS;
 public partial class MainWindow : Window
 {
     private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
-    private Brush ButtonColor = new SolidColorBrush(Color.FromArgb(255, 255, 255, 255));
+   
 
     private AS_Main Sigma;
 
@@ -69,28 +69,6 @@ public partial class MainWindow : Window
 
         Log.Debug("Setting background color");
         Grid.Background = BackroundColor;
-     
-
-        // Buttons
-
-        Menue.Background = ButtonColor;
-        ButtonExita.Background = ButtonColor;
-        //ButtonBrush.BorderBrush = ButtonColor;
-        ButtonEraser.Background = ButtonColor;
-        ButtonEyedropper.Background = ButtonColor;
-        LabelPensize.Background = ButtonColor;
-        listviewFrames.Background = ButtonColor;
-        ButtonsNextFrane.Background = ButtonColor;
-        ButtonPreviuosFrame.Background = ButtonColor;
-        ButtonStopFrame.Background = ButtonColor;
-
-       
-
-
-
-
-
-
     }
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)

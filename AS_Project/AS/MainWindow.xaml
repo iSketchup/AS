@@ -13,8 +13,8 @@
 
 
         <Style x:Key="ToolButtonStyle" TargetType="Button">
-            <Setter Property="Width" Value="40"/>
-            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Height" Value="20"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="Gray"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -33,7 +33,39 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF4000"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#2A5B99"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
+
+
+        <Style x:Key="FlatMenuItemStyle" TargetType="MenuItem">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="1"/>
+           
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="MenuItem">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter ContentSource="Header" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="#FFDDDDDD"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
 
     </Window.Resources>
     
@@ -68,36 +100,40 @@
 
 
             <Menu  Grid.Row="0"  Height="10" Grid.Column="0" x:Name="Menue" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3"  >
-                
-                <MenuItem Header="File" FontSize="7" Height="10">
-                    <Button x:Name="ButtonNew" Content="New"/>
-                    <Button x:Name="ButtonSave" Content="Save"/>
-                    <Button x:Name="ButtonOpen" Content="Open"/>
-                    <Button x:Name="ButtonExit" Content="Exit"/>
-                </MenuItem>
 
-                <MenuItem Header="Frame" FontSize="7" Height="10" Click="MenuItem_Click" >
-                    <Button x:Name="ButtonNewFrame" Content="New Frame"/>
-                    <Button x:Name="ButtonLastFrame" Content="Last Frane"/>
+
+                <Menu>
+                    <MenuItem Header="File" FontSize="6" Height="10" >
+                        <MenuItem Header="New" Style="{StaticResource FlatMenuItemStyle}" />
+                        <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}" />
+                        <MenuItem Header="Open" Style="{StaticResource FlatMenuItemStyle}" />
+                        <MenuItem Header="Exit" Style="{StaticResource FlatMenuItemStyle}" />
+                    </MenuItem>
+                </Menu>
+
+
+                <MenuItem Header="Frame" FontSize="6" Height="10" Click="MenuItem_Click" >
+                    <MenuItem x:Name="ButtonNewFrame" Header="New Frame"  Style="{StaticResource FlatMenuItemStyle}"/>
+                    <MenuItem x:Name="ButtonLastFrame" Header="Last Frane"  Style="{StaticResource FlatMenuItemStyle}"/>
                 </MenuItem>
 
                 <MenuItem Header="Settings" FontSize="6" Height="10" />
             </Menu>
 
 
-            <Button x:Name="ButtonExita" Content="X" Grid.Column="2" Grid.Row="0" Height="10"  Width="20" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="6"  Click="ButtonExita_Click" />
+            <Button x:Name="ButtonExita" Content="✕" Grid.Column="2" Grid.Row="0" Height="10"  Width="20" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="6"  Click="ButtonExita_Click" />
 
 
 
             <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0"  Grid.Row="1"  >
-                <Button x:Name="ButtonBrush"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Width="40" Height="40" Click="ButtonBrush_Click"  >
-                    <Image Source="Assets/pencil.png" Width="20" Height="20" IsHitTestVisible="False"/>
+                <Button x:Name="ButtonBrush"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonBrush_Click"  >
+                    <Image Source="Assets/pencil.png" Width="10" Height="10" IsHitTestVisible="False"/>
                 </Button>
                 <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEraser_Click"  >
-                    <Image Source="Assets/eraser.png" Width="20" Height="20" IsHitTestVisible="False" />
+                    <Image Source="Assets/eraser.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
                 <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
-                    <Image Source="Assets/eyedropper.png" Width="20" Height="20" IsHitTestVisible="False" />
+                    <Image Source="Assets/eyedropper.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
             </StackPanel>
 
@@ -129,12 +165,12 @@
             </StackPanel>
 
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="20"  Margin="20 20 0 10" Height="30" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="20" Height="30" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="20 " Height="30" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
 
 
-                <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" >
+                <ListView x:Name="listviewFrames" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" >
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal" />
