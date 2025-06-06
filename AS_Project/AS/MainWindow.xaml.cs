@@ -39,7 +39,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
+        Sigma.colorpallet.initializeColorPallet( LabelActiveColor, colorPicker);
 
         CompositionTarget.Rendering += Loop;
 
