@@ -40,7 +40,11 @@ public partial class MainWindow : Window
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
+=======
+        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
+>>>>>>> Stashed changes
 =======
         Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
 >>>>>>> Stashed changes
