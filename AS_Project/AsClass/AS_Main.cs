@@ -2,11 +2,13 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace AsClass
 {
     public class AS_Main
     {
+
         public Image VisibleImg;
         public Frame frame;
         public Pen pen = new();
@@ -22,11 +24,13 @@ namespace AsClass
 
             imageBackground.Source = Frame.BackgroundMaker(500, 240);
         }
-        public void MouseLeftDown(object sender, MouseButtonEventArgs e)
+
+        public void Tick()
         {
-            Point pos = e.GetPosition((IInputElement)sender);
-            pen.Draw(frame, pos, true);
+            Point pos = Mouse.GetPosition(VisibleImg);
+            pen.Draw(frame, pos);
         }
+
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)));
@@ -35,12 +39,6 @@ namespace AsClass
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
             
-        }
-        public void MouseLeftUp(object sender, MouseButtonEventArgs e)
-        {
-
-            Point pos = e.GetPosition((IInputElement)sender);
-            pen.Draw(frame, pos, false);
         }
     }
 }
