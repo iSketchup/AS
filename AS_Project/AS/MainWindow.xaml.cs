@@ -24,8 +24,10 @@ public partial class MainWindow : Window
    
 
     private AS_Main Sigma;
+    private bool MousButtonPressed = false;
 
-   
+
+
 
     public MainWindow()
     {
@@ -46,7 +48,7 @@ public partial class MainWindow : Window
 
         Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
 
-
+        CompositionTarget.Rendering += Loop;
 
     }
 
@@ -78,11 +80,6 @@ public partial class MainWindow : Window
     }
 
 
-    private void MouseLeftDown(object sender, MouseButtonEventArgs e)
-    {
-        Sigma.MouseLeftDown(sender, e);
-    }
-
     private void ButtonBrush_Click(object sender, RoutedEventArgs e)
     {
         Sigma.ButtonBrush_Click(sender, e);
@@ -95,14 +92,26 @@ public partial class MainWindow : Window
         Log.Debug("EraserClicked");
     }
 
-    private void MouseLeftUp(object sender, MouseButtonEventArgs e)
-    {
-        Sigma.MouseLeftUp(sender, e);
-    }
 
     private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
     {
         Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
         LabelActiveColor.Background = Sigma.pen.color;
+    }
+    
+    private void Loop(object s, EventArgs e) 
+    {
+        if (MousButtonPressed)
+            Sigma.Tick();
+    }
+
+    private void MouseLeftDown(object sender, MouseButtonEventArgs e)
+    {
+        MousButtonPressed = true;
+    }
+
+    private void MouseLeftUp(object sender, MouseButtonEventArgs e)
+    {
+        MousButtonPressed = false;
     }
 }
