@@ -15,7 +15,7 @@ namespace AsClass
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
 
-            WriteableBitmap wb = new(Width, Height, 96, 96, PixelFormats.Bgra32, null);
+            WriteableBitmap wb = new(Width, Height, 96, 96, PixelFormats.Pbgra32, null);
 
             int stride = wb.BackBufferStride;
 
@@ -76,7 +76,7 @@ namespace AsClass
             this.Height = height;
             this.img = img;
 
-            wb = BackgroundMaker(width, height);
+            wb = new(Width, Height, 96, 96, PixelFormats.Pbgra32, null);
 
             this.img.Source = wb;
         }

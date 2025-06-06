@@ -93,4 +93,9 @@ public partial class MainWindow : Window
         Sigma.ButtonEraser_Click(sender, e);
         Log.Debug("EraserClicked");
     }
+
+    private void MouseLeftUp(object sender, MouseButtonEventArgs e)
+    {
+        Sigma.MouseLeftUp(sender, e);
+    }
 }
