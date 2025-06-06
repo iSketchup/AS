@@ -39,15 +39,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
-=======
         Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
->>>>>>> Stashed changes
-=======
-        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor, LabelHexCode, colorPicker);
->>>>>>> Stashed changes
 
         CompositionTarget.Rendering += Loop;
 
