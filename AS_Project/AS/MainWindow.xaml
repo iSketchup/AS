@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
         WindowState="Maximized"
@@ -99,7 +100,7 @@
 
 
 
-            <Menu  Grid.Row="0"  Height="10" Grid.Column="0" x:Name="Menue" Visibility="Visible"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3"  >
+            <Menu  Grid.Row="0"  Height="10" Grid.Column="0" x:Name="Menue" Visibility="Visible" Margin="0 0 0 5"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3"  >
 
 
                 <Menu>
@@ -159,8 +160,8 @@
 
 
             <StackPanel x:Name="StackPanelHEX" Orientation="Vertical" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Width="120" >
-                <Label x:Name="LabelHexCode" Content="#FFFFEA" Padding="3"  HorizontalAlignment="Center"/>
-
+                <Label x:Name="LabelHexCode" Content="" Padding="3"   HorizontalAlignment="Center"/>
+                <xctk:ColorPicker Name="colorPicker" SelectedColorChanged="colorPicker_SelectedColorChanged"  />
 
             </StackPanel>
 

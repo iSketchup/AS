@@ -10,7 +10,7 @@ using System.Windows.Media.Media3D;
 
 namespace AsClass
 {
-    public class ColorPicker
+    public class Eyedropper
     {
         private Color _selectedColor;
 
@@ -24,7 +24,7 @@ namespace AsClass
             }
         }
 
-        public ColorPicker( double FrameHeight, double Framewidth)
+        public Eyedropper( double FrameHeight, double Framewidth)
         {
           
         }

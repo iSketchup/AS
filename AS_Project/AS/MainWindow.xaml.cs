@@ -44,7 +44,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet();
+        Sigma.colorpallet.initializeColorPallet(RectangleActiveColor,LabelHexCode, colorPicker);
 
 
 
@@ -69,6 +69,7 @@ public partial class MainWindow : Window
 
         Log.Debug("Setting background color");
         Grid.Background = BackroundColor;
+        WrapColorPallet.Background = Brushes.White;
     }
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -93,4 +94,11 @@ public partial class MainWindow : Window
         Sigma.ButtonEraser_Click(sender, e);
         Log.Debug("EraserClicked");
     }
-}
+
+    private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+    {
+        Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
+        RectangleActiveColor.Fill = Sigma.pen.color;
+
+    }
+} 

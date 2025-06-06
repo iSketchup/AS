@@ -1,5 +1,8 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
+using System.Windows.Xps.Packaging;
+using Xceed.Wpf.Toolkit;
 
 namespace AsClass
 {
@@ -30,6 +33,8 @@ namespace AsClass
 
         private WrapPanel wrapPanel;
 
+      
+
         public Colorpallet(WrapPanel wrapPanel, Pen pen)
         {
             this.wrapPanel = wrapPanel;
@@ -37,21 +42,30 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet()
+        public void initializeColorPallet(Rectangle rectangle, Label label , ColorPicker colorPicker)
         {
             foreach (SolidColorBrush color in brushes)
             {
                 Button button = new Button
                 {
                     Background = color,
-                    Width = 12,
+                    Width = wrapPanel.Width/7,
                     Height = 12,
+                    BorderBrush = Brushes.Black,
+                    BorderThickness = new System.Windows.Thickness(0.5),
+
 
                 };
 
                 button.Click += (s, e) =>
                 {
-                    Activecolor = (SolidColorBrush)button.Background;
+                    Activecolor = color;
+                    rectangle.Fill = button.Background;
+                    label.Content = Activecolor.Color.ToString();
+                    label.Background = new SolidColorBrush(Activecolor.Color);
+                    colorPicker.SelectedColor = Activecolor.Color;
+
+
                 };
 
                 wrapPanel.Children.Add(button);
