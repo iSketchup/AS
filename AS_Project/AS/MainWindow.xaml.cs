@@ -33,6 +33,7 @@ public partial class MainWindow : Window
         SetBackroundColor();
 
 
+        Cursor = Cursors.Pen;
 
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Console()
