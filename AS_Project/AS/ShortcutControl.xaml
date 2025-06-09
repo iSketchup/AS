@@ -6,21 +6,47 @@
              xmlns:local="clr-namespace:AS"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border Background="{TemplateBinding Background}"
+         BorderBrush="{TemplateBinding BorderBrush}"
+         BorderThickness="{TemplateBinding BorderThickness}"
+         CornerRadius="8">
+                            <ContentPresenter
+         HorizontalAlignment="Center"
+         VerticalAlignment="Center"
+         RecognizesAccessKey="True"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    
     <Grid>
 
         <ToggleButton x:Name="TogglePopupButton" Height="30" Width="150" HorizontalAlignment="Left"  Background="Gray">
             <StackPanel>
 
-                <Label x:Name="TabContent" Content="Shortcuts"   />
+                <Label x:Name="TabContent" Content="Shortcuts"  />
 
                 <Popup Name="myPopup" IsOpen="{Binding IsChecked, ElementName=TogglePopupButton}">
                     <Border BorderThickness="1">
                         <StackPanel x:Name="StackPanelButtons" Orientation="Vertical" >
-                            <Label Content="E: Eraser"/>
-                            <Label Content="B: Brush"/>
-                            <Label Content="I: Eydrop" />
-                            <Label Content="Leertaste: Start/Stop"/>
-                            <Label Content="Pfeiltasten: next/previous Frame"/>
+                            <Label Content="E: Eraser" Style="{StaticResource LabelStyle}" />
+                            <Label Content="B: Brush"  Style="{StaticResource LabelStyle}" />
+                            <Label Content="I: Eydrop"   Style="{StaticResource LabelStyle}" />
+                            <Label Content="Leertaste: Start/Stop"  Style="{StaticResource LabelStyle}" />
+                            <Label Content="Pfeiltasten: next/previous Frame"  Style="{StaticResource LabelStyle}" />
 
 
                         </StackPanel>

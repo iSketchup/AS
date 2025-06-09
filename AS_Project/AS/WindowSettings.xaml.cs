@@ -21,10 +21,17 @@ namespace AS
     public partial class WindowSettings : Window
     {
 
-        public Settings settings = new Settings();
+        public Settings settings { get; set; }
         public WindowSettings()
         {
             InitializeComponent();
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

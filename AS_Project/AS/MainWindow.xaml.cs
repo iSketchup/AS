@@ -157,12 +157,12 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
     {
-        Window window = new WindowSettings();
+        Window WindowSettings = new WindowSettings();
 
-        if (window.ShowDialog() == true)
+        if (WindowSettings.ShowDialog() == true)
         {
             
-
+           
 
             Log.Debug("WindowSettings dialog closed with OK");
         }

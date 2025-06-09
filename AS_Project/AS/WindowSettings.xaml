@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
-        Title="WindowSettings" Height="450" Width="800">
+        Title="WindowSettings" Height="400" Width="500">
 
 
     <Window.Resources>
@@ -61,7 +61,7 @@
             <Label Content="Width:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
             <Label Content="Height:" HorizontalAlignment="Right" FontSize="20"  Margin="10"/>
             <Label Content="FPS:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
-            <local:ShortcutControl />
+            <local:ShortcutControl Margin="10" HorizontalAlignment="Right" />
 
         </StackPanel>
 
@@ -72,6 +72,6 @@
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="2" Width="200"  Content="Apply Settings" HorizontalAlignment="Right" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" />
 
-        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click"/>
     </Grid>
 </Window>
