@@ -167,8 +167,13 @@ public partial class MainWindow : Window
     
     }
 
-    private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
+    private void ButtonsNextFrane_Click(object sender, RoutedEventArgs e)
     {
-      
+        Sigma.Animation.NextFrame();
+    }
+
+    private void ButtonPreviuosFrame_Click(object sender, RoutedEventArgs e)
+    {
+        Sigma.Animation.PrevFrame();
     }
 }

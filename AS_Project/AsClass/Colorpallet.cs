@@ -1,15 +1,13 @@
 ﻿using System.IO;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Shapes;
-using System.Windows.Xps.Packaging;
 using Xceed.Wpf.Toolkit;
 
 namespace AsClass
 {
     public class Colorpallet
     {
-        public List<SolidColorBrush> ColorList = new List<SolidColorBrush>
+        public static List<SolidColorBrush> ColorList = new List<SolidColorBrush>
 {
     new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)),
     new SolidColorBrush(Color.FromArgb(255, 49, 58, 145)),
@@ -29,21 +27,26 @@ namespace AsClass
     new SolidColorBrush(Color.FromArgb(255, 237, 230, 200))
 };
         public Pen pen;
-        private SolidColorBrush _Activecolo;
+        private SolidColorBrush _Activecolor;
 
         public Label label;
-        public SolidColorBrush Activecolor { get { return _Activecolo; }
-            set {
+        public SolidColorBrush Activecolor
+        {
+            get { return _Activecolor; }
+            set
+            {
                 pen.ChangeColor(value);
-                  string hexColor = $"#{value.Color.A :X2}{value.Color.R :X2}{value.Color.G :X2}{value.Color.B :X2}";
-                    label.Background = value;
-                    label.Content = hexColor;
-                _Activecolo = value; } }
+                string hexColor = $"#{value.Color.A:X2}{value.Color.R:X2}{value.Color.G:X2}{value.Color.B:X2}";
+                label.Background = value;
+                label.Content = hexColor;
+                _Activecolor = value;
+            }
+        }
 
         private WrapPanel wrapPanel;
 
-    
-       
+
+
 
 
         public Colorpallet(WrapPanel wrapPanel, Pen pen)
@@ -53,7 +56,7 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet( Label label , ColorPicker colorPicker)
+        public void initializeColorPallet(Label label, ColorPicker colorPicker)
         {
             this.label = label;
 
@@ -65,26 +68,27 @@ namespace AsClass
                 Button button = new Button
                 {
                     Background = color,
-                    Width = wrapPanel.Width/7,
+                    Width = wrapPanel.Width / 7,
                     Height = 12,
                     BorderBrush = Brushes.Black,
                     BorderThickness = new System.Windows.Thickness(0.5),
 
-                   
+
 
                 };
 
-                
+
 
                 button.Click += (s, e) =>
                 {
                     Activecolor = color;
-                  
+
                     colorPicker.SelectedColor = Activecolor.Color;
                 };
 
                 wrapPanel.Children.Add(button);
-                
+
+                Activecolor = ColorList[0];
             }
         }
 
@@ -100,7 +104,7 @@ namespace AsClass
 
                 while ((line = stream.ReadLine()) != null)
                 {
-                    string trimmed= line.Trim();
+                    string trimmed = line.Trim();
 
 
                     if (string.IsNullOrEmpty(trimmed) || trimmed.StartsWith("#") || trimmed.StartsWith("GIMP") || trimmed.StartsWith("Name:"))
@@ -124,10 +128,10 @@ namespace AsClass
 
             return colorList;
 
-            
+
         }
 
-      
+
 
     }
 }

@@ -133,7 +133,7 @@
                 <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEraser_Click"  >
                     <Image Source="Assets/eraser.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
-                <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEyedropper_Click" >
+                <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
                     <Image Source="Assets/eyedropper.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
             </StackPanel>
@@ -165,9 +165,9 @@
 
           
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click"/>
                 <Button x:Name="ButtonStopFrame" Content="∥" FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click"/>
 
 
                 <ListView x:Name="ListviewFramebuttons"

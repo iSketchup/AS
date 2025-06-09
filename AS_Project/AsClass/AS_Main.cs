@@ -17,8 +17,7 @@ namespace AsClass
 
         public Settings settings;
 
-        public Point pos;
-        public Eyedropper eyedropper;
+        public Eyedropper eyedropper = new Eyedropper();
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
         {
             Animation = new(listView, imageDraw);
@@ -73,7 +72,7 @@ namespace AsClass
 
             
 
-                colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
+                Colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
                 colorpallet.initializeColorPallet(label,colorPicker);
 
                 
