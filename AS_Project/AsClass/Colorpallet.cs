@@ -31,12 +31,12 @@ namespace AsClass
         public Pen pen;
         private SolidColorBrush _Activecolo;
 
-        public Label labelel;
+        public Label label;
         public SolidColorBrush Activecolor { get { return _Activecolo; }
             set {
                 pen.ChangeColor(value);
-                  string hexColor = $"#{Activecolor.Color.A :X2}{Activecolor.Color.R :X2}{Activecolor.Color.G :X2}{Activecolor.Color.B :X2}";
-                    label.Background = color;
+                  string hexColor = $"#{value.Color.A :X2}{value.Color.R :X2}{value.Color.G :X2}{value.Color.B :X2}";
+                    label.Background = value;
                     label.Content = hexColor;
                 _Activecolo = value; } }
 
@@ -55,6 +55,7 @@ namespace AsClass
 
         public void initializeColorPallet( Label label , ColorPicker colorPicker)
         {
+            this.label = label;
 
             wrapPanel.Children.Clear();
 
@@ -80,9 +81,6 @@ namespace AsClass
                     Activecolor = color;
                   
                     colorPicker.SelectedColor = Activecolor.Color;
-
-                   
-
                 };
 
                 wrapPanel.Children.Add(button);
