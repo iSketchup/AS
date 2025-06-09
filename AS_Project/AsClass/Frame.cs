@@ -108,8 +108,11 @@ namespace AsClass
                 {
                     for (int x = x_true; x < x_true + PixelSize; x++)
                     {
-
                         byte* pixel = buffer + y * stride + x * 4;
+
+                        if (pixel < buffer || pixel >= buffer + Height * stride)
+                                continue;
+
                         pixel[3] = col.A;
 
 
