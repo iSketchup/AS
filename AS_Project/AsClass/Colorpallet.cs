@@ -30,15 +30,20 @@ namespace AsClass
 };
         public Pen pen;
         private SolidColorBrush _Activecolo;
+
+        public Label labelel;
         public SolidColorBrush Activecolor { get { return _Activecolo; }
             set {
                 pen.ChangeColor(value);
+                  string hexColor = $"#{Activecolor.Color.A :X2}{Activecolor.Color.R :X2}{Activecolor.Color.G :X2}{Activecolor.Color.B :X2}";
+                    label.Background = color;
+                    label.Content = hexColor;
                 _Activecolo = value; } }
 
         private WrapPanel wrapPanel;
 
     
-
+       
 
 
         public Colorpallet(WrapPanel wrapPanel, Pen pen)
@@ -73,9 +78,10 @@ namespace AsClass
                 button.Click += (s, e) =>
                 {
                     Activecolor = color;
-                    label.Content = Activecolor.Color.ToString();
+                  
                     colorPicker.SelectedColor = Activecolor.Color;
 
+                   
 
                 };
 

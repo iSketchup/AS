@@ -95,8 +95,7 @@ public partial class MainWindow : Window
 
     private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
     {
-        Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
-        LabelActiveColor.Background = Sigma.pen.color;
+       Sigma.colorpallet.Activecolor = new SolidColorBrush(colorPicker.SelectedColor.Value);
         Log.Debug("Color changed to: {Color}", colorPicker.SelectedColor.Value);
     }
 
