@@ -133,7 +133,7 @@
                 <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEraser_Click"  >
                     <Image Source="Assets/eraser.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
-                <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}"  >
+                <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEyedropper_Click" >
                     <Image Source="Assets/eyedropper.png" Width="10" Height="10" IsHitTestVisible="False" />
                 </Button>
             </StackPanel>

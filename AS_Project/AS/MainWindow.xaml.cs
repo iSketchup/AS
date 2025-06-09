@@ -176,4 +176,9 @@ public partial class MainWindow : Window
     {
         Sigma.Animation.PrevFrame();
     }
+
+    private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
+    {
+       
+    }
 }
