@@ -36,8 +36,8 @@ namespace AsClass
 
         public void Tick()
         {
-            Point pos = Mouse.GetPosition(Animation.SelectedImg);
-            pen.Draw(Animation.SelctedFrame, pos);
+            Point pos = Mouse.GetPosition(Animation.VisibleImg);
+            pen.Draw(Animation.SelectedFrame, pos);
         }
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)

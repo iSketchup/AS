@@ -66,19 +66,16 @@ namespace AsClass
         public int Layers { get; set; } = 1;
 
 
-        public Image img;
         public WriteableBitmap wb;
 
 
-        public Frame(int width, int height, Image img)
+        public Frame(int width, int height)
         {
             this.Width = width;
             this.Height = height;
-            this.img = img;
 
             wb = new(Width, Height, 96, 96, PixelFormats.Pbgra32, null);
 
-            this.img.Source = wb;
         }
 
         public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)

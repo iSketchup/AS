@@ -128,31 +128,30 @@ public partial class MainWindow : Window
 
         foreach (FrameButton button in ListviewFramebuttons.Items)
         {
-           if(button == ListviewFramebuttons.Items[selectedIndex])
+            if (button == ListviewFramebuttons.Items[selectedIndex])
             {
                 button.Background = Brushes.Orange;
                 button.isselected = true;
-              
+
 
             }
             else
             {
-             button.Background = Brushes.Transparent;
-             button.isselected = false;
+                button.Background = Brushes.Transparent;
+                button.isselected = false;
 
 
             }
         }
 
 
-
     }
 
     private void ButtonInsertColorpallet_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.InserColorPallet(LabelActiveColor,colorPicker);
+        Sigma.InserColorPallet(LabelActiveColor, colorPicker);
 
-       
+
     }
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
