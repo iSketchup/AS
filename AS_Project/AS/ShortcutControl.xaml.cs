@@ -16,22 +16,13 @@ using System.Windows.Shapes;
 namespace AS
 {
     /// <summary>
-    /// Interaction logic for TAB.xaml
+    /// Interaction logic for ShortcutControl.xaml
     /// </summary>
-    public partial class ContolTab : UserControl
+    public partial class ShortcutControl : UserControl
     {
-
-
-        public ContolTab()
+        public ShortcutControl()
         {
             InitializeComponent();
         }
-
-      
-
-
-
-
-
     }
 }

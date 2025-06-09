@@ -19,6 +19,7 @@ public partial class MainWindow : Window
     private AS_Main Sigma;
     private bool MousButtonPressed = false;
 
+    private Settings settings;
 
 
 
@@ -152,5 +153,19 @@ public partial class MainWindow : Window
         Sigma.InserColorPallet(LabelActiveColor,colorPicker);
 
        
+    }
+
+    private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+    {
+        Window window = new WindowSettings();
+
+        if (window.ShowDialog() == true)
+        {
+            settings = window.settings;
+
+
+            Log.Debug("WindowSettings dialog closed with OK");
+        }
+    
     }
 }
