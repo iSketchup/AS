@@ -72,6 +72,6 @@
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="2" Width="200"  Content="Apply Settings" HorizontalAlignment="Right" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_1" />
 
-        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_2"/>
     </Grid>
 </Window>
