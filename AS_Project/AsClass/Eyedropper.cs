@@ -24,13 +24,22 @@ namespace AsClass
             }
         }
 
-        public Eyedropper( )
+        private WriteableBitmap wb;
+        private int x;
+        private int y;
+
+
+        public Eyedropper(Frame frame, Point point )
         {
-          
+            int x = (int)point.X;
+            int y = (int)point.Y;
+            this.wb = frame.wb;
+
+            
         }
 
 
-        public void GetColor(int x, int y,WriteableBitmap wb)
+        public void GetColor()
         {
             int stride = wb.BackBufferStride;
 

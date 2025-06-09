@@ -17,7 +17,8 @@ namespace AsClass
 
         public Settings settings;
 
-        public Eyedropper eyedropper = new Eyedropper();
+        public Point pos;
+        public Eyedropper eyedropper;
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
         {
             Animation = new(listView, imageDraw);
@@ -31,7 +32,7 @@ namespace AsClass
 
         public void Tick()
         {
-            Point pos = Mouse.GetPosition(Animation.VisibleImg);
+            pos = Mouse.GetPosition(Animation.VisibleImg);
             pen.Draw(Animation.SelectedFrame, pos);
         }
 
@@ -47,7 +48,12 @@ namespace AsClass
 
         public void Eydropper_click(object sender, RoutedEventArgs e)
         {
-            pen.ChangeColor(new SolidColorBrush(eyedropper.SelectedColor));
+            eyedropper = new Eyedropper((Frame)Animation.SelectedFrame, pos);
+
+            eyedropper.GetColor();
+
+            colorpallet.Activecolor = new SolidColorBrush(eyedropper.SelectedColor);
+
         }
 
 
