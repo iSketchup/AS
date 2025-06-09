@@ -46,13 +46,10 @@ namespace AsClass
            
         }
 
-        public void Eydropper_click(object sender, RoutedEventArgs e)
-        {
-            eyedropper = new Eyedropper((Frame)Animation.SelectedFrame, pos);
+      
 
-            eyedropper.GetColor();
 
-            colorpallet.Activecolor = new SolidColorBrush(eyedropper.SelectedColor);
+
 
         }
 
