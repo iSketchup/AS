@@ -1,5 +1,4 @@
 ﻿using System.Windows.Controls;
-using System.Windows.Documents;
 
 namespace AsClass
 {
@@ -59,9 +58,9 @@ namespace AsClass
             FrameButton frameButton = (FrameButton)listview.SelectedItem;
             if (frameButton != null)
             {
-            VisibleImg.Source = frameButton.frame.wb;
+                VisibleImg.Source = frameButton.frame.wb;
 
-                            }
+            }
         }
 
         public void Add()
