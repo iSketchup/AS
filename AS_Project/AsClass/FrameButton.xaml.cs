@@ -31,7 +31,7 @@ namespace AsClass
             this.Content = name;
             this.ListView = listview;
 
-            frame = new Frame(500, 240, new Image()); 
+            frame = new Frame(500, 240); 
 
         }
 

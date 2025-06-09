@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace AsClass
 {
@@ -8,11 +9,9 @@ namespace AsClass
         {
             get
             {
-                return (Frame)((FrameButton)listview.SelectedItem).frame;
+                return ((FrameButton)listview.SelectedItem).frame;
             }
         }
-        public Image VisibleImg { get; set; }
-
         private int _selectedIndex = 0;
         public int SelectedIndex
         {
@@ -34,16 +33,23 @@ namespace AsClass
                 listview.SelectedIndex = value;
                 _selectedIndex = value;
                 Update();
+
             }
         }
 
         private ListView listview;
+        public Image VisibleImg { get; set; }
+
 
         public Animation(ListView ListviewFramebutton, Image imageDraw)
         {
             VisibleImg = imageDraw;
+
+
             this.listview = ListviewFramebutton;
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString()));
+
+            Update();
 
 
         }
@@ -51,7 +57,11 @@ namespace AsClass
         public void Update()
         {
             FrameButton frameButton = (FrameButton)listview.SelectedItem;
+            if (frameButton != null)
+            {
             VisibleImg.Source = frameButton.frame.wb;
+
+                            }
         }
 
         public void Add()
