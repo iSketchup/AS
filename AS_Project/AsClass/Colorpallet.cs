@@ -34,7 +34,9 @@ namespace AsClass
 
         private WrapPanel wrapPanel;
 
-      
+    
+
+
 
         public Colorpallet(WrapPanel wrapPanel, Pen pen)
         {
@@ -45,6 +47,10 @@ namespace AsClass
 
         public void initializeColorPallet( Label label , ColorPicker colorPicker)
         {
+
+            wrapPanel.Children.Clear();
+
+
             foreach (SolidColorBrush color in ColorList)
             {
                 Button button = new Button
@@ -55,8 +61,11 @@ namespace AsClass
                     BorderBrush = Brushes.Black,
                     BorderThickness = new System.Windows.Thickness(0.5),
 
+                   
 
                 };
+
+                
 
                 button.Click += (s, e) =>
                 {
@@ -80,7 +89,7 @@ namespace AsClass
 
             using (StreamReader stream = new StreamReader(fiepath))
             {
-                string line = stream.ReadToEnd();
+                string line;
 
                 while ((line = stream.ReadLine()) != null)
                 {
@@ -91,7 +100,8 @@ namespace AsClass
                         continue;
 
 
-                    string[] colorsplit = trimmed.Split(' ');
+                    string[] colorsplit = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+
 
 
                     if (colorsplit.Length >= 3 &&

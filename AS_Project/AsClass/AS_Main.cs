@@ -68,7 +68,7 @@ namespace AsClass
             {
                 string dateipfad = dialog.FileName;
 
-                colorpallet.ColorList.Clear();
+            
 
                 colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
                 colorpallet.initializeColorPallet(label,colorPicker);

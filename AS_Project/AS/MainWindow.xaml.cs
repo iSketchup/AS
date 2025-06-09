@@ -139,7 +139,7 @@ public partial class MainWindow : Window
             else
             {
              button.Background = Brushes.Transparent;
-                button.isselected = false;
+             button.isselected = false;
 
 
             }
@@ -151,6 +151,6 @@ public partial class MainWindow : Window
     {
         Sigma.InserColorPallet(LabelActiveColor,colorPicker);
 
-        Log.Debug($"Color pallet inserted{Sigma.colorpallet.ColorList[0] }");
+       
     }
 }
