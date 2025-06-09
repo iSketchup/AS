@@ -16,8 +16,13 @@ namespace AsClass
 
         public Settings settings;
 
+        public int FrameWidth { get; set; }
 
-       
+        public int FrameHeight { get; set; }
+
+
+        public int FPS { get; set; } 
+
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
         {
