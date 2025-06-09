@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using Xceed.Wpf.Toolkit;
 
@@ -16,20 +17,13 @@ namespace AsClass
 
         public Settings settings;
 
-        public int FrameWidth { get; set; }
-
-        public int FrameHeight { get; set; }
-
-
-        public int FPS { get; set; } 
-
-
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
         {
             Animation = new(listView, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
-
+            
+            this.settings = settings;
 
             imageBackground.Source = Frame.BackgroundMaker(500, 240);
         }
@@ -42,7 +36,7 @@ namespace AsClass
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
         {
-            pen.ChangeColor(new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)));
+            pen.ChangeColor(colorpallet.Activecolor);
         }
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
