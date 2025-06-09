@@ -17,13 +17,13 @@ namespace AsClass
 
         public Settings settings;
 
-        public Eyedropper eyedropper = new Eyedropper();
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
+
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
             Animation = new(listView, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
-            
+
             this.settings = settings;
 
             imageBackground.Source = Frame.BackgroundMaker(500, 240);
@@ -31,7 +31,7 @@ namespace AsClass
 
         public void Tick()
         {
-            pos = Mouse.GetPosition(Animation.VisibleImg);
+            Point pos = Mouse.GetPosition(Animation.VisibleImg);
             pen.Draw(Animation.SelectedFrame, pos);
         }
 
@@ -42,20 +42,20 @@ namespace AsClass
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
-           
-        }
-
-      
-
-
-
 
         }
+
+
+
+
+
+
+
 
 
         public void AddnewFrame()
         {
-            Animation.Add();     
+            Animation.Add();
         }
 
         [STAThread]
@@ -66,16 +66,16 @@ namespace AsClass
             dialog.Title = "Bitte wähle eine Datei aus";
             dialog.Filter = "GPL-Dateien (*.gpl)|*.gpl";
 
-            if (dialog.ShowDialog() ==true)
+            if (dialog.ShowDialog() == true)
             {
                 string dateipfad = dialog.FileName;
 
-            
+
 
                 Colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
-                colorpallet.initializeColorPallet(label,colorPicker);
+                colorpallet.initializeColorPallet(label, colorPicker);
 
-                
+
             }
         }
     }
