@@ -21,7 +21,7 @@ namespace AS
     public partial class WindowSettings : Window
     {
 
-        public Settings settings;
+        public Settings settings = new Settings();
         public WindowSettings()
         {
             InitializeComponent();

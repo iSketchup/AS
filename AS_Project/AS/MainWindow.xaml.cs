@@ -161,7 +161,7 @@ public partial class MainWindow : Window
 
         if (window.ShowDialog() == true)
         {
-            settings = window.settings;
+            
 
 
             Log.Debug("WindowSettings dialog closed with OK");
