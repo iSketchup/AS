@@ -32,7 +32,7 @@ public partial class MainWindow : Window
         SetBackroundColor();
 
         // Erster Framebutton hinzufügen
-        ListviewFramebuttons.Items.Add(new FrameButtons());
+        ListviewFramebuttons.Items.Add(new FrameButtons(ListviewFramebuttons));
 
 
         Log.Logger = new LoggerConfiguration()
@@ -119,7 +119,7 @@ public partial class MainWindow : Window
 
     private void ButtonNewFrame_Click(object sender, RoutedEventArgs e)
     {
-        ListviewFramebuttons.Items.Add(new FrameButtons());
+        ListviewFramebuttons.Items.Add(new FrameButtons(ListviewFramebuttons));
     }
 
     private void ListviewFramebuttons_SelectionChanged(object sender, SelectionChangedEventArgs e)

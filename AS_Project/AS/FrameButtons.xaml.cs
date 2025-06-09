@@ -25,14 +25,22 @@ namespace AS
     {
 
         public bool isselected = true;
+
+        private ListView ListView;
      
-        public FrameButtons( )
+        public FrameButtons(ListView listview )
         {
             InitializeComponent();
 
+            this.ListView = listview;
 
 
         }
 
+        private void ButtonFrame_Click(object sender, RoutedEventArgs e)
+        {
+            ListView.SelectedItem = this;
+
+        }
     }
 }
