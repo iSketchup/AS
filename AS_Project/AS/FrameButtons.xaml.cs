@@ -34,9 +34,5 @@ namespace AS
 
         }
 
-        private void ButtonFrame_Click(object sender, RoutedEventArgs e)
-        {
-        
-        }
     }
 }

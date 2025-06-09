@@ -44,7 +44,7 @@
 
 
             <Grid>
-        <Button x:Name="ButtonFrame" Content="Frame _" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" Height="20" Width="50"  Style="{StaticResource FrameButtonStyle}" BorderThickness="2" Click="ButtonFrame_Click" />
+        <Button x:Name="ButtonFrame" Content="Frame _" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" Height="20" Width="50"  Style="{StaticResource FrameButtonStyle}" BorderThickness="2"  />
 
     </Grid>
 </UserControl>
