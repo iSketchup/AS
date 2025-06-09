@@ -17,6 +17,7 @@ namespace AsClass
 
         public Settings settings;
 
+        public Eyedropper eyedropper = new Eyedropper();
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
         {
             Animation = new(listView, imageDraw);
@@ -42,6 +43,11 @@ namespace AsClass
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
            
+        }
+
+        public void Eydropper_click(object sender, RoutedEventArgs e)
+        {
+            pen.ChangeColor(new SolidColorBrush(eyedropper.SelectedColor));
         }
 
 

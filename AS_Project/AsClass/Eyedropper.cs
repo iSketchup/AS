@@ -24,13 +24,13 @@ namespace AsClass
             }
         }
 
-        public Eyedropper( double FrameHeight, double Framewidth)
+        public Eyedropper( )
         {
           
         }
 
 
-        public void Pixelmade(int x, int y,WriteableBitmap wb)
+        public void GetColor(int x, int y,WriteableBitmap wb)
         {
             int stride = wb.BackBufferStride;
 
@@ -45,15 +45,14 @@ namespace AsClass
 
 
                 byte* pixel = buffer + y * stride + x * 4;
-                pixel[3] = 255;
+
+                pixel[3] = SelectedColor.A;
 
 
-                pixel[0] = 0;
-                pixel[1] = 0;
-                pixel[2] = 255;
+                pixel[0] = SelectedColor.B;
+                pixel[1] = SelectedColor.G;
+                pixel[2] = SelectedColor.R;
 
-
-                wb.AddDirtyRect(new Int32Rect(0, 0,wb.PixelWidth,wb.PixelHeight));
 
 
 
