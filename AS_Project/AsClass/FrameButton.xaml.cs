@@ -21,9 +21,8 @@ namespace AsClass
     public partial class FrameButton : UserControl
     {
         public ListView ListView;
-
-
         public bool isselected = true;
+        public Frame frame;
 
         public FrameButton(ListView listview, string name)
         {
@@ -32,6 +31,7 @@ namespace AsClass
             this.Content = name;
             this.ListView = listview;
 
+            frame = new Frame(500, 240, new Image()); 
 
         }
 
