@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.IO;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Xps.Packaging;
@@ -9,7 +10,7 @@ namespace AsClass
     public class Colorpallet
     {
 
-        private List<SolidColorBrush> brushes = new List<SolidColorBrush>
+        public List<SolidColorBrush> ColorList = new List<SolidColorBrush>
 {
             new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)),       // Black
             new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)), // White
@@ -44,7 +45,7 @@ namespace AsClass
 
         public void initializeColorPallet( Label label , ColorPicker colorPicker)
         {
-            foreach (SolidColorBrush color in brushes)
+            foreach (SolidColorBrush color in ColorList)
             {
                 Button button = new Button
                 {
@@ -67,8 +68,49 @@ namespace AsClass
                 };
 
                 wrapPanel.Children.Add(button);
+                
             }
         }
+
+
+        public static List<SolidColorBrush> LoadColorsFromGPL(string fiepath)
+        {
+            List<SolidColorBrush> colorList = new List<SolidColorBrush>();
+
+
+            using (StreamReader stream = new StreamReader(fiepath))
+            {
+                string line = stream.ReadToEnd();
+
+                while ((line = stream.ReadLine()) != null)
+                {
+                    string trimmed= line.Trim();
+
+
+                    if (string.IsNullOrEmpty(trimmed) || trimmed.StartsWith("#") || trimmed.StartsWith("GIMP") || trimmed.StartsWith("Name:"))
+                        continue;
+
+
+                    string[] colorsplit = trimmed.Split(' ');
+
+
+                    if (colorsplit.Length >= 3 &&
+                   byte.TryParse(colorsplit[0], out byte r) &&
+                   byte.TryParse(colorsplit[1], out byte g) &&
+                   byte.TryParse(colorsplit[2], out byte b))
+                    {
+                        Color color = Color.FromRgb(r, g, b);
+                        colorList.Add(new SolidColorBrush(color));
+                    }
+                }
+            }
+
+            return colorList;
+
+            
+        }
+
+      
 
     }
 }

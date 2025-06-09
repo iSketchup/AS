@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -22,18 +24,19 @@ namespace AS
     public partial class FrameButtons : UserControl
     {
 
-        public bool isselected = false;
-        public FrameButtons()
+        public bool isselected = true;
+     
+        public FrameButtons( )
         {
             InitializeComponent();
+
+
+
         }
 
         private void ButtonFrame_Click(object sender, RoutedEventArgs e)
         {
-            isselected = true;
-
-            ButtonFrame.BorderBrush = Brushes.Red;
-        }
         
+        }
     }
 }

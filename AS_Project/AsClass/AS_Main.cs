@@ -1,8 +1,10 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+using Xceed.Wpf.Toolkit;
 
 namespace AsClass
 {
@@ -13,6 +15,8 @@ namespace AsClass
         public Frame frame;
         public Pen pen = new();
         public Colorpallet colorpallet;
+
+
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel)
         {
@@ -39,6 +43,37 @@ namespace AsClass
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
             
+        }
+
+
+        public void AddnewFrame()
+        {
+            // TODO für LUis neues Frame erstellen
+
+            
+
+
+              
+        }
+
+        [STAThread]
+
+        public void InserColorPallet(Label label, ColorPicker colorPicker)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Bitte wähle eine Datei aus";
+            dialog.Filter = "GPL-Dateien (*.gpl)|*.gpl";
+
+            if (dialog.ShowDialog() ==true)
+            {
+                string dateipfad = dialog.FileName;
+
+              
+
+                colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
+
+                colorpallet.initializeColorPallet(label,colorPicker);
+            }
         }
     }
 }

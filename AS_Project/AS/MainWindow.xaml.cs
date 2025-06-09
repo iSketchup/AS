@@ -31,6 +31,9 @@ public partial class MainWindow : Window
         // Set the background color of the window
         SetBackroundColor();
 
+        // Erster Framebutton hinzufügen
+        ListviewFramebuttons.Items.Add(new FrameButtons());
+
 
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Console()
@@ -39,7 +42,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet( LabelActiveColor, colorPicker);
+        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
 
         CompositionTarget.Rendering += Loop;
 
@@ -79,12 +82,14 @@ public partial class MainWindow : Window
     private void ButtonBrush_Click(object sender, RoutedEventArgs e)
     {
         Sigma.ButtonBrush_Click(sender, e);
+        Cursor = Cursors.Pen;
         Log.Debug("PenClicked");
     }
 
     private void ButtonEraser_Click(object sender, RoutedEventArgs e)
     {
         Sigma.ButtonEraser_Click(sender, e);
+        Cursor = Cursors.Cross;
         Log.Debug("EraserClicked");
     }
 
@@ -93,6 +98,7 @@ public partial class MainWindow : Window
     {
         Sigma.pen.color = new SolidColorBrush(colorPicker.SelectedColor.Value);
         LabelActiveColor.Background = Sigma.pen.color;
+        Log.Debug("Color changed to: {Color}", colorPicker.SelectedColor.Value);
     }
 
     private void Loop(object s, EventArgs e)
@@ -109,5 +115,40 @@ public partial class MainWindow : Window
     private void MouseLeftUp(object sender, MouseButtonEventArgs e)
     {
         MousButtonPressed = false;
+    }
+
+    private void ButtonNewFrame_Click(object sender, RoutedEventArgs e)
+    {
+        ListviewFramebuttons.Items.Add(new FrameButtons());
+    }
+
+    private void ListviewFramebuttons_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        int selectedIndex = ListviewFramebuttons.SelectedIndex;
+
+
+        foreach (FrameButtons button in ListviewFramebuttons.Items)
+        {
+           if(button == ListviewFramebuttons.Items[selectedIndex])
+            {
+                button.Background = Brushes.Orange;
+                button.isselected = true;
+              
+
+            }
+            else
+            {
+             button.Background = Brushes.Transparent;
+                button.isselected = false;
+
+
+            }
+        }
+
+    }
+
+    private void ButtonInsertColorpallet_Click(object sender, RoutedEventArgs e)
+    {
+        Sigma.InserColorPallet(LabelActiveColor,colorPicker);
     }
 }

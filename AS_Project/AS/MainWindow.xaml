@@ -114,7 +114,7 @@
 
 
                 <MenuItem Header="Frame" FontSize="6" Height="10" Click="MenuItem_Click" >
-                    <MenuItem x:Name="ButtonNewFrame" Header="New Frame"  Style="{StaticResource FlatMenuItemStyle}"/>
+                    <MenuItem x:Name="ButtonNewFrame" Header="New Frame" Click="ButtonNewFrame_Click" Style="{StaticResource FlatMenuItemStyle}"/>
                     <MenuItem x:Name="ButtonLastFrame" Header="Last Frane"  Style="{StaticResource FlatMenuItemStyle}"/>
                 </MenuItem>
 
@@ -154,6 +154,7 @@
 
 
                 <WrapPanel x:Name="WrapColorPallet" Visibility="Visible" Margin="10"  Height="100" Width="100"  />
+                <Button x:Name="ButtonInsertColorpallet" Content="Insert" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="50" Style="{StaticResource ToolButtonStyle}" Click="ButtonInsertColorpallet_Click"/>
                 <Label x:Name="LabelActiveColor" Foreground="Beige" BorderBrush="Gray" BorderThickness="1" Grid.Column="2" Grid.Row="1" Height="30" Margin="0 20 0 20" Width="100" Background="Black" />
             </StackPanel>
 
@@ -169,10 +170,17 @@
                 <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
 
 
-                <StackPanel x:Name="listviewFrames" Orientation="Horizontal" Margin="40 20 0 10" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" >
-                    <local:FrameButtons />
-                </StackPanel>
-
+                <ListView x:Name="ListviewFramebuttons"
+                            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                            Height="30" Width="300" Margin="40 20 0 10" SelectionChanged="ListviewFramebuttons_SelectionChanged">
+                   
+                        <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
 
 
 
