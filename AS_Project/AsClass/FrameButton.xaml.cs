@@ -1,37 +1,35 @@
-﻿using Serilog;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Markup.Localizer;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AS
+namespace AsClass
 {
     /// <summary>
-    /// Interaction logic for FrameButtons.xaml
+    /// Interaction logic for FrameButton.xaml
     /// </summary>
-    public partial class FrameButtons : UserControl
+    public partial class FrameButton : UserControl
     {
+        public ListView ListView;
+
 
         public bool isselected = true;
 
-        private ListView ListView;
-     
-        public FrameButtons(ListView listview )
+        public FrameButton(ListView listview, string name)
         {
             InitializeComponent();
 
+            this.Content = name;
             this.ListView = listview;
 
 
@@ -39,7 +37,7 @@ namespace AS
 
         private void ButtonFrame_Click(object sender, RoutedEventArgs e)
         {
-            ListView.SelectedItem = this;
+            ListView.SelectedItem = this;  // hier frame change
 
         }
     }

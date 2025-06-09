@@ -10,18 +10,15 @@ namespace AsClass
 {
     public class AS_Main
     {
-
-        public Image VisibleImg;
-        public Frame frame;
+        public Animation Animation;
         public Pen pen = new();
         public Colorpallet colorpallet;
 
 
 
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
         {
-            VisibleImg = imageDraw;
-            frame = new Frame(500, 240, imageDraw);
+            Animation = new(listView, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
 
@@ -31,8 +28,8 @@ namespace AsClass
 
         public void Tick()
         {
-            Point pos = Mouse.GetPosition(VisibleImg);
-            pen.Draw(frame, pos);
+            Point pos = Mouse.GetPosition(Animation.SelectedImg);
+            pen.Draw(Animation.SelctedFrame, pos);
         }
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
@@ -48,12 +45,7 @@ namespace AsClass
 
         public void AddnewFrame()
         {
-            // TODO für LUis neues Frame erstellen
-
-            
-
-
-              
+            Animation.Add();     
         }
 
         [STAThread]
