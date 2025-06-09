@@ -11,7 +11,7 @@ namespace AsClass
 
         static readonly int defaultBgPixelSize = 32;
         static int PixelSize = 4;
-        
+
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
 
@@ -111,7 +111,7 @@ namespace AsClass
                         byte* pixel = buffer + y * stride + x * 4;
 
                         if (pixel < buffer || pixel >= buffer + Height * stride)
-                                continue;
+                            continue;
 
                         pixel[3] = col.A;
 

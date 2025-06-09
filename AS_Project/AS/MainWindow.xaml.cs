@@ -27,13 +27,11 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Sigma = new(imageDraw, imageBackground, WrapColorPallet);
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons);
 
         // Set the background color of the window
         SetBackroundColor();
 
-        // Erster Framebutton hinzufügen
-        ListviewFramebuttons.Items.Add(new FrameButtons(ListviewFramebuttons));
 
 
         Log.Logger = new LoggerConfiguration()
@@ -120,7 +118,7 @@ public partial class MainWindow : Window
 
     private void ButtonNewFrame_Click(object sender, RoutedEventArgs e)
     {
-        ListviewFramebuttons.Items.Add(new FrameButtons(ListviewFramebuttons));
+        Sigma.AddnewFrame();
     }
 
     private void ListviewFramebuttons_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -128,7 +126,7 @@ public partial class MainWindow : Window
         int selectedIndex = ListviewFramebuttons.SelectedIndex;
 
 
-        foreach (FrameButtons button in ListviewFramebuttons.Items)
+        foreach (FrameButton button in ListviewFramebuttons.Items)
         {
            if(button == ListviewFramebuttons.Items[selectedIndex])
             {
@@ -145,6 +143,8 @@ public partial class MainWindow : Window
 
             }
         }
+
+
 
     }
 
