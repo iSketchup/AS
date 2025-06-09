@@ -9,22 +9,25 @@ namespace AsClass
 {
     public class Colorpallet
     {
-
         public List<SolidColorBrush> ColorList = new List<SolidColorBrush>
 {
-            new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)),       // Black
-            new SolidColorBrush(Color.FromArgb(255, 255, 255, 255)), // White
-            new SolidColorBrush(Color.FromArgb(255, 255, 0, 0)),     // Red
-            new SolidColorBrush(Color.FromArgb(255, 0, 128, 0)),     // Green
-            new SolidColorBrush(Color.FromArgb(255, 0, 0, 255)),     // Blue
-            new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)),   // Yellow
-            new SolidColorBrush(Color.FromArgb(255, 255, 165, 0)),   // Orange
-            new SolidColorBrush(Color.FromArgb(255, 128, 0, 128)),   // Purple
-            new SolidColorBrush(Color.FromArgb(255, 255, 192, 203)), // Pink
-            new SolidColorBrush(Color.FromArgb(255, 165, 42, 42)),   // Brown
-            new SolidColorBrush(Color.FromArgb(255, 128, 128, 128))  // Gray
-};  
-
+    new SolidColorBrush(Color.FromArgb(255, 0, 0, 0)),
+    new SolidColorBrush(Color.FromArgb(255, 49, 58, 145)),
+    new SolidColorBrush(Color.FromArgb(255, 76, 52, 53)),
+    new SolidColorBrush(Color.FromArgb(255, 177, 72, 99)),
+    new SolidColorBrush(Color.FromArgb(255, 72, 84, 84)),
+    new SolidColorBrush(Color.FromArgb(255, 118, 85, 162)),
+    new SolidColorBrush(Color.FromArgb(255, 146, 86, 43)),
+    new SolidColorBrush(Color.FromArgb(255, 131, 133, 207)),
+    new SolidColorBrush(Color.FromArgb(255, 128, 128, 120)),
+    new SolidColorBrush(Color.FromArgb(255, 80, 148, 80)),
+    new SolidColorBrush(Color.FromArgb(255, 205, 147, 115)),
+    new SolidColorBrush(Color.FromArgb(255, 143, 191, 213)),
+    new SolidColorBrush(Color.FromArgb(255, 156, 171, 177)),
+    new SolidColorBrush(Color.FromArgb(255, 187, 200, 64)),
+    new SolidColorBrush(Color.FromArgb(255, 156, 204, 71)),
+    new SolidColorBrush(Color.FromArgb(255, 237, 230, 200))
+};
         public Pen pen;
         private SolidColorBrush _Activecolo;
         public SolidColorBrush Activecolor { get { return _Activecolo; }
