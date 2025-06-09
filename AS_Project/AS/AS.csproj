@@ -31,10 +31,4 @@
     <Resource Include="Assets\pencil.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="TAB.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
 </Project>
