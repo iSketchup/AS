@@ -150,5 +150,7 @@ public partial class MainWindow : Window
     private void ButtonInsertColorpallet_Click(object sender, RoutedEventArgs e)
     {
         Sigma.InserColorPallet(LabelActiveColor,colorPicker);
+
+        Log.Debug($"Color pallet inserted{Sigma.colorpallet.ColorList[0] }");
     }
 }

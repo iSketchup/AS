@@ -17,6 +17,7 @@ namespace AsClass
         public Eraser(double size)
         {
             Size = size;
+            
         }
 
     }

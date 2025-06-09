@@ -42,7 +42,7 @@ namespace AsClass
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
-            
+           
         }
 
 
@@ -68,11 +68,12 @@ namespace AsClass
             {
                 string dateipfad = dialog.FileName;
 
-              
+                colorpallet.ColorList.Clear();
 
                 colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
-
                 colorpallet.initializeColorPallet(label,colorPicker);
+
+                
             }
         }
     }
