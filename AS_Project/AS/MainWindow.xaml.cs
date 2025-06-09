@@ -19,7 +19,7 @@ public partial class MainWindow : Window
     private AS_Main Sigma;
     private bool MousButtonPressed = false;
 
-    private Settings settings;
+    public Settings settings;
 
 
 
@@ -157,12 +157,12 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
     {
-        Window WindowSettings = new WindowSettings();
+         WindowSettings windowSettings = new WindowSettings();
 
-        if (WindowSettings.ShowDialog() == true)
+        if (windowSettings.ShowDialog() == true)
         {
-            
-           
+
+            settings = windowSettings.settings;
 
             Log.Debug("WindowSettings dialog closed with OK");
         }

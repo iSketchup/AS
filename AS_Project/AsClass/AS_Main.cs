@@ -14,7 +14,10 @@ namespace AsClass
         public Pen pen = new();
         public Colorpallet colorpallet;
 
+        public Settings settings;
 
+
+       
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
         {
