@@ -11,7 +11,11 @@
   <ItemGroup>
     <None Remove="Assets\eraser.png" />
     <None Remove="Assets\eyedropper.png" />
+    <None Remove="Assets\pause-btn.png" />
     <None Remove="Assets\pencil.png" />
+    <None Remove="Assets\play-fill.png" />
+    <None Remove="Assets\skip-end-fill.png" />
+    <None Remove="Assets\skip-start-fill.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,7 +32,26 @@
   <ItemGroup>
     <Resource Include="Assets\eraser.png" />
     <Resource Include="Assets\eyedropper.png" />
+    <Resource Include="Assets\pause-btn.png" />
     <Resource Include="Assets\pencil.png" />
+    <Resource Include="Assets\play-fill.png" />
+    <Resource Include="Assets\skip-end-fill.png" />
+    <Resource Include="Assets\skip-start-fill.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
