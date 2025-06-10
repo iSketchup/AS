@@ -11,7 +11,7 @@ namespace AsClass
     {
         public Animation Animation;
         public Pen pen = new();
-        public Eyedropper Eyedropper = new();
+        public Eyedropper Eyedropper ;
         public Colorpallet colorpallet;
 
         public Settings settings;
@@ -25,6 +25,8 @@ namespace AsClass
             Animation = new(listView, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
+
+            Eyedropper = new Eyedropper(colorpallet);
 
             this.settings = settings;
 

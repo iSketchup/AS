@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,6 +11,8 @@ using System.Windows.Media.Media3D;
 
 namespace AsClass
 {
+
+    
     public class Eyedropper
     {
         private Color _selectedColor;
@@ -19,20 +22,25 @@ namespace AsClass
             get { return _selectedColor; }
             set
             {
+
+
                 _selectedColor = value;
+                colorpallet.Activecolor = new SolidColorBrush(value);
                
             }
         }
+        Colorpallet colorpallet;
 
        
         public bool active = false;
 
         private Color newColor;
 
-        public Eyedropper()
+        public Eyedropper(Colorpallet colorpallet)
         {
-           
-            
+           this.colorpallet = colorpallet;
+          
+
         }
 
 
