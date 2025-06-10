@@ -70,6 +70,8 @@ public partial class MainWindow : Window
         Log.Debug("Setting background color");
         Grid.Background = BackroundColor;
         WrapColorPallet.Background = Brushes.White;
+        ButtonExita.Background = Brushes.White;
+        Menue.Background = Brushes.White;
     }
 
     private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -199,6 +201,12 @@ public partial class MainWindow : Window
     {
        Sigma.pen.active = false;
        Sigma.Eyedropper.active = true;
+
+        Cursor = Cursors.UpArrow;
     }
 
+    private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
 }

@@ -47,6 +47,8 @@
                             <Label Content="I: Eydrop"   Style="{StaticResource LabelStyle}" />
                             <Label Content="Leertaste: Start/Stop"  Style="{StaticResource LabelStyle}" />
                             <Label Content="Pfeiltasten: next/previous Frame"  Style="{StaticResource LabelStyle}" />
+                            <Label Content="Strg + N: New Frame"  Style="{StaticResource LabelStyle}"/>
+                            <Label Content="Strg + S: Save" Style="{StaticResource LabelStyle}" />
 
 
                         </StackPanel>

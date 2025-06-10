@@ -103,26 +103,27 @@
             <Menu  Grid.Row="0"  Height="10" Grid.Column="0" x:Name="Menue" Visibility="Visible" Margin="0 0 0 5"  VerticalAlignment="Top" IsMainMenu="True" Grid.ColumnSpan="3"  >
 
 
-                <Menu>
-                    <MenuItem Header="File" FontSize="6" Height="10" >
+         
+                <MenuItem Header="File" FontSize="6" Height="10" >
                         <MenuItem Header="New" Style="{StaticResource FlatMenuItemStyle}" />
                         <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}" />
                         <MenuItem Header="Open" Style="{StaticResource FlatMenuItemStyle}" />
-                        <MenuItem Header="Exit" Style="{StaticResource FlatMenuItemStyle}" />
-                    </MenuItem>
-                </Menu>
+                        <MenuItem Header="Exit" Style="{StaticResource FlatMenuItemStyle}" Click="MenuItem_Click_2" />
+                </MenuItem>
+              
 
 
                 <MenuItem Header="Frame" FontSize="6" Height="10" Click="MenuItem_Click" >
                     <MenuItem x:Name="ButtonNewFrame" Header="New Frame" Click="ButtonNewFrame_Click" Style="{StaticResource FlatMenuItemStyle}"/>
                     <MenuItem x:Name="ButtonLastFrame" Header="Last Frane"  Style="{StaticResource FlatMenuItemStyle}"/>
+                    <MenuItem x:Name="ButtonNextFrame" Header="Next Frane" Style="{StaticResource FlatMenuItemStyle}" />
                 </MenuItem>
 
                 <MenuItem Header="Settings" FontSize="6" Height="10" Click="MenuItem_Click_1" />
             </Menu>
 
 
-            <Button x:Name="ButtonExita" Content="✕" Grid.Column="2" Grid.Row="0" Height="10"  Width="20" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="6"  Click="ButtonExita_Click" />
+            <Button x:Name="ButtonExita" Content="✕" Grid.Column="2" Grid.Row="0" Height="10"  Width="20" HorizontalAlignment="Right" BorderBrush="Transparent" VerticalAlignment="Top" FontSize="6"  Click="ButtonExita_Click" />
 
 
 
@@ -183,13 +184,13 @@
                 </ListView>
 
 
-
+              
 
             </StackPanel>
 
 
             <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" >
-                <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor"  />
                 <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseDown="MouseLeftDown" MouseUp="MouseLeftUp"/>
             </Canvas>
         </Grid>
