@@ -20,13 +20,16 @@ public partial class MainWindow : Window
 
     public Settings settings;
 
+    public bool dragging = false;
+
+    private Point lastDragPoint;
 
 
     public MainWindow()
     {
         InitializeComponent();
 
-        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons,new Settings());
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons, new Settings());
 
         // Set the background color of the window
         SetBackroundColor();
@@ -102,13 +105,13 @@ public partial class MainWindow : Window
 
     private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
     {
-       Sigma.colorpallet.Activecolor = new SolidColorBrush(colorPicker.SelectedColor.Value);
+        Sigma.colorpallet.Activecolor = new SolidColorBrush(colorPicker.SelectedColor.Value);
         Log.Debug("Color changed to: {Color}", colorPicker.SelectedColor.Value);
     }
 
     private void Loop(object s, EventArgs e)
     {
-            Sigma.Tick();
+        Sigma.Tick();
     }
 
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
@@ -161,7 +164,7 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
     {
-         WindowSettings windowSettings = new WindowSettings();
+        WindowSettings windowSettings = new WindowSettings();
 
         if (windowSettings.ShowDialog() == true)
         {
@@ -171,7 +174,7 @@ public partial class MainWindow : Window
 
             Log.Debug("WindowSettings dialog closed with OK");
         }
-    
+
     }
 
     private void ButtonsNextFrane_Click(object sender, RoutedEventArgs e)
@@ -200,8 +203,8 @@ public partial class MainWindow : Window
 
     private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
     {
-       Sigma.pen.active = false;
-       Sigma.Eyedropper.active = true;
+        Sigma.pen.active = false;
+        Sigma.Eyedropper.active = true;
 
         Cursor = Cursors.UpArrow;
     }
@@ -214,5 +217,55 @@ public partial class MainWindow : Window
     private void ButtonAddFrame_Click(object sender, RoutedEventArgs e)
     {
         Sigma.AddnewFrame();
+    }
+
+    private void CanvDraw_MouseWheel(object sender, MouseWheelEventArgs e)
+
+    {
+        const double zoomSpeed = 0.1;
+
+        double oldScale = canvasScale.ScaleX;
+        double newScale = oldScale;
+
+        if (e.Delta > 0)
+            newScale = oldScale + zoomSpeed;
+        else if (e.Delta < 0)
+            newScale = Math.Max(0.1, oldScale - zoomSpeed);
+
+        Point mousePos = e.GetPosition(CanvDraw);
+
+        // Verschiebung anpassen, damit Mausposition fixiert bleibt
+        canvasTranslate.X -= (mousePos.X) * (newScale - oldScale);
+        canvasTranslate.Y -= (mousePos.Y) * (newScale - oldScale);
+
+        canvasScale.ScaleX = newScale;
+        canvasScale.ScaleY = newScale;
+    }
+
+    private void CanvDraw_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+    {
+        dragging = true;
+        lastDragPoint = e.GetPosition(this);
+        CanvDraw.CaptureMouse();
+    }
+
+    private void CanvDraw_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+    {
+        dragging = false;
+        CanvDraw.ReleaseMouseCapture();
+    }
+
+    private void CanvDraw_MouseMove(object sender, MouseEventArgs e)
+    {
+
+        if (!dragging) return;
+
+        Point currentPoint = e.GetPosition(this);
+        Vector delta = currentPoint - lastDragPoint;
+
+        canvasTranslate.X += delta.X;
+        canvasTranslate.Y += delta.Y;
+
+        lastDragPoint = currentPoint;
     }
 }
