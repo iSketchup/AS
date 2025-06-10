@@ -9,7 +9,7 @@ namespace AsClass
 {
     public class AS_Main
     {
-        public Animation Animation;
+        public Animation animation;
         public Pen pen = new();
         public Eyedropper Eyedropper ;
         public Colorpallet colorpallet;
@@ -22,7 +22,7 @@ namespace AsClass
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
-            Animation = new(listView, imageDraw);
+            animation = new(listView, imageDraw);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
 
@@ -30,7 +30,7 @@ namespace AsClass
 
             this.settings = settings;
 
-            imageBackground.Source = Frame.BackgroundMaker(500, 240);
+            imageBackground.Source = Frame.BackgroundMaker(300, 240);
 
         }
 
@@ -38,20 +38,21 @@ namespace AsClass
         {
             tickcount++;
 
-            Point pos = Mouse.GetPosition(Animation.VisibleImg);
+
+            Point pos = Mouse.GetPosition(animation.VisibleImg);
 
             if (MouseButtonPressed && pen.active)
             {
-                pen.Draw(Animation.SelectedFrame, pos);
+                pen.Draw(animation.SelectedFrame, pos);
             }
 
             else if (MouseButtonPressed && Eyedropper.active)
             {
-                Eyedropper.GetColor((int)pos.X, (int)pos.Y, Animation.SelectedFrame.wb);
+                Eyedropper.GetColor((int)pos.X, (int)pos.Y, animation.SelectedFrame.wb);
             }
-            if (tickcount % settings.FPS == 0 && Animation.running)
+            if (tickcount % settings.FPS == 0 && animation.running)
             {
-                Animation.Tick();
+                animation.Tick();
             }
         }
 
@@ -75,7 +76,7 @@ namespace AsClass
 
         public void AddnewFrame()
         {
-            Animation.Add();
+            animation.Add();
         }
 
         [STAThread]

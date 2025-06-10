@@ -31,7 +31,7 @@ namespace AsClass
             this.Content = name;
             this.ListView = listview;
 
-            frame = new Frame(500, 240);
+            frame = new Frame(300, 240);
 
             ListView.SelectedItem = this;  // hier frame change
 
