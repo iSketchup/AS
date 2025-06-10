@@ -210,4 +210,9 @@ public partial class MainWindow : Window
     {
         this.Close();
     }
+
+    private void ButtonAddFrame_Click(object sender, RoutedEventArgs e)
+    {
+        Sigma.AddnewFrame();
+    }
 }

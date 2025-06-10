@@ -166,9 +166,15 @@
 
           
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonStopFrame_Click"/>
-                <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click"/>
+                <Button x:Name="ButtonPreviuosFrame"  FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click">
+                    <Image Source="Assets/skip-start-fill.png" Width="10" Height="10" IsHitTestVisible="False" />
+                </Button>
+                <Button x:Name="ButtonStopFrame"  FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonStopFrame_Click">
+                    <Image Source="Assets/play-fill.png" Width="10" Height="10" IsHitTestVisible="False" />
+                </Button>
+                <Button x:Name="ButtonsNextFrane" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click">
+                    <Image Source="Assets/skip-end-fill.png" Width="20" Height="10" IsHitTestVisible="False" />
+                </Button>
 
 
                 <ListView x:Name="ListviewFramebuttons"
@@ -184,7 +190,7 @@
                 </ListView>
 
 
-              
+                <Button x:Name="ButtonAddFrame" Content="+" FontSize="8"  FontWeight="Bold" Height="13"  VerticalAlignment="Center" Margin="20 20 0 10" Style="{StaticResource ToolButtonStyle}" Click="ButtonAddFrame_Click" />
 
             </StackPanel>
 
