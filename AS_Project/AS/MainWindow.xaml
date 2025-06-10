@@ -191,7 +191,6 @@
 
 
                 <Button x:Name="ButtonAddFrame" Content="+" FontSize="8"  FontWeight="Bold" Height="13"  VerticalAlignment="Center" Margin="20 20 0 10" Style="{StaticResource ToolButtonStyle}" Click="ButtonAddFrame_Click" />
-
             </StackPanel>
 
             <Border BorderBrush="AntiqueWhite" BorderThickness="2">
