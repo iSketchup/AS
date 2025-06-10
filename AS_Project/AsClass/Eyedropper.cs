@@ -24,22 +24,19 @@ namespace AsClass
             }
         }
 
-        private WriteableBitmap wb;
-        private int x;
-        private int y;
+       
+        public bool active = false;
 
+        private Color newColor;
 
-        public Eyedropper(Frame frame, Point point )
+        public Eyedropper()
         {
-            int x = (int)point.X;
-            int y = (int)point.Y;
-            this.wb = frame.wb;
-
+           
             
         }
 
 
-        public void GetColor()
+        public void GetColor(int x, int y, WriteableBitmap wb)
         {
             int stride = wb.BackBufferStride;
 
@@ -55,15 +52,18 @@ namespace AsClass
 
                 byte* pixel = buffer + y * stride + x * 4;
 
-                pixel[3] = SelectedColor.A;
+             
+                newColor.A = pixel[3];
+
+             
+                newColor.B = pixel[0];
+               
+                newColor.G = pixel[1];
+             
+                newColor.R = pixel[2];
 
 
-                pixel[0] = SelectedColor.B;
-                pixel[1] = SelectedColor.G;
-                pixel[2] = SelectedColor.R;
-
-
-
+                SelectedColor = newColor;
 
             }
             wb.Unlock();
