@@ -107,7 +107,7 @@ namespace AsClass
                     {
                         byte* pixel = buffer + y * stride + x * 4;
 
-                        if (pixel < buffer || pixel >= buffer + Height * stride)
+                        if (pixel < buffer || pixel > buffer + Height * stride)
                             continue;
 
                         pixel[3] = col.A;

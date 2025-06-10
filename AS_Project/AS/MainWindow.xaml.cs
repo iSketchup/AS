@@ -167,6 +167,7 @@ public partial class MainWindow : Window
         {
 
             settings = windowSettings.settings;
+            Sigma.settings = settings;
 
             Log.Debug("WindowSettings dialog closed with OK");
         }

@@ -11,26 +11,39 @@ namespace AsClass
     {
         public Animation animation;
         public Pen pen = new();
-        public Eyedropper Eyedropper ;
+        public Eyedropper Eyedropper;
         public Colorpallet colorpallet;
-
-        public Settings settings;
 
         private int tickcount = 0;
 
+
         public bool MouseButtonPressed { get; set; } = false;
+
+        private Settings _settings;
+        public Settings settings
+        {
+            get { return _settings; }
+            set { 
+                _settings = value; 
+                animation = new(animation.listview, animation.VisibleImg, _settings);
+
+                imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
+            }
+        }
+        public Image imageBackground { get; set; }
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
-            animation = new(listView, imageDraw);
+            animation = new(listView, imageDraw, settings);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
 
             Eyedropper = new Eyedropper(colorpallet);
 
+            this.imageBackground = imageBackground;
+
             this.settings = settings;
 
-            imageBackground.Source = Frame.BackgroundMaker(300, 240);
 
         }
 
@@ -63,7 +76,7 @@ namespace AsClass
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
-            
+
         }
 
 

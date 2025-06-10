@@ -36,18 +36,19 @@ namespace AsClass
             }
         }
 
-        private ListView listview;
+        public ListView listview;
         public Image VisibleImg { get; set; }
 
         public bool running = false;
+        private Settings setting;
 
-        public Animation(ListView ListviewFramebutton, Image imageDraw)
+        public Animation(ListView ListviewFramebutton, Image imageDraw, Settings setting)
         {
             VisibleImg = imageDraw;
-
+            this.setting = setting;
 
             this.listview = ListviewFramebutton;
-            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString()));
+            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), setting));
 
             Update();
 
@@ -66,7 +67,7 @@ namespace AsClass
 
         public void Add()
         {
-            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString()));
+            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), setting));
             SelectedIndex = listview.Items.Count - 1;
 
         }

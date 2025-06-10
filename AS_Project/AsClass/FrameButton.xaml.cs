@@ -24,14 +24,14 @@ namespace AsClass
         public bool isselected = true;
         public Frame frame;
 
-        public FrameButton(ListView listview, string name)
+        public FrameButton(ListView listview, string name, Settings settings)
         {
             InitializeComponent();
 
             this.Content = name;
             this.ListView = listview;
 
-            frame = new Frame(300, 240);
+            frame = new Frame(settings.FrameWidth, settings.FrameHeight);
 
             ListView.SelectedItem = this;  // hier frame change
 
