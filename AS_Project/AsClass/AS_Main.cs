@@ -13,13 +13,14 @@ namespace AsClass
     {
         public Animation Animation;
         public Pen pen = new();
+        public Eyedropper Eyedropper;
         public Colorpallet colorpallet;
 
         public Settings settings;
 
         private int tickcount = 0;
 
-        public bool MousButtonPressed { get;  set; } = false;
+        public bool MouseButtonPressed { get;  set; } = false;
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
@@ -36,10 +37,17 @@ namespace AsClass
         {
             tickcount++;
 
-            if (MousButtonPressed) { 
-                Point pos = Mouse.GetPosition(Animation.VisibleImg);
+            Point pos = Mouse.GetPosition(Animation.VisibleImg);
+            
+            if (MouseButtonPressed && pen.active)
+            {
                 pen.Draw(Animation.SelectedFrame, pos);
-}
+            }
+
+            else if (MouseButtonPressed && Eyedropper.active)
+            {
+                Eyedropper.GetColor((int)pos.X, (int)pos.Y, Animation.SelectedFrame.wb);
+            }
             if (tickcount % settings.FPS == 0 && Animation.running)
             {
                 Animation.Tick();
