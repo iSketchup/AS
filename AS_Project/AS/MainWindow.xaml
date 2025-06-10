@@ -155,7 +155,7 @@
 
 
                 <WrapPanel x:Name="WrapColorPallet" Visibility="Visible" Margin="10"  Height="100" Width="100"  />
-                <Button x:Name="ButtonInsertColorpallet" Content="Insert" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="50" Style="{StaticResource ToolButtonStyle}" Click="ButtonInsertColorpallet_Click"/>
+                <Button x:Name="ButtonInsertColorpallet" Content="Insert Colorpallet" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="100" Style="{StaticResource ToolButtonStyle}" Click="ButtonInsertColorpallet_Click"/>
                 <Label x:Name="LabelActiveColor" Foreground="Beige" BorderBrush="Gray" BorderThickness="1" Grid.Column="2" Grid.Row="1" Height="30" Margin="0 20 0 20" Width="100" Background="Black" />
             </StackPanel>
 
