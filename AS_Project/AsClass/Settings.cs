@@ -9,9 +9,9 @@ namespace AsClass
 {
     public class Settings
     {
-        public int FrameWidth { get; set; } = 800;
+        public int FrameWidth { get; set; } = 500;
 
-        public int FrameHeight { get; set; } = 600;
+        public int FrameHeight { get; set; } = 240;
 
         public int FPS { get; set; } = 2;
 

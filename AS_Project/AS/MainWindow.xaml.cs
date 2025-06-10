@@ -167,6 +167,7 @@ public partial class MainWindow : Window
         {
 
             settings = windowSettings.settings;
+            Sigma.settings = settings;
 
             Log.Debug("WindowSettings dialog closed with OK");
         }
@@ -175,24 +176,24 @@ public partial class MainWindow : Window
 
     private void ButtonsNextFrane_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.Animation.NextFrame();
+        Sigma.animation.NextFrame();
     }
 
     private void ButtonPreviuosFrame_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.Animation.PrevFrame();
+        Sigma.animation.PrevFrame();
     }
 
     private void ButtonStopFrame_Click(object sender, RoutedEventArgs e)
     {
-        switch (Sigma.Animation.running)
+        switch (Sigma.animation.running)
         {
             case true:
-                Sigma.Animation.running = false;
+                Sigma.animation.running = false;
                 break;
 
             case false:
-                Sigma.Animation.running = true;
+                Sigma.animation.running = true;
                 break;
         }
     }
