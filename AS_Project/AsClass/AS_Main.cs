@@ -31,6 +31,7 @@ namespace AsClass
                 animation = new(animation.listview, animation.VisibleImg, value);
 
                 imageBackground.Source = Frame.BackgroundMaker(value.FrameWidth, value.FrameHeight);
+                value.SaveToJsonFile("Settings.json");
             }
         }
         public Image imageBackground { get; set; }
