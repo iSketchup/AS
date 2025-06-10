@@ -166,7 +166,7 @@
           
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button x:Name="ButtonPreviuosFrame" Content="◀" FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click"/>
-                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}"/>
+                <Button x:Name="ButtonStopFrame" Content="∥" FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonStopFrame_Click"/>
                 <Button x:Name="ButtonsNextFrane" Content="▶" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click"/>
 
 

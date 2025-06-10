@@ -178,6 +178,20 @@ public partial class MainWindow : Window
         Sigma.Animation.PrevFrame();
     }
 
+    private void ButtonStopFrame_Click(object sender, RoutedEventArgs e)
+    {
+        switch (Sigma.Animation.running)
+        {
+            case true:
+                Sigma.Animation.running = false;
+                break;
+            case false:
+                Sigma.Animation.running = true;
+                break;
+            default:
+        }
+    }
+
     private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
     {
        

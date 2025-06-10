@@ -17,6 +17,8 @@ namespace AsClass
 
         public Settings settings;
 
+        private int tickcount = 0;
+
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
@@ -31,8 +33,15 @@ namespace AsClass
 
         public void Tick()
         {
+            tickcount++;
+
             Point pos = Mouse.GetPosition(Animation.VisibleImg);
             pen.Draw(Animation.SelectedFrame, pos);
+
+            if (tickcount % settings.FPS == 0 && Animation.running)
+            {
+                Animation.Tick();
+            }
         }
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)

@@ -39,6 +39,7 @@ namespace AsClass
         private ListView listview;
         public Image VisibleImg { get; set; }
 
+        public bool running = false;
 
         public Animation(ListView ListviewFramebutton, Image imageDraw)
         {
@@ -65,8 +66,9 @@ namespace AsClass
 
         public void Add()
         {
-            SelectedIndex = listview.Items.Count;
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString()));
+            SelectedIndex = listview.Items.Count - 1;
+
         }
 
 
@@ -79,6 +81,11 @@ namespace AsClass
         public void PrevFrame()
         {
             SelectedIndex--;
+        }
+
+        public void Tick()
+        {
+            NextFrame();
         }
     }
 
