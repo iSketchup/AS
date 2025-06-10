@@ -1,5 +1,6 @@
 ﻿using AsClass;
 using Serilog;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -18,7 +19,22 @@ public partial class MainWindow : Window
 
     private AS_Main Sigma;
 
-    public Settings settings;
+    private Settings _settings;
+    public Settings settings { get { return _settings; }
+        set
+        {
+            if (File.Exists("Settings.Json"))
+            {
+                _settings = Settings.LoadFromJson("Settings.Json");
+            }
+            else
+            {
+                _settings = new Settings();
+                _settings = value;
+            }
+        }
+
+        }
 
 
 
@@ -26,7 +42,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons,new Settings());
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons,settings);
 
         // Set the background color of the window
         SetBackroundColor();
@@ -50,6 +66,7 @@ public partial class MainWindow : Window
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
+        settings.SaveToJsonFile("Settings.json");
     }
 
     private void SliderPenSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -209,6 +226,7 @@ public partial class MainWindow : Window
     private void MenuItem_Click_2(object sender, RoutedEventArgs e)
     {
         this.Close();
+        settings.SaveToJsonFile("Settings.json");
     }
 
     private void ButtonAddFrame_Click(object sender, RoutedEventArgs e)

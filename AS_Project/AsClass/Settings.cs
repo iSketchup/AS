@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
@@ -29,6 +31,40 @@ namespace AsClass
             FrameHeight = frameHeight;
             FPS = fps;
         }
-           
+
+
+       
+
+
+        public void SaveToJsonFile(string filePath)
+        {
+            string jsonString = JsonSerializer.Serialize(this);
+         
+            using (StreamWriter stream = new StreamWriter(filePath,false))
+            {
+                stream.Write(jsonString);
+            }
+        }
+
+        public static Settings LoadFromJson(string filepath)
+        {
+            Settings settings = new Settings();
+
+            if (File.Exists(filepath) == true)
+            {
+                settings = null;
+                
+                using (StreamReader stream = new StreamReader(filepath))
+                {
+                    string SerilizeData = stream.ReadToEnd();
+
+                    settings = JsonSerializer.Deserialize<Settings>(SerilizeData);
+
+                }
+              
+            }
+            return settings;
+
+        }
     }
 }

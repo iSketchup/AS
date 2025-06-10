@@ -48,6 +48,7 @@ namespace AsClass
             this.setting = setting;
 
             this.listview = ListviewFramebutton;
+            ListviewFramebutton.Items.Clear();
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), setting));
 
             Update();

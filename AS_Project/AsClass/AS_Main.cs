@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using Xceed.Wpf.Toolkit;
@@ -26,15 +28,23 @@ namespace AsClass
             set
             {
                 _settings = value;
-                animation = new(animation.listview, animation.VisibleImg, _settings);
+                animation = new(animation.listview, animation.VisibleImg, settings);
 
                 imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
             }
         }
         public Image imageBackground { get; set; }
 
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
         {
+            if (File.Exists("Settings.Json"))
+            {
+                _settings = Settings.LoadFromJson("Settings.Json");
+            }
+            else
+            {
+                this._settings = settings;
+            }
             animation = new(listView, imageDraw, settings);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
@@ -43,7 +53,7 @@ namespace AsClass
 
             this.imageBackground = imageBackground;
 
-            this.settings = settings;
+       
 
 
         }

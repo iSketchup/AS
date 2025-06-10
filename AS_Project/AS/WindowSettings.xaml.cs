@@ -27,7 +27,18 @@ namespace AS
         {
             InitializeComponent();
 
+            if (settings != null && File.Exists("Settings.json"))
+            {
+                settings = Settings.LoadFromJson("Settings.json");
 
+                WidthTextBox.Text = settings.FrameWidth.ToString();
+                HeightTextBox.Text = settings.FrameHeight.ToString();
+                FPSTextBox.Text = settings.FPS.ToString();
+            }
+            else
+            {
+                settings = new Settings();
+            }
         }
 
 
@@ -65,6 +76,7 @@ namespace AS
 
 
                 this.DialogResult = true;
+                settings.SaveToJsonFile("Settings.json");
             }
 
 
