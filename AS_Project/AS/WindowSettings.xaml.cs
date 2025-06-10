@@ -75,8 +75,8 @@ namespace AS
                 settings = new Settings(width, height, FPS);
 
 
-                this.DialogResult = true;
                 settings.SaveToJsonFile("Settings.json");
+                this.DialogResult = true;
             }
 
 
