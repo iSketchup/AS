@@ -194,7 +194,8 @@
 
             </StackPanel>
 
-            <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" MouseWheel="CanvDraw_MouseWheel" MouseRightButtonDown="CanvDraw_MouseRightButtonDown" MouseRightButtonUp="CanvDraw_MouseRightButtonUp" MouseMove="CanvDraw_MouseMove" >
+            <Border BorderBrush="AntiqueWhite" BorderThickness="2">
+            <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseWheel="CanvDraw_MouseWheel" MouseRightButtonDown="CanvDraw_MouseRightButtonDown" MouseRightButtonUp="CanvDraw_MouseRightButtonUp" MouseMove="CanvDraw_MouseMove" >
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform x:Name="canvasScale" ScaleX="1" ScaleY="1" />
@@ -203,8 +204,9 @@
             </Canvas.RenderTransform>
 
                 <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor"  />
-                <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseDown="MouseLeftDown" MouseUp="MouseLeftUp"/>
+                <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseLeftButtonDown="MouseLeftDown" MouseLeftButtonUp="MouseLeftUp"/>
             </Canvas>
+            </Border>
         </Grid>
 
     </Viewbox>

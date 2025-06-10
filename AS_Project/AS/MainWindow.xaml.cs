@@ -279,6 +279,11 @@ public partial class MainWindow : Window
         if (!dragging) return;
 
         Point currentPoint = e.GetPosition(this);
+
+        if (currentPoint.X < 0 || currentPoint.Y < 0 || currentPoint.X > CanvDraw.ActualWidth || currentPoint.Y > CanvDraw.ActualHeight)
+           return;
+        // bounds berechnung
+
         Vector delta = currentPoint - lastDragPoint;
 
         canvasTranslate.X += delta.X;
