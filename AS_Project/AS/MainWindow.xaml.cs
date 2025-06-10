@@ -287,6 +287,23 @@ public partial class MainWindow : Window
         //   return;
         // bounds berechnung
 
+
+        // Mausposition relativ zum Canvas (z.B. von MouseEventArgs)
+        //Point currentPoint = e.GetPosition(myCanvas);
+
+        // Mausposition relativ zum verschobenen Inhalt
+        // double adjustedX = currentPoint.X - canvasTranslate.X;
+        // double adjustedY = currentPoint.Y - canvasTranslate.Y;
+
+        // Check, ob innerhalb der sichtbaren Canvas-Grenzen (z.B. Inhaltegröße)
+        // if (adjustedX < 0 || adjustedY < 0 || adjustedX > myCanvas.ActualWidth || adjustedY > myCanvas.ActualHeight)
+        // {
+        //    return; // Maus außerhalb des sichtbaren Inhalts -> abbrechen
+        // }
+
+
+
+
         Vector delta = currentPoint - lastDragPoint;
 
         canvasTranslate.X += delta.X;
