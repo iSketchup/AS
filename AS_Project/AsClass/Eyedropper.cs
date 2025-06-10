@@ -63,7 +63,7 @@ namespace AsClass
                 newColor.R = pixel[2];
 
 
-                SelectedColor = newColor;
+                _selectedColor = newColor;
 
             }
             wb.Unlock();
