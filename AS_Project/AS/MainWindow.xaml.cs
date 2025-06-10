@@ -1,10 +1,12 @@
 ﻿using AsClass;
 using Serilog;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 
 namespace AS;
@@ -43,7 +45,7 @@ public partial class MainWindow : Window
     public bool dragging = false;
 
     private Point lastDragPoint;
-
+  
 
     public MainWindow()
     {
@@ -73,6 +75,8 @@ public partial class MainWindow : Window
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
+
+        settings = Settings.LoadFromJson ("Settings.json");         
         settings.SaveToJsonFile("Settings.json");
         this.Close();
     }
@@ -186,14 +190,32 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_1(object sender, RoutedEventArgs e)
     {
-        WindowSettings windowSettings = new WindowSettings();
-
-        if (windowSettings.ShowDialog() == true)
+        if (File.Exists("Settings.json"))
         {
-            Sigma.settings = windowSettings.settings;
 
-            Log.Debug("WindowSettings dialog closed with OK");
+            WindowSettings windowSettings = new WindowSettings(Settings.LoadFromJson("Settings.json"));
+
+            if (windowSettings.ShowDialog() == true)
+            {
+                Sigma.settings = windowSettings.settings;
+
+                Log.Debug("WindowSettings dialog closed with OK");
+            }
         }
+        else
+        {
+            WindowSettings windowSettings = new WindowSettings();
+
+            if (windowSettings.ShowDialog() == true)
+            {
+                Sigma.settings = windowSettings.settings;
+
+                Log.Debug("WindowSettings dialog closed with OK");
+            }
+        }
+       
+
+        
 
     }
 
@@ -213,10 +235,30 @@ public partial class MainWindow : Window
         {
             case true:
                 Sigma.animation.running = false;
+                System.Windows.Shapes.Path pathStart = new System.Windows.Shapes.Path
+                {
+                    Data = Geometry.Parse("m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"),
+                    Fill = Brushes.Black,
+                    Margin = new Thickness(0, 0, 5, 2)
+                    
+                };
+
+                ButtonStopFrame.Content = pathStart;
                 break;
 
             case false:
                 Sigma.animation.running = true;
+               
+                System.Windows.Shapes.Path pathstop = new System.Windows.Shapes.Path
+                {
+                    Data = Geometry.Parse("M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"),
+                    Fill = Brushes.Black,
+                    Margin = new Thickness(0, 0, 5, 2),
+                    
+                };
+
+
+                ButtonStopFrame.Content = pathstop;
                 break;
         }
     }
@@ -231,7 +273,6 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_2(object sender, RoutedEventArgs e)
     {
-        settings.SaveToJsonFile("Settings.json");
         this.Close();
     }
 

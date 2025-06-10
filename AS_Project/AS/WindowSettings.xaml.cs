@@ -31,14 +31,27 @@ namespace AS
             {
                 settings = Settings.LoadFromJson("Settings.json");
 
-                WidthTextBox.Text = settings.FrameWidth.ToString();
-                HeightTextBox.Text = settings.FrameHeight.ToString();
-                FPSTextBox.Text = settings.FPS.ToString();
+                
             }
             else
             {
                 settings = new Settings();
             }
+
+            WidthTextBox.Text = settings.FrameWidth.ToString();
+            HeightTextBox.Text = settings.FrameHeight.ToString();
+            FPSTextBox.Text = settings.FPS.ToString();
+        }
+
+        public WindowSettings(Settings settings)
+        {
+            InitializeComponent();
+
+            this.settings = settings;
+
+            WidthTextBox.Text = settings.FrameWidth.ToString();
+            HeightTextBox.Text = settings.FrameHeight.ToString();
+            FPSTextBox.Text = settings.FPS.ToString();
         }
 
 
@@ -75,7 +88,10 @@ namespace AS
                 settings = new Settings(width, height, FPS);
 
 
-                settings.SaveToJsonFile("Settings.json");
+               settings.SaveToJsonFile("Settings.json");
+
+
+
                 this.DialogResult = true;
             }
 
@@ -84,6 +100,7 @@ namespace AS
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+           
             this.Close();
         }
     }

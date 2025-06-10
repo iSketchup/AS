@@ -39,10 +39,12 @@ namespace AsClass
         public void SaveToJsonFile(string filePath)
         {
             string jsonString = JsonSerializer.Serialize(this);
+
+           
          
             using (StreamWriter stream = new StreamWriter(filePath,false))
             {
-                stream.WriteLine(jsonString);
+                stream.Write(jsonString);
             }
         }
 

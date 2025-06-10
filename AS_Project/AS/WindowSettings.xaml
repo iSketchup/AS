@@ -66,9 +66,9 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" >
-            <TextBox x:Name="WidthTextBox" Text="500" HorizontalAlignment="Left" Width="200" FontSize="20" Margin="10 20 0 0" />
-            <TextBox x:Name="HeightTextBox" Text="240" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 20 0 0"/>
-            <TextBox x:Name="FPSTextBox" Text="10" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 30 0 0"/>
+            <TextBox x:Name="WidthTextBox" Text="" HorizontalAlignment="Left" Width="200" FontSize="20" Margin="10 20 0 0" />
+            <TextBox x:Name="HeightTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 20 0 0"/>
+            <TextBox x:Name="FPSTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 30 0 0"/>
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="2" Width="200"  Content="Apply Settings" HorizontalAlignment="Right" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_1" IsDefault="True"/>
 
