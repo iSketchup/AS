@@ -27,15 +27,18 @@ namespace AsClass
             get { return _settings; }
             set
             {
-                _settings = value;
-                animation = new(animation.listview, animation.VisibleImg, settings);
+
+              
+               
+                animation = new(animation.listview, animation.VisibleImg, _settings);
 
                 imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
+                
             }
         }
         public Image imageBackground { get; set; }
 
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView,Settings settings)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
         {
             if (File.Exists("Settings.Json"))
             {
@@ -43,13 +46,15 @@ namespace AsClass
             }
             else
             {
-                this._settings = settings;
+                _settings = new Settings();
             }
+
             animation = new(listView, imageDraw, settings);
 
             colorpallet = new Colorpallet(wrapPanel, pen);
 
             Eyedropper = new Eyedropper(colorpallet);
+
 
             this.imageBackground = imageBackground;
 

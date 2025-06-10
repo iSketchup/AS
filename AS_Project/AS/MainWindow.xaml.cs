@@ -45,7 +45,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons,settings);
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons);
 
         // Set the background color of the window
         SetBackroundColor();

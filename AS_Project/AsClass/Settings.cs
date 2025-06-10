@@ -42,7 +42,7 @@ namespace AsClass
          
             using (StreamWriter stream = new StreamWriter(filePath,false))
             {
-                stream.Write(jsonString);
+                stream.WriteLine(jsonString);
             }
         }
 
