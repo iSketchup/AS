@@ -60,7 +60,7 @@ namespace AsClass
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
-
+            
         }
 
 
