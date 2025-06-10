@@ -16,8 +16,6 @@ namespace AsClass
         public Eyedropper Eyedropper;
         public Colorpallet colorpallet;
 
-        private int tickcount = 0;
-
 
         public bool MouseButtonPressed { get; set; } = false;
 
@@ -56,9 +54,6 @@ namespace AsClass
 
         public void Tick()
         {
-            tickcount++;
-
-
             Point pos = Mouse.GetPosition(animation.VisibleImg);
 
             if (MouseButtonPressed && pen.active)
@@ -70,10 +65,7 @@ namespace AsClass
             {
                 Eyedropper.GetColor((int)pos.X, (int)pos.Y, animation.SelectedFrame.wb);
             }
-            if (tickcount % settings.FPS == 0 && animation.running)
-            {
                 animation.Tick();
-            }
         }
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)

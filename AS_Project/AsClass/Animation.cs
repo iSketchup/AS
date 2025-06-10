@@ -35,6 +35,7 @@ namespace AsClass
 
             }
         }
+        private TimeOnly lasttime = TimeOnly.FromDateTime(DateTime.Now);
 
         public ListView listview;
         public Image VisibleImg { get; set; }
@@ -87,7 +88,20 @@ namespace AsClass
 
         public void Tick()
         {
-            NextFrame();
+
+            TimeOnly now = TimeOnly.FromDateTime(DateTime.Now);
+
+            int timePast = (int)(now - lasttime).TotalMilliseconds;
+
+
+
+            if (running && timePast >= 1000/ setting.FPS)
+            {
+                lasttime = now;
+                NextFrame();
+
+            }
+
         }
     }
 
