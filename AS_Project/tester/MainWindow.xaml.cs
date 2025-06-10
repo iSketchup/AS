@@ -16,70 +16,63 @@ using System.Windows.Media.Media3D;
 
 namespace tester
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public WriteableBitmap wb = new WriteableBitmap(100, 100, 96, 96, PixelFormats.Bgra32, null);
 
-        public MainWindow()
+        public partial class MainWindow : Window
         {
-            InitializeComponent();
+            private Point lastDragPoint;
+            private bool isDragging = false;
 
-            ZeigeRotesBild((byte)beep.Value);
-            img.Source = wb;
-        }
-
-        void ZeigeRotesBild(byte beep)
-        {
-            int stritde = wb.BackBufferStride;
-
-            wb.Lock();
-
-            unsafe
+            public MainWindow()
             {
-                byte* buffer = (byte*)wb.BackBuffer;
+                InitializeComponent();
+            }
 
-                for (int y = 0; y < 100; y++)
-                {
-                    for (int x = 0; x < 100; x++)
-                    {
+            private void Canvas_MouseWheel(object sender, MouseWheelEventArgs e)
+            {
+                const double zoomSpeed = 0.1;
 
-                        byte* pixel = buffer + y * stritde + x * 4;
+                double oldScale = canvasScale.ScaleX;
+                double newScale = oldScale;
 
-                        pixel[3] = beep;
+                if (e.Delta > 0)
+                    newScale = oldScale + zoomSpeed;
+                else if (e.Delta < 0)
+                    newScale = Math.Max(0.1, oldScale - zoomSpeed);
 
-                            if (((x / 10) + (y / 10)) % 2 == 0)
-                        {
-                            pixel[0] = 153;
-                            pixel[1] = 153;
-                            pixel[2] = 153;
-                            }
-                        else
-                        {
-                            pixel[0] = 204;
-                            pixel[1] = 204;
-                            pixel[2] = 204;
-                        }
+                Point mousePos = e.GetPosition(MyCanvas);
 
+                // Verschiebung anpassen, damit Mausposition fixiert bleibt
+                canvasTranslate.X -= (mousePos.X) * (newScale - oldScale);
+                canvasTranslate.Y -= (mousePos.Y) * (newScale - oldScale);
 
-                            
-                            }
-                    }
+                canvasScale.ScaleX = newScale;
+                canvasScale.ScaleY = newScale;
+            }
 
-            wb.AddDirtyRect(new Int32Rect(0, 0, 100, 100));
+            private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+            {
+                isDragging = true;
+                lastDragPoint = e.GetPosition(this);
+                MyCanvas.CaptureMouse();
+            }
 
+            private void Canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+            {
+                isDragging = false;
+                MyCanvas.ReleaseMouseCapture();
+            }
 
+            private void Canvas_MouseMove(object sender, MouseEventArgs e)
+            {
+                if (!isDragging) return;
 
-                    }
-            wb.Unlock();
-        }
+                Point currentPoint = e.GetPosition(this);
+                Vector delta = currentPoint - lastDragPoint;
 
-        private void beep_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+                canvasTranslate.X += delta.X;
+                canvasTranslate.Y += delta.Y;
 
-            ZeigeRotesBild((byte)beep.Value);
+                lastDragPoint = currentPoint;
+            }
         }
     }
-}

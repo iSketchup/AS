@@ -69,13 +69,13 @@
 
 
     </Window.Resources>
-    
-    
-    
-    
-    
-    
-    <Viewbox Stretch="Fill" >
+
+
+
+
+
+
+    <Viewbox Stretch="Fill" MouseUp="MouseLeftUp">
         
         
         <Grid x:Name="Grid" >

@@ -6,11 +6,22 @@
         xmlns:local="clr-namespace:tester"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas x:Name="x" Background="AliceBlue">
-    
-        <Image x:Name="img"/>
+    <Grid>
+        <Canvas Name="MyCanvas" Background="LightGray"
+                MouseWheel="Canvas_MouseWheel"
+                MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+                MouseLeftButtonUp="Canvas_MouseLeftButtonUp"
+                MouseMove="Canvas_MouseMove">
 
-        <Slider x:Name="beep" Minimum="1" Maximum="255" Value="255" Canvas.Left="347" Canvas.Top="154" HorizontalAlignment="Left" VerticalAlignment="Center" Width="229" ValueChanged="beep_ValueChanged"></Slider>
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="canvasScale" ScaleX="1" ScaleY="1" />
+                    <TranslateTransform x:Name="canvasTranslate" X="0" Y="0" />
+                </TransformGroup>
+            </Canvas.RenderTransform>
 
-    </Canvas>
+            <!-- Beispielobjekt -->
+            <Ellipse Canvas.Left="100" Canvas.Top="100" Width="100" Height="100" Fill="Blue"/>
+        </Canvas>
+    </Grid>
 </Window>
