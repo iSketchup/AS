@@ -17,7 +17,6 @@ public partial class MainWindow : Window
 
 
     private AS_Main Sigma;
-    private bool MousButtonPressed = false;
 
     public Settings settings;
 
@@ -102,18 +101,17 @@ public partial class MainWindow : Window
 
     private void Loop(object s, EventArgs e)
     {
-        if (MousButtonPressed)
             Sigma.Tick();
     }
 
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
-        MousButtonPressed = true;
+        Sigma.MousButtonPressed = true;
     }
 
     private void MouseLeftUp(object sender, MouseButtonEventArgs e)
     {
-        MousButtonPressed = false;
+        Sigma.MousButtonPressed = false;
     }
 
     private void ButtonNewFrame_Click(object sender, RoutedEventArgs e)
@@ -185,10 +183,10 @@ public partial class MainWindow : Window
             case true:
                 Sigma.Animation.running = false;
                 break;
+
             case false:
                 Sigma.Animation.running = true;
                 break;
-            default:
         }
     }
 

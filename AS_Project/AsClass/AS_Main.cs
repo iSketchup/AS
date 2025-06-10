@@ -19,6 +19,7 @@ namespace AsClass
 
         private int tickcount = 0;
 
+        public bool MousButtonPressed { get;  set; } = false;
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
@@ -35,9 +36,10 @@ namespace AsClass
         {
             tickcount++;
 
-            Point pos = Mouse.GetPosition(Animation.VisibleImg);
-            pen.Draw(Animation.SelectedFrame, pos);
-
+            if (MousButtonPressed) { 
+                Point pos = Mouse.GetPosition(Animation.VisibleImg);
+                pen.Draw(Animation.SelectedFrame, pos);
+}
             if (tickcount % settings.FPS == 0 && Animation.running)
             {
                 Animation.Tick();
