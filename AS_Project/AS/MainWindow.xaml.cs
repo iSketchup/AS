@@ -69,7 +69,7 @@ public partial class MainWindow : Window
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
-        settings.SaveToJsonFile("Settings.json");
+        
     }
 
     private void SliderPenSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

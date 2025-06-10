@@ -18,19 +18,20 @@
 - Pixel Art Editor
 - Brush und Eraser
 - Farbpallete (Wrappanel)
-- Serialisierung von sprites
 - Colorpicker HEX
 - camera zoom
-- Copy/Paste Buttons
+-  bleibende Settings
 
 ## Nice to Have
 
 - Animation mit Sprite sheets
 - Ladbare Farbpallete
+- Copy/Paste Buttons
+- Serialisierung von sprites
 - Eyedrop tool
 - Layers
 - Serializierung von Animation zum Sprite sheet (in Metadaten)
-- bleibende settings
+
 
 ## Arbeitsteilung
 #### Luis:
