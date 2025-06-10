@@ -192,7 +192,7 @@ public partial class MainWindow : Window
 
     private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
     {
-       
+        Cursor = Cursors.UpArrow;
     }
 
 }
