@@ -9,13 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\eraser.png" />
-    <None Remove="Assets\eyedropper.png" />
-    <None Remove="Assets\pause-btn.png" />
-    <None Remove="Assets\pencil.png" />
-    <None Remove="Assets\play-fill.png" />
-    <None Remove="Assets\skip-end-fill.png" />
-    <None Remove="Assets\skip-start-fill.png" />
+    <None Remove="Assets\skip-start-fill.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,13 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\eraser.png" />
-    <Resource Include="Assets\eyedropper.png" />
-    <Resource Include="Assets\pause-btn.png" />
-    <Resource Include="Assets\pencil.png" />
-    <Resource Include="Assets\play-fill.png" />
-    <Resource Include="Assets\skip-end-fill.png" />
-    <Resource Include="Assets\skip-start-fill.png" />
+    <Resource Include="Assets\skip-start-fill.svg" />
   </ItemGroup>
 
   <ItemGroup>

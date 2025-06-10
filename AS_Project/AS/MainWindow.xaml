@@ -129,13 +129,13 @@
 
             <StackPanel x:Name="StackpanelTools" Orientation="Vertical" Grid.Column="0"  Grid.Row="1"  >
                 <Button x:Name="ButtonBrush"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonBrush_Click"  >
-                    <Image Source="Assets/pencil.png" Width="10" Height="10" IsHitTestVisible="False"/>
+                    <Path Data="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" Fill="Black" />
                 </Button>
                 <Button x:Name="ButtonEraser"  Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEraser_Click"  >
-                    <Image Source="Assets/eraser.png" Width="10" Height="10" IsHitTestVisible="False" />
+                    <Path Data="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z" Fill="Black"/>
                 </Button>
                 <Button x:Name="ButtonEyedropper" Margin="5" Style="{StaticResource  ToolButtonStyle}" Click="ButtonEyedropper_Click" >
-                    <Image Source="Assets/eyedropper.png" Width="10" Height="10" IsHitTestVisible="False" />
+                    <Path Data="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708zM2 12.707l7-7L10.293 7l-7 7H2z" Fill="Black"/>
                 </Button>
             </StackPanel>
 
@@ -167,13 +167,13 @@
           
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button x:Name="ButtonPreviuosFrame"  FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click">
-                    <Image Source="Assets/skip-start-fill.png" Width="10" Height="10" IsHitTestVisible="False" />
+                    <Path Data="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z" Fill="Black"/>
                 </Button>
                 <Button x:Name="ButtonStopFrame"  FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonStopFrame_Click">
-                    <Image Source="Assets/play-fill.png" Width="10" Height="10" IsHitTestVisible="False" />
+                    <Path Data="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" Fill="Black"/>
                 </Button>
                 <Button x:Name="ButtonsNextFrane" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click">
-                    <Image Source="Assets/skip-end-fill.png" Width="20" Height="10" IsHitTestVisible="False" />
+                    <Path Data="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z" Fill="Black"/>
                 </Button>
 
 
