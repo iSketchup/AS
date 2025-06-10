@@ -25,7 +25,7 @@ namespace AsClass
 
 
                 _selectedColor = value;
-                colorpallet.Activecolor = new SolidColorBrush(value);
+               
                
             }
         }
@@ -71,7 +71,7 @@ namespace AsClass
                 newColor.R = pixel[2];
 
 
-                _selectedColor = newColor;
+                colorpallet.Activecolor = new SolidColorBrush(newColor);
 
             }
             wb.Unlock();
