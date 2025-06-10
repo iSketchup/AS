@@ -80,6 +80,9 @@ public partial class MainWindow : Window
 
     private void ButtonBrush_Click(object sender, RoutedEventArgs e)
     {
+
+        Sigma.Eyedropper.active = false;
+        Sigma.pen.active = true;
         Sigma.ButtonBrush_Click(sender, e);
         Cursor = Cursors.Pen;
         Log.Debug("PenClicked");
@@ -87,6 +90,8 @@ public partial class MainWindow : Window
 
     private void ButtonEraser_Click(object sender, RoutedEventArgs e)
     {
+        Sigma.Eyedropper.active = false;
+        Sigma.pen.active = true;
         Sigma.ButtonEraser_Click(sender, e);
         Cursor = Cursors.Cross;
         Log.Debug("EraserClicked");
@@ -106,12 +111,12 @@ public partial class MainWindow : Window
 
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
-        Sigma.MousButtonPressed = true;
+        Sigma.MouseButtonPressed = true;
     }
 
     private void MouseLeftUp(object sender, MouseButtonEventArgs e)
     {
-        Sigma.MousButtonPressed = false;
+        Sigma.MouseButtonPressed = false;
     }
 
     private void ButtonNewFrame_Click(object sender, RoutedEventArgs e)
@@ -192,7 +197,8 @@ public partial class MainWindow : Window
 
     private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
     {
-       
+       Sigma.pen.active = false;
+       Sigma.Eyedropper.active = true;
     }
 
 }

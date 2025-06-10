@@ -11,7 +11,7 @@ namespace AsClass
     
      public class Pen
     {
-        internal bool active;
+        public bool active = true;
 
         public int Size { get; set; } = 1;
 

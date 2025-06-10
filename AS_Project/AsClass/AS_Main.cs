@@ -3,8 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Threading;
 using Xceed.Wpf.Toolkit;
 
 namespace AsClass
@@ -13,14 +11,14 @@ namespace AsClass
     {
         public Animation Animation;
         public Pen pen = new();
-        public Eyedropper Eyedropper;
+        public Eyedropper Eyedropper = new();
         public Colorpallet colorpallet;
 
         public Settings settings;
 
         private int tickcount = 0;
 
-        public bool MouseButtonPressed { get;  set; } = false;
+        public bool MouseButtonPressed { get; set; } = false;
 
         public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
@@ -31,6 +29,7 @@ namespace AsClass
             this.settings = settings;
 
             imageBackground.Source = Frame.BackgroundMaker(500, 240);
+
         }
 
         public void Tick()
@@ -38,7 +37,7 @@ namespace AsClass
             tickcount++;
 
             Point pos = Mouse.GetPosition(Animation.VisibleImg);
-            
+
             if (MouseButtonPressed && pen.active)
             {
                 pen.Draw(Animation.SelectedFrame, pos);
