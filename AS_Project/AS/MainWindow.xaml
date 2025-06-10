@@ -167,13 +167,13 @@
           
             <StackPanel x:Name="StackPanelAnimationBar" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button x:Name="ButtonPreviuosFrame"  FontSize="15"  Margin="20 20 0 10" Height="20" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonPreviuosFrame_Click">
-                    <Path Data="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z" Fill="Black"/>
+                    <Path Data="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z" Fill="Black" Margin="0 0 5 2" />
                 </Button>
                 <Button x:Name="ButtonStopFrame"  FontSize="15" Height="20" Margin="10 20 0 10 " Padding="15 0 15 0" BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonStopFrame_Click">
-                    <Path Data="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" Fill="Black"/>
+                    <Path Data="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" Fill="Black"  Margin="0 0 5 2"/>
                 </Button>
                 <Button x:Name="ButtonsNextFrane" FontSize="15 " Height="20" Margin="10 20 0 10 " BorderThickness="0" Style="{StaticResource  ToolButtonStyle}" Click="ButtonsNextFrane_Click">
-                    <Path Data="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z" Fill="Black"/>
+                    <Path Data="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z" Fill="Black"  Margin="0 0 5 2"/>
                 </Button>
 
 
