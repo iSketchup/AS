@@ -23,8 +23,9 @@ namespace AsClass
         public Settings settings
         {
             get { return _settings; }
-            set { 
-                _settings = value; 
+            set
+            {
+                _settings = value;
                 animation = new(animation.listview, animation.VisibleImg, _settings);
 
                 imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
