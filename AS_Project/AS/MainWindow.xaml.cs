@@ -20,7 +20,12 @@ public partial class MainWindow : Window
     private AS_Main Sigma;
 
     private Settings _settings;
-    public Settings settings { get { return _settings; }
+    public Settings settings
+    {
+        get
+        {
+            return _settings;
+        }
         set
         {
             if (File.Exists("Settings.Json"))
@@ -29,12 +34,11 @@ public partial class MainWindow : Window
             }
             else
             {
-                _settings = new Settings();
-                _settings = value;
+                _settings = new Settings(500, 240, 10);
             }
         }
 
-        }
+    }
 
     public bool dragging = false;
 
@@ -45,9 +49,10 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons);
+        settings = new Settings();
 
-        // Set the background color of the window
+        Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons, settings);
+
         SetBackroundColor();
 
 
@@ -68,8 +73,8 @@ public partial class MainWindow : Window
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
+        settings.SaveToJsonFile("Settings.json");
         this.Close();
-        
     }
 
     private void SliderPenSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -185,9 +190,7 @@ public partial class MainWindow : Window
 
         if (windowSettings.ShowDialog() == true)
         {
-
-            settings = windowSettings.settings;
-            Sigma.settings = settings;
+            Sigma.settings = windowSettings.settings;
 
             Log.Debug("WindowSettings dialog closed with OK");
         }
@@ -228,8 +231,8 @@ public partial class MainWindow : Window
 
     private void MenuItem_Click_2(object sender, RoutedEventArgs e)
     {
-        this.Close();
         settings.SaveToJsonFile("Settings.json");
+        this.Close();
     }
 
     private void ButtonAddFrame_Click(object sender, RoutedEventArgs e)
@@ -280,8 +283,8 @@ public partial class MainWindow : Window
 
         Point currentPoint = e.GetPosition(this);
 
-        if (currentPoint.X < 0 || currentPoint.Y < 0 || currentPoint.X > CanvDraw.ActualWidth || currentPoint.Y > CanvDraw.ActualHeight)
-           return;
+        //if (currentPoint.X < 0 || currentPoint.Y < 0 || currentPoint.X > CanvDraw.ActualWidth || currentPoint.Y > CanvDraw.ActualHeight)
+        //   return;
         // bounds berechnung
 
         Vector delta = currentPoint - lastDragPoint;

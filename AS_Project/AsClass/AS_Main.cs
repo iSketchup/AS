@@ -27,38 +27,28 @@ namespace AsClass
             get { return _settings; }
             set
             {
+                _settings = value;
+                animation = new(animation.listview, animation.VisibleImg, value);
 
-              
-               
-                animation = new(animation.listview, animation.VisibleImg, _settings);
-
-                imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
-                
+                imageBackground.Source = Frame.BackgroundMaker(value.FrameWidth, value.FrameHeight);
             }
         }
         public Image imageBackground { get; set; }
 
-        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView)
+        public AS_Main(Image imageDraw, Image imageBackground, WrapPanel wrapPanel, ListView listView, Settings settings)
         {
-            if (File.Exists("Settings.Json"))
-            {
-                _settings = Settings.LoadFromJson("Settings.Json");
-            }
-            else
-            {
-                _settings = new Settings();
-            }
-
             animation = new(listView, imageDraw, settings);
-
+            _settings = settings;
             colorpallet = new Colorpallet(wrapPanel, pen);
 
             Eyedropper = new Eyedropper(colorpallet);
 
 
+            imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
             this.imageBackground = imageBackground;
 
-       
+
+
 
 
         }
