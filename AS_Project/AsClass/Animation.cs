@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.IO;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace AsClass
 {
@@ -118,6 +120,15 @@ namespace AsClass
 
         }
 
+        internal void SaveTo(string path)
+        {
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                PngBitmapEncoder encoder = new PngBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(SelectedFrame.wb));
+                encoder.Save(stream);
+            }
+        }
     }
 
 }

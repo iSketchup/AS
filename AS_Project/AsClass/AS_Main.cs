@@ -133,5 +133,10 @@ namespace AsClass
         {
             animation = new(animation.listview, animation.VisibleImg, path);
         }
+
+        public void SaveTo(string path)
+        {
+            animation.SaveTo(path);
+        }
     }
 }

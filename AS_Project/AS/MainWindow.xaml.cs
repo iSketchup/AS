@@ -412,12 +412,22 @@ public partial class MainWindow : Window
 
     }
 
+    [STAThread]
     private void ButtonSave_Click(object sender, RoutedEventArgs e)
     {
 
-    }
+        SaveFileDialog dialog = new SaveFileDialog();
+        dialog.Title = "Speichern unter...";
+        dialog.Filter = "PNG-Dateien (*.png)|*.png";
 
-    [STAThread]
+        if (dialog.ShowDialog() == true)
+        {
+            string path = dialog.FileName;
+            
+            Sigma.SaveTo(path);
+
+        }
+    }
     private void ButtonLoad_Click(object sender, RoutedEventArgs e)
 
     {
@@ -434,5 +444,7 @@ public partial class MainWindow : Window
 
         }
     }
+
+    
 
 }
