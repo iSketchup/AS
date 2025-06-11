@@ -67,6 +67,8 @@ public partial class MainWindow : Window
 
         Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
 
+      
+
         CompositionTarget.Rendering += Loop;
 
 
