@@ -1,4 +1,5 @@
 ﻿using AsClass;
+using Microsoft.Win32;
 using Serilog;
 using System.IO;
 using System.Windows;
@@ -367,7 +368,7 @@ public partial class MainWindow : Window
 
     private void KeyHandler(object sender, KeyEventArgs e)
     {
-        switch (e.Key) 
+        switch (e.Key)
         {
             case Key.B:
                 ButtonBrush_Click(sender, e);
@@ -400,10 +401,38 @@ public partial class MainWindow : Window
             return;
         }
 
-        if(Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.N))
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.N))
         {
             Sigma.settings = settings;
         }
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.S))
+        {
+            ButtonSave_Click(sender, e);
+        }
 
     }
+
+    private void ButtonSave_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    [STAThread]
+    private void ButtonLoad_Click(object sender, RoutedEventArgs e)
+
+    {
+
+        OpenFileDialog dialog = new OpenFileDialog();
+        dialog.Title = "Bitte wähle eine Datei aus";
+        dialog.Filter = "Png-Dateien (*.png)|*.png";
+
+        if (dialog.ShowDialog() == true)
+        {
+            string path = dialog.FileName;
+
+            Sigma.LoadFrom(path);
+
+        }
+    }
+
 }

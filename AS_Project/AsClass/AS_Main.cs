@@ -115,9 +115,9 @@ namespace AsClass
             }
         }
 
-        public void MarkActiveTool(Button button, bool isaciv)
+        public void MarkActiveTool(Button button, bool isactiv)
         {
-            if (isaciv)
+            if (isactiv)
             {
                 button.BorderBrush = Brushes.Orange;
                 button.BorderThickness = new Thickness(2);
@@ -127,6 +127,11 @@ namespace AsClass
                 button.BorderBrush = Brushes.Black;
                 button.BorderThickness = new Thickness(0.5);
             }
+        }
+
+        public void LoadFrom(string path)
+        {
+            animation = new(animation.listview, animation.VisibleImg, path);
         }
     }
 }

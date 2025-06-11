@@ -36,7 +36,21 @@ namespace AsClass
             ListView.SelectedItem = this;  // hier frame change
 
 
-        
+
+        }
+        public FrameButton(ListView listview, string name, string path)
+        {
+            InitializeComponent();
+
+            this.Content = name;
+            this.ListView = listview;
+
+            frame = Frame.LoadFrameFrom(path);
+
+            ListView.SelectedItem = this;  // hier frame change
+
+
+
         }
     }
 }
