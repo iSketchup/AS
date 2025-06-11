@@ -15,6 +15,8 @@ namespace AsClass
 
         public int Size { get; set; } = 1;
 
+        public bool isEraser { get; set; } = false; 
+
         public SolidColorBrush color { get; set; } =
             new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));       // Black; 
 

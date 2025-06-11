@@ -79,11 +79,11 @@ namespace AS
             {
                 FPSTextBox.Background = Brushes.Red;
                 FPSTextBox.Foreground  = Brushes.Maroon;
-                FPSTextBox.Text = "FPS must be between 0 and 60";
+                FPSTextBox.Text = "MUST BE 1-60!";
             }
 
 
-            if(string.IsNullOrEmpty(WidthTextBox.Text)==false && isValidWidth == true  && string.IsNullOrEmpty(HeightTextBox.Text) == false && isValidHeight == true && string.IsNullOrEmpty(FPSTextBox.Text) && isValidFPS == true && FPS >0 || FPS <= 60){
+            if(string.IsNullOrEmpty(WidthTextBox.Text)==false && isValidWidth == true  && string.IsNullOrEmpty(HeightTextBox.Text) == false && isValidHeight == true && string.IsNullOrEmpty(FPSTextBox.Text) && isValidFPS == true && FPS > 0  || FPS > 0 && FPS <= 60){
                
                 settings = new Settings(width, height, FPS);
 

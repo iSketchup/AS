@@ -74,7 +74,10 @@ namespace AsClass
         }
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
+
+            
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
+          
 
         }
 
@@ -109,6 +112,20 @@ namespace AsClass
                 colorpallet.initializeColorPallet(label, colorPicker);
 
 
+            }
+        }
+
+        public void MarkActiveTool(Button button, bool isaciv)
+        {
+            if (isaciv)
+            {
+                button.BorderBrush = Brushes.Orange;
+                button.BorderThickness = new Thickness(2);
+            }
+            else
+            {
+                button.BorderBrush = Brushes.Black;
+                button.BorderThickness = new Thickness(0.5);
             }
         }
     }

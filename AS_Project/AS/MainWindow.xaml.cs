@@ -71,6 +71,8 @@ public partial class MainWindow : Window
 
         CompositionTarget.Rendering += Loop;
 
+        
+
     }
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
@@ -114,6 +116,7 @@ public partial class MainWindow : Window
 
         Sigma.Eyedropper.active = false;
         Sigma.pen.active = true;
+        Sigma.pen.isEraser = false;
         Sigma.ButtonBrush_Click(sender, e);
         Cursor = Cursors.Pen;
         Log.Debug("PenClicked");
@@ -122,7 +125,8 @@ public partial class MainWindow : Window
     private void ButtonEraser_Click(object sender, RoutedEventArgs e)
     {
         Sigma.Eyedropper.active = false;
-        Sigma.pen.active = true;
+        Sigma.pen.active = false;
+        Sigma.pen.isEraser = true;
         Sigma.ButtonEraser_Click(sender, e);
         Cursor = Cursors.Cross;
         Log.Debug("EraserClicked");
@@ -138,6 +142,10 @@ public partial class MainWindow : Window
     private void Loop(object s, EventArgs e)
     {
         Sigma.Tick();
+
+        Sigma.MarkActiveTool(ButtonBrush, Sigma.pen.active);
+        Sigma.MarkActiveTool(ButtonEraser, Sigma.pen.isEraser);
+        Sigma.MarkActiveTool(ButtonEyedropper, Sigma.Eyedropper.active);
     }
 
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
@@ -267,6 +275,7 @@ public partial class MainWindow : Window
     {
         Sigma.pen.active = false;
         Sigma.Eyedropper.active = true;
+        Sigma.pen.isEraser = false;
 
         Cursor = Cursors.UpArrow;
     }
