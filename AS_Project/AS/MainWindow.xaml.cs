@@ -67,8 +67,6 @@ public partial class MainWindow : Window
 
         Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
 
-      
-
         CompositionTarget.Rendering += Loop;
 
 
@@ -400,6 +398,11 @@ public partial class MainWindow : Window
         {
             ButtonAddFrame_Click(sender, e);
             return;
+        }
+
+        if(Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.N))
+        {
+            Sigma.settings = settings;
         }
 
     }
