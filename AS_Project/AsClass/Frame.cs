@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -78,6 +79,14 @@ namespace AsClass
 
         }
 
+        public Frame(WriteableBitmap wbn)
+        {
+            this.Width = wbn.PixelWidth;
+            this.Height = wbn.PixelHeight;
+
+            wb = wbn;
+        }
+
         public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)
         {
             Frame.PixelSize = Size * 4;
@@ -129,6 +138,23 @@ namespace AsClass
             ;
         }
 
+        public static Frame LoadFrameFrom(string path)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                bitmapImage.BeginInit();
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.StreamSource = stream;
+                bitmapImage.EndInit();
+                bitmapImage.Freeze();
+            }
+
+            WriteableBitmap writeableBitmap = new WriteableBitmap(bitmapImage);
+
+            return new Frame(writeableBitmap);
+        }
 
     }
 }

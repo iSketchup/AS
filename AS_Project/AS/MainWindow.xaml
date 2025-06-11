@@ -107,8 +107,8 @@
 
                 <MenuItem Header="File" FontSize="6" Height="10" >
                     <MenuItem Header="New" Style="{StaticResource FlatMenuItemStyle}" />
-                    <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}" />
-                    <MenuItem Header="Open" Style="{StaticResource FlatMenuItemStyle}" />
+                    <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonSave_Click"/>
+                    <MenuItem Header="Open" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonLoad_Click"/>
                     <MenuItem Header="Exit" Style="{StaticResource FlatMenuItemStyle}" Click="MenuItem_Click_2" />
                 </MenuItem>
 

@@ -57,6 +57,20 @@ namespace AsClass
 
         }
 
+        public Animation(ListView ListviewFramebutton, Image imageDraw, string path)
+        {
+            VisibleImg = imageDraw;
+            this.listview = ListviewFramebutton;
+            ListviewFramebutton.Items.Clear();
+            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), path));
+
+            Update();
+
+
+        }
+
+
+
         public void Update()
         {
             FrameButton frameButton = (FrameButton)listview.SelectedItem;
@@ -103,6 +117,7 @@ namespace AsClass
             }
 
         }
+
     }
 
 }
