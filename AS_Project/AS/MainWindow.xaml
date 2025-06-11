@@ -69,6 +69,9 @@
 
 
 
+
+
+
     </Window.Resources>
 
 
@@ -183,9 +186,8 @@
                 </Button>
 
 
-                <ListView x:Name="ListviewFramebuttons"
-                            ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                <ListView x:Name="ListviewFramebuttons" ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                           
                             Height="30" Width="300" Margin="40 20 0 10" SelectionChanged="ListviewFramebuttons_SelectionChanged">
 
                     <ListView.ItemsPanel>
@@ -193,6 +195,7 @@
                             <StackPanel Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
+                    
                 </ListView>
 
                 
