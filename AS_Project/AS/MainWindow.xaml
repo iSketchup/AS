@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:AS"
+        KeyDown="KeyHandler"
         mc:Ignorable="d"
         WindowState="Maximized"
         WindowStyle="None"
@@ -75,7 +76,7 @@
 
 
 
-    <Viewbox Stretch="Fill" MouseUp="MouseLeftUp">
+    <Viewbox Stretch="Fill" MouseLeftButtonUp="MouseLeftUp">
 
 
         <Grid x:Name="Grid" >
