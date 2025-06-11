@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
-        Title="WindowSettings" Height="400" Width="500">
+        Title="WindowSettings" Height="420" Width="520">
 
 
     <Window.Resources>
@@ -70,8 +70,14 @@
             <TextBox x:Name="HeightTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 20 0 0"/>
             <TextBox x:Name="FPSTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 30 0 0"/>
         </StackPanel>
-        <Button Grid.Column="1" Grid.Row="2" Width="200"  Content="Apply Settings" HorizontalAlignment="Right" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_1" IsDefault="True"/>
 
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
+            <Label Content="All Frames will be Resetted" HorizontalAlignment="Center" Margin="5" Background="Orange"/>
+            <Button  Width="200"  Content="Apply Settings" HorizontalAlignment="Right" FontSize="20"  Style="{StaticResource ButtonStyle}" Click="Button_Click_1" IsDefault="True"/>
+           
+        </StackPanel>
+       
         <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_2" IsCancel="True"/>
+       
     </Grid>
 </Window>
