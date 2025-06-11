@@ -56,7 +56,7 @@ namespace AsClass
         {
             Point pos = Mouse.GetPosition(animation.VisibleImg);
 
-            if (MouseButtonPressed && pen.active)
+            if (MouseButtonPressed &&( pen.active|| pen.isEraser))
             {
                 pen.Draw(animation.SelectedFrame, pos);
             }
@@ -74,7 +74,7 @@ namespace AsClass
         }
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
-
+         
             
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
           
