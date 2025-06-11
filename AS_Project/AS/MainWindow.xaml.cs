@@ -167,7 +167,12 @@ public partial class MainWindow : Window
 
     private void ListviewFramebuttons_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        if (!this.IsLoaded)
+            return;
+
         int selectedIndex = ListviewFramebuttons.SelectedIndex;
+
+        Sigma.animation.Update();
 
 
         foreach (FrameButton button in ListviewFramebuttons.Items)

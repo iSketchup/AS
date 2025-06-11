@@ -36,13 +36,7 @@ namespace AsClass
             ListView.SelectedItem = this;  // hier frame change
 
 
-        }
-
-        private void ButtonFrame_Click(object sender, RoutedEventArgs e)
-        {
-            ListView.SelectedItem = this;  // hier frame change
-
-
+        
         }
     }
 }
