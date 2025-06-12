@@ -24,7 +24,7 @@ namespace AsClass
             {
                 if (value < 0)
                 {
-                    value = listview.Items.Count;
+                    value = listview.Items.Count-1;
                 }
                 if (value >= listview.Items.Count)
                 {
