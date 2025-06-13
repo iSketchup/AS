@@ -152,6 +152,7 @@ namespace AsClass
 
             ImageFrame<Rgba32> firstFrame = (ImageFrame<Rgba32>)firstImage.Frames.RootFrame;
             GifFrameMetadata firstFrameMetadata = firstFrame.Metadata.GetGifMetadata();
+            firstFrameMetadata.DisposalMethod = GifDisposalMethod.RestoreToBackground;
             firstFrameMetadata.FrameDelay = 1000 / setting.FPS;
             gif.Frames.AddFrame(firstFrame);
 
@@ -163,9 +164,10 @@ namespace AsClass
 
                 Image<Rgba32> img = (Image<Rgba32>)currentFramebutton.frame.sharpImage();
                 ImageFrame<Rgba32> frame = img.Frames.RootFrame;
-                
-                frame.Metadata.GetGifMetadata().FrameDelay = 1000 / setting.FPS;
-                    gif.Frames.AddFrame(frame);
+
+                GifFrameMetadata framemetadata = frame.Metadata.GetGifMetadata();
+                framemetadata.DisposalMethod = GifDisposalMethod.RestoreToBackground;
+                gif.Frames.AddFrame(frame);
                 }
 
 
