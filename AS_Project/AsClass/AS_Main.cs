@@ -144,9 +144,9 @@ namespace AsClass
             animation.SaveToGif(Path);
         }
 
-        public void LoadFromGif(string path, Settings setting)
+        public void LoadFromGIF(string path)
         {
-
+            animation.LoadFromGIF(path, settings);
         }
     }
 }

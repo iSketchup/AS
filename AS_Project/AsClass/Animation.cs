@@ -189,7 +189,7 @@ namespace AsClass
         }
 
 
-        public void LoadFromGIF(string path)
+        public void LoadFromGIF(string path, Settings settings)
         {
             Image<Rgba32> gif = SI.Image.Load<Rgba32>(path);
 
