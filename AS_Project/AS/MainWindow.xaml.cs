@@ -460,13 +460,14 @@ public partial class MainWindow : Window
 
         OpenFileDialog dialog = new OpenFileDialog();
         dialog.Title = "Bitte wähle eine Datei aus";
-        dialog.Filter = "Png-Dateien (*.png)|*.png";
+        dialog.Filter = "GIF-Dateien (*.gif)|*.gif";
+        //        dialog.Filter = "Png-Dateien (*.png)|*.png";
 
         if (dialog.ShowDialog() == true)
         {
             string path = dialog.FileName;
 
-            Sigma.LoadFrom(path);
+            Sigma.animation.LoadFromGIF(path);
 
         }
     }

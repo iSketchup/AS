@@ -82,6 +82,38 @@ namespace AsClass
             return new Frame(writeableBitmap);
         }
 
+        public static WriteableBitmap ToWritableBitmap(ImageFrame<Rgba32> image)
+        {
+            int width = image.Width;
+            int height = image.Height;
+
+
+            Rgba32[] pixelData = new Rgba32[width * height];
+            image.CopyPixelDataTo(pixelData);
+
+            byte[] bgraPixels = new byte[width * height * 4];
+            for (int i = 0; i < pixelData.Length; i++)
+            {
+                int offset = i * 4;
+                Rgba32 rgba = pixelData[i];
+                bgraPixels[offset + 0] = rgba.B;
+                bgraPixels[offset + 1] = rgba.G;
+                bgraPixels[offset + 2] = rgba.R;
+                bgraPixels[offset + 3] = rgba.A;
+            }
+
+            WriteableBitmap wb = new WriteableBitmap(width, height, 96, 96, System.Windows.Media.PixelFormats.Bgra32, null);
+
+            wb.WritePixels(
+                new Int32Rect(0, 0, width, height),
+                bgraPixels,
+                width * 4,
+                0
+            );
+
+            return wb;
+        }
+
 
         public int Width { get; set; }
         public int Height { get; set; }
