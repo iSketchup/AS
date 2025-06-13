@@ -418,7 +418,6 @@ public partial class MainWindow : Window
 
         SaveFileDialog dialog = new SaveFileDialog();
         dialog.Title = "Speichern unter...";
-        //dialog.Filter = "PNG-Dateien (*.png)|*.png";
         dialog.Filter = "Png-Dateien (*.gif)|*.gif";
 
         if (dialog.ShowDialog() == true)
@@ -432,6 +431,17 @@ public partial class MainWindow : Window
     private void ButtonPNGSave_Click(object sender, RoutedEventArgs e)
     {
 
+        SaveFileDialog dialog = new SaveFileDialog();
+        dialog.Title = "Speichern unter...";
+        dialog.Filter = "PNG-Dateien (*.png)|*.png";
+
+        if (dialog.ShowDialog() == true)
+        {
+            string path = dialog.FileName;
+
+            Sigma.SaveCurrentFrame(path);
+
+        }
     }
     private void ButtonLoad_Click(object sender, RoutedEventArgs e)
 
