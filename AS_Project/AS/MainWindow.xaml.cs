@@ -15,7 +15,7 @@ namespace AS;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
+    private Brush BackroundColor = new SolidColorBrush(Color.FromArgb(255, 136, 121, 105));
 
 
     private AS_Main Sigma;
