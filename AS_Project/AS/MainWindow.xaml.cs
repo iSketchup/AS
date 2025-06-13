@@ -397,7 +397,7 @@ public partial class MainWindow : Window
 
         }
 
-        if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.LeftShift) && e.Key == Key.N)
+        if ((Keyboard.Modifiers & ModifierKeys.Alt) == ModifierKeys.Alt && e.SystemKey == Key.N)
         {
             ButtonAddFrame_Click(sender, e);
             return;
@@ -410,6 +410,14 @@ public partial class MainWindow : Window
         if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.S))
         {
             ButtonGIFSave_Click(sender, e);
+        }
+        if(Keyboard.IsKeyDown(Key.LeftCtrl) && e.Key == Key.C)
+        {
+            ButtonCopy_Click(sender, e);
+        }
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) && e.Key == Key.V)
+        {
+            ButtonPaste_Click(sender, e);
         }
 
     }

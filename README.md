@@ -57,6 +57,19 @@
 | 28.05 | Backround Colors           | Dominik    | 100%       |
 | 03.06 | ColorPallet/Colorpicker    | Dominik    | 40%        |
 | 03.06 | Bitmap zeichenbar machen   | Luis       | 100%       |
+| 04.06 | Colorpallet/Colorpicker    | Dominik    | 100%       |
+| 04.06 | Eraser                     | Luis       | 100%       |
+| 05.06 | Animation                  | Luis       | 30%        |
+| 05.06 | Eyedropper                 | Dominik    | 100%       |
+| 09.06 | Colorpallets laden         | Dominik    | 100%       |
+| 09.06 | Animation                  | Luis       | 80%        |
+| 09.06 | Settings/Serialisierung    | Dominik    | 60%        |
+| 10.06 | Settings/Serialisierung    | Dominik    | 100%       |
+| 10.06 | Animation                  | Luis       | 100%       |
+| 11.06 | Laden/Saven von png        | Luis       | 100%       |
+| 11.06 | GUI Verbesserungen         | Dominik    | 100%       |
+| 13.06 | Copy/Paste                 | Dominik    | 100%       |
+| 13.06 | Save to GIf                | LUIs       | 100%       |
 
 
 ## 3 Lastenheft
