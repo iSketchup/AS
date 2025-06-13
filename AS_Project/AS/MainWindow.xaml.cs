@@ -407,13 +407,13 @@ public partial class MainWindow : Window
         }
         if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.S))
         {
-            ButtonSave_Click(sender, e);
+            ButtonGIFSave_Click(sender, e);
         }
 
     }
 
     [STAThread]
-    private void ButtonSave_Click(object sender, RoutedEventArgs e)
+    private void ButtonGIFSave_Click(object sender, RoutedEventArgs e)
     {
 
         SaveFileDialog dialog = new SaveFileDialog();
@@ -428,6 +428,10 @@ public partial class MainWindow : Window
             Sigma.SaveToGif(path);
 
         }
+    }
+    private void ButtonPNGSave_Click(object sender, RoutedEventArgs e)
+    {
+
     }
     private void ButtonLoad_Click(object sender, RoutedEventArgs e)
 
@@ -445,7 +449,5 @@ public partial class MainWindow : Window
 
         }
     }
-
-    
 
 }
