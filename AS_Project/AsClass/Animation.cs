@@ -146,7 +146,7 @@ namespace AsClass
 
 
                 Image<Rgba32> gif = new(firstImage.Width, firstImage.Height);
-                gif.Frames.RemoveFrame(0);
+                //gif.Frames.RemoveFrame(0);
 
 
 
