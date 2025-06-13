@@ -1,23 +1,32 @@
-﻿using Microsoft.Win32;
+﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats.Gif;
 using SixLabors.ImageSharp.PixelFormats;
-using SI = SixLabors.ImageSharp;
 using System.IO;
-using SWC = System.Windows.Controls;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using SixLabors.ImageSharp;
+using SI = SixLabors.ImageSharp;
+using SWC = System.Windows.Controls;
 
 namespace AsClass
 {
     public class Animation
     {
+
+
         public Frame SelectedFrame
         {
             get
             {
                 return ((FrameButton)listview.SelectedItem).frame;
             }
+            set
+            {
+                ((FrameButton)listview.SelectedItem).frame = value;
+                Update();
+            }
+
+
+
         }
         private int _selectedIndex = 0;
         public int SelectedIndex
@@ -30,7 +39,7 @@ namespace AsClass
             {
                 if (value < 0)
                 {
-                    value = listview.Items.Count-1;
+                    value = listview.Items.Count - 1;
                 }
                 if (value >= listview.Items.Count)
                 {
@@ -117,7 +126,7 @@ namespace AsClass
 
 
 
-            if (running && timePast >= 1000/ setting.FPS)
+            if (running && timePast >= 1000 / setting.FPS)
             {
                 lasttime = now;
                 NextFrame();
@@ -138,15 +147,15 @@ namespace AsClass
 
         public void SaveToGif(string path)
         {
-                if (listview.Items.Count == 0)
-                    return;
+            if (listview.Items.Count == 0)
+                return;
 
-                FrameButton framebut = (FrameButton)listview.Items[0];
-                SI.Image firstImage = framebut.frame.sharpImage();
+            FrameButton framebut = (FrameButton)listview.Items[0];
+            SI.Image firstImage = framebut.frame.sharpImage();
 
 
-                Image<Rgba32> gif = new(firstImage.Width, firstImage.Height);
-                //gif.Frames.RemoveFrame(0);
+            Image<Rgba32> gif = new(firstImage.Width, firstImage.Height);
+            //gif.Frames.RemoveFrame(0);
 
 
 
@@ -158,7 +167,7 @@ namespace AsClass
 
 
             for (int i = 1; i < listview.Items.Count; i++)
-                {
+            {
 
                 FrameButton currentFramebutton = (FrameButton)(listview.Items[i]);
 
@@ -168,14 +177,14 @@ namespace AsClass
                 GifFrameMetadata framemetadata = frame.Metadata.GetGifMetadata();
                 framemetadata.DisposalMethod = GifDisposalMethod.RestoreToBackground;
                 gif.Frames.AddFrame(frame);
-                }
+            }
 
 
-                gif.Metadata.GetGifMetadata().RepeatCount = 0;
+            gif.Metadata.GetGifMetadata().RepeatCount = 0;
 
 
-                gif.Save(path, new GifEncoder());
-            
+            gif.Save(path, new GifEncoder());
+
 
         }
     }

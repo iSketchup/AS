@@ -21,6 +21,8 @@ public partial class MainWindow : Window
     private AS_Main Sigma;
 
     private Settings _settings;
+
+    private AsClass.Frame CopiedFrame;
     public Settings settings
     {
         get
@@ -459,5 +461,17 @@ public partial class MainWindow : Window
             Sigma.LoadFrom(path);
 
         }
+    }
+
+    private void ButtonCopy_Click(object sender, RoutedEventArgs e)
+    {
+
+        CopiedFrame = Sigma.animation.SelectedFrame;
+
+    }
+
+    private void ButtonPaste_Click(object sender, RoutedEventArgs e)
+    {
+        Sigma.animation.SelectedFrame = CopiedFrame;
     }
 }
