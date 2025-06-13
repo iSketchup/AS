@@ -174,7 +174,7 @@ public partial class MainWindow : Window
 
         foreach (FrameButton button in ListviewFramebuttons.Items)
         {
-            if (button == ListviewFramebuttons.Items[selectedIndex])
+            ////if (button == ListviewFramebuttons.Items[selectedIndex])
             {
                 button.Background = Brushes.Orange;
                 button.isselected = true;

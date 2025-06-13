@@ -15,20 +15,7 @@ namespace AsClass
     
     public class Eyedropper
     {
-        private Color _selectedColor;
-
-        public Color SelectedColor
-        {
-            get { return _selectedColor; }
-            set
-            {
-
-
-                _selectedColor = value;
-               
-               
-            }
-        }
+      
         Colorpallet colorpallet;
 
        
