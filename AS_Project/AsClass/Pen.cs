@@ -37,11 +37,6 @@ namespace AsClass
 
         public void Draw(Frame frame, Point point)
         {
-            if (point.X < 0 || point.X >= frame.Width )
-                return;
-            if (point.Y < 0 || point.Y >= frame.Height)
-                return; 
-
             frame.ChangePixelColor(point, color, Size);
         }
     }

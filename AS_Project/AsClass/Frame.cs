@@ -168,6 +168,12 @@ namespace AsClass
 
                         if (pixel < buffer || pixel > buffer + Height * stride) // ahhh
                             continue;
+                        if (x >= Width)
+                            continue;
+                        if (y >= Height)
+                            continue;
+
+                        
 
                         pixel[3] = col.A;
 
