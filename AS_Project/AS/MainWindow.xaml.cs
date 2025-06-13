@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Xml.Serialization;
 
 
 namespace AS;
@@ -467,12 +468,27 @@ public partial class MainWindow : Window
         {
             string path = dialog.FileName;
 
-            Sigma.animation.LoadFromGIF(path);
+            Sigma.LoadFromGIF(path);
 
         }
     }
 
-    private void ButtonCopy_Click(object sender, RoutedEventArgs e)
+    private void ButtonLoadasPng(object sender, RoutedEventArgs e)
+    {
+        OpenFileDialog dialog = new OpenFileDialog();
+        dialog.Title = "Bitte wähle eine Datei aus";
+        dialog.Filter = "GIF-Dateien (*.png)|*.png";
+       
+        if (dialog.ShowDialog() == true)
+        {
+            string path = dialog.FileName;
+
+            Sigma.LoadFrom(path);
+
+        }
+    }
+
+        private void ButtonCopy_Click(object sender, RoutedEventArgs e)
     {
 
         CopiedFrame = Sigma.animation.SelectedFrame;
@@ -483,4 +499,6 @@ public partial class MainWindow : Window
     {
         Sigma.animation.SelectedFrame = CopiedFrame;
     }
+
+    
 }
