@@ -143,5 +143,10 @@ namespace AsClass
         {
             animation.SaveToGif(Path);
         }
+
+        public void LoadFromGif(string path, Settings setting)
+        {
+
+        }
     }
 }
