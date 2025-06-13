@@ -134,9 +134,14 @@ namespace AsClass
             animation = new(animation.listview, animation.VisibleImg, path);
         }
 
-        public void SaveTo(string path)
+        public void SaveCurrentFrame(string path)
         {
-            animation.SaveTo(path);
+            animation.SaveToSingleFile(path);
+        }
+
+        public void SaveToGif(string Path)
+        {
+            animation.SaveToGif(Path);
         }
     }
 }

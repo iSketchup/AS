@@ -174,7 +174,7 @@ public partial class MainWindow : Window
 
         foreach (FrameButton button in ListviewFramebuttons.Items)
         {
-            ////if (button == ListviewFramebuttons.Items[selectedIndex])
+            if (button == ListviewFramebuttons.Items[selectedIndex])
             {
                 button.Background = Brushes.Orange;
                 button.isselected = true;
@@ -418,13 +418,14 @@ public partial class MainWindow : Window
 
         SaveFileDialog dialog = new SaveFileDialog();
         dialog.Title = "Speichern unter...";
-        dialog.Filter = "PNG-Dateien (*.png)|*.png";
+        //dialog.Filter = "PNG-Dateien (*.png)|*.png";
+        dialog.Filter = "Png-Dateien (*.gif)|*.gif";
 
         if (dialog.ShowDialog() == true)
         {
             string path = dialog.FileName;
             
-            Sigma.SaveTo(path);
+            Sigma.SaveToGif(path);
 
         }
     }

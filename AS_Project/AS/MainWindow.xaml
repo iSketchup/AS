@@ -110,9 +110,9 @@
 
                 <MenuItem Header="File" FontSize="6" Height="10" >
                     <MenuItem Header="New" Style="{StaticResource FlatMenuItemStyle}" />
-                    <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonSave_Click">
+                    <MenuItem Header="Save" Style="{StaticResource FlatMenuItemStyle}">
                         <MenuItem Header="Save to png" />
-                        <MenuItem Header="Save to GIF" />
+                        <MenuItem Header="Save to GIF"  Click="ButtonSave_Click"/>
                     </MenuItem>
                       
                     <MenuItem Header="Open" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonLoad_Click"/>

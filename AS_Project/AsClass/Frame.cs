@@ -1,8 +1,11 @@
-﻿using System.IO;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Color = System.Windows.Media.Color;
+using Point = System.Windows.Point;
 
 namespace AsClass
 {
@@ -10,7 +13,7 @@ namespace AsClass
     public class Frame
     {
 
-        static readonly int defaultBgPixelSize = 32;
+        static readonly int defaultBgPixelSize = 8;
         static int PixelSize = 4;
 
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
@@ -61,6 +64,24 @@ namespace AsClass
 
             return wb;
         }
+        public static Frame LoadFrameFrom(string path)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                bitmapImage.BeginInit();
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.StreamSource = stream;
+                bitmapImage.EndInit();
+                bitmapImage.Freeze();
+            }
+
+            WriteableBitmap writeableBitmap = new WriteableBitmap(bitmapImage);
+
+            return new Frame(writeableBitmap);
+        }
+
 
         public int Width { get; set; }
         public int Height { get; set; }
@@ -89,15 +110,12 @@ namespace AsClass
 
         public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)
         {
-            Frame.PixelSize = Size * 4;
+            Frame.PixelSize = Size;
 
             Color col = brush.Color;
 
             int x_true = (int)pos.X;
             int y_true = (int)pos.Y;
-
-            x_true = x_true - x_true % 4;
-            y_true = y_true - y_true % 4;
 
             int stride = wb.BackBufferStride;
 
@@ -135,26 +153,25 @@ namespace AsClass
             }
             wb.Unlock();
 
-            ;
         }
 
-        public static Frame LoadFrameFrom(string path)
+        public Image sharpImage()
         {
-            BitmapImage bitmapImage = new BitmapImage();
+            int width = wb.PixelWidth;
+            int height = wb.PixelHeight;
+            int stride = wb.BackBufferStride;
 
-            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
-            {
-                bitmapImage.BeginInit();
-                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                bitmapImage.StreamSource = stream;
-                bitmapImage.EndInit();
-                bitmapImage.Freeze();
-            }
+            byte[] pixels = new byte[height * stride];
+            wb.CopyPixels(pixels, stride, 0);
 
-            WriteableBitmap writeableBitmap = new WriteableBitmap(bitmapImage);
 
-            return new Frame(writeableBitmap);
+            Image image = Image.LoadPixelData<Bgra32>(pixels, width, height)
+                             .CloneAs<Rgba32>();
+
+            return image;
         }
+
+
 
     }
 }
