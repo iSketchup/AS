@@ -27,7 +27,7 @@ namespace AsClass
             {
                 _settings = value;
                 animation = new(animation.listview, animation.VisibleImg, value);
-
+                Frame.defaultBgPixelSize = settings.TileSize;
                 imageBackground.Source = Frame.BackgroundMaker(value.FrameWidth, value.FrameHeight);
                
             }
