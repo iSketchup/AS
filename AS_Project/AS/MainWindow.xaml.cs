@@ -178,24 +178,7 @@ public partial class MainWindow : Window
         Sigma.animation.Update();
 
 
-        foreach (FrameButton button in ListviewFramebuttons.Items)
-        {
-            if (button == ListviewFramebuttons.Items[ListviewFramebuttons.Items.Count -1] )
-            {
-                button.Background = Brushes.Orange;
-                button.isselected = true;
-
-
-            }
-            else
-            {
-                button.Background = Brushes.Transparent;
-                button.isselected = false;
-
-
-            }
-        }
-
+     
 
 
     }
@@ -507,10 +490,20 @@ public partial class MainWindow : Window
 
     private void ButtonDeleteFrame_Click(object sender, RoutedEventArgs e)
     {
-        if(Sigma.animation.listview != null)
+        int selectedIndex = ListviewFramebuttons.SelectedIndex;
+        if (Sigma.animation.listview != null && ListviewFramebuttons.Items.Count != 1)
         {
-            Sigma.animation.listview.Items.RemoveAt(Sigma.animation.SelectedIndex);
+            Sigma.animation.listview.Items.RemoveAt(ListviewFramebuttons.SelectedIndex);
             Sigma.animation.SelectedIndex -= 1;
+            for(int i = 0; i< ListviewFramebuttons.Items.Count; i++) 
+            {
+                FrameButton frameButton = (FrameButton)ListviewFramebuttons.Items[i];
+                frameButton.Content = $"{i+1}";
+
+
+            }
+            ListviewFramebuttons.SelectedIndex = selectedIndex-1;
+
         }
     }
 
