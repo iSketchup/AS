@@ -69,7 +69,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker);
+        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker,ScrollviewerColorpallet);
 
         CompositionTarget.Rendering += Loop;
 
@@ -198,7 +198,7 @@ public partial class MainWindow : Window
 
     private void ButtonInsertColorpallet_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.InserColorPallet(LabelActiveColor, colorPicker);
+        Sigma.InserColorPallet(LabelActiveColor, colorPicker,ScrollviewerColorpallet);
 
 
     }
