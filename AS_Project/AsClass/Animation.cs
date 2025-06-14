@@ -80,7 +80,7 @@ namespace AsClass
             VisibleImg = imageDraw;
             this.listview = ListviewFramebutton;
             ListviewFramebutton.Items.Clear();
-            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), path));
+            setting = LoadFromGIF(path);
 
             Update();
 
@@ -157,13 +157,14 @@ namespace AsClass
 
             Image<Rgba32> gif = new(firstImage.Width, firstImage.Height);
 
-
-
             ImageFrame<Rgba32> firstFrame = (ImageFrame<Rgba32>)firstImage.Frames.RootFrame;
             GifFrameMetadata firstFrameMetadata = firstFrame.Metadata.GetGifMetadata();
             firstFrameMetadata.DisposalMethod = GifDisposalMethod.RestoreToBackground;
             firstFrameMetadata.FrameDelay = 1000 / setting.FPS;
             gif.Frames.AddFrame(firstFrame);
+
+            gif.Frames.RemoveFrame(0);
+
 
 
             for (int i = 1; i < listview.Items.Count; i++)
@@ -189,9 +190,12 @@ namespace AsClass
         }
 
 
-        public void LoadFromGIF(string path, Settings settings)
+        public Settings LoadFromGIF(string path)
         {
+            listview.Items.Clear();
+
             Image<Rgba32> gif = SI.Image.Load<Rgba32>(path);
+
 
             int frameCount = gif.Frames.Count;
 
@@ -200,6 +204,7 @@ namespace AsClass
 
 
             ImageFrame<Rgba32> FirstFrame = gif.Frames[0];
+            gif.Frames.RemoveFrame(0);
 
             GifFrameMetadata metadata = FirstFrame.Metadata.GetGifMetadata();
             int frameDelay = metadata.FrameDelay;
@@ -209,7 +214,7 @@ namespace AsClass
             }
 
 
-            this.setting = new Settings(width, heigth, 1000 / frameDelay);
+            setting = new Settings(width, heigth, 1000 / frameDelay);
 
             this.SelectedFrame = new Frame(Frame.ToWritableBitmap(FirstFrame));
 
@@ -228,7 +233,12 @@ namespace AsClass
 
 
 
-        gif.Dispose();
+            SelectedIndex = 0;
+
+            gif.Dispose();
+
+
+            return setting;
         }
     }
 
