@@ -83,7 +83,8 @@ namespace AsClass
                 button.Click += (s, e) =>
                 {
                     Activecolor = color;
-
+                    pen.active = true;
+                    pen.isEraser = false;
                     colorPicker.SelectedColor = Activecolor.Color;
                 };
 
