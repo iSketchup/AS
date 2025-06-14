@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,8 @@ namespace AS
     {
 
         public Settings settings;
+
+        public int tileSize = 8;
         public WindowSettings()
         {
             InitializeComponent();
@@ -41,6 +44,8 @@ namespace AS
             WidthTextBox.Text = settings.FrameWidth.ToString();
             HeightTextBox.Text = settings.FrameHeight.ToString();
             FPSTextBox.Text = settings.FPS.ToString();
+            SliderTileSize.Value = settings.TileSize;
+            LabelTileSize.Content = $"{settings.TileSize}";
         }
 
         public WindowSettings(Settings settings)
@@ -52,6 +57,8 @@ namespace AS
             WidthTextBox.Text = settings.FrameWidth.ToString();
             HeightTextBox.Text = settings.FrameHeight.ToString();
             FPSTextBox.Text = settings.FPS.ToString();
+            SliderTileSize.Value = settings.TileSize;
+            LabelTileSize.Content = $"{settings.TileSize}";
         }
 
 
@@ -60,10 +67,12 @@ namespace AS
             WidthTextBox.Background = null;
             HeightTextBox.Background = null;
             FPSTextBox.Background = null;
+           
 
             bool isValidWidth = int.TryParse(WidthTextBox.Text, out int width);
             bool isValidHeight = int.TryParse(HeightTextBox.Text, out int height);
             bool isValidFPS = int.TryParse(FPSTextBox.Text, out int FPS);
+            tileSize = (int)SliderTileSize.Value;
 
             if (string.IsNullOrEmpty(WidthTextBox.Text) || isValidWidth == false)
             {
@@ -85,7 +94,7 @@ namespace AS
 
             if(string.IsNullOrEmpty(WidthTextBox.Text)==false && isValidWidth == true  && string.IsNullOrEmpty(HeightTextBox.Text) == false && isValidHeight == true && string.IsNullOrEmpty(FPSTextBox.Text) && isValidFPS == true && FPS > 0  || FPS > 0 && FPS <= 60){
                
-                settings = new Settings(width, height, FPS);
+                settings = new Settings(width, height, FPS,tileSize);
 
 
                settings.SaveToJsonFile("Settings.json");
@@ -102,6 +111,18 @@ namespace AS
         {
            
             this.Close();
+        }
+
+        private void SliderTileSize_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if(!this.IsLoaded)
+                return;
+
+
+
+            LabelTileSize.Content = $"{Math.Floor(SliderTileSize.Value)}";
+          
+
         }
     }
 }

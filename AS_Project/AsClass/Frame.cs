@@ -13,8 +13,8 @@ namespace AsClass
     public class Frame
     {
 
-        static readonly int defaultBgPixelSize = 8;
-        static int PixelSize = 4;
+        public static int defaultBgPixelSize = 8;
+      
 
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
@@ -142,7 +142,7 @@ namespace AsClass
 
         public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)
         {
-            Frame.PixelSize = Size;
+            int PixelSize = Size;
 
             Color col = brush.Color;
 

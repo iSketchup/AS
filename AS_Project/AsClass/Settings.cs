@@ -17,7 +17,7 @@ namespace AsClass
 
         public int FPS { get; set; } = 2;
 
-       
+        public int TileSize { get; set; } = 8;
 
 
         public Settings()
@@ -25,11 +25,19 @@ namespace AsClass
 
         }
 
-        public Settings(int frameWidth, int frameHeight, int fps)
+        public Settings (int frameWidth, int frameHeight, int fps)
         {
             FrameWidth = frameWidth;
             FrameHeight = frameHeight;
             FPS = fps;
+        }
+
+        public Settings(int frameWidth, int frameHeight, int fps,int Tilesize)
+        {
+            FrameWidth = frameWidth;
+            FrameHeight = frameHeight;
+            FPS = fps;
+            this.TileSize = Tilesize;
         }
 
 

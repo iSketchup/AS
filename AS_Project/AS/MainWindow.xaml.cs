@@ -40,7 +40,7 @@ public partial class MainWindow : Window
             }
             else
             {
-                _settings = new Settings(500, 240, 10);
+                _settings = new Settings(500, 240, 10,8);
             }
         }
 
@@ -57,10 +57,11 @@ public partial class MainWindow : Window
         InitializeComponent();
 
         settings = new Settings();
-
+        AsClass.Frame.defaultBgPixelSize = settings.TileSize;
         Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons, settings);
-
+       
         SetBackroundColor();
+
 
 
         Cursor = Cursors.Pen;
@@ -76,7 +77,7 @@ public partial class MainWindow : Window
 
         CompositionTarget.Rendering += Loop;
 
-       
+     
 
     }
 
@@ -199,9 +200,13 @@ public partial class MainWindow : Window
 
             if (windowSettings.ShowDialog() == true)
             {
+              
                 Sigma.settings = windowSettings.settings;
+                AsClass.Frame.defaultBgPixelSize = settings.TileSize;
 
                 Log.Debug("WindowSettings dialog closed with OK");
+
+              
             }
         }
         else
@@ -210,9 +215,11 @@ public partial class MainWindow : Window
 
             if (windowSettings.ShowDialog() == true)
             {
+               
                 Sigma.settings = windowSettings.settings;
-
+                AsClass.Frame.defaultBgPixelSize = settings.TileSize;
                 Log.Debug("WindowSettings dialog closed with OK");
+              
             }
         }
 

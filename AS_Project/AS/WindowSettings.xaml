@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
-        Title="WindowSettings" Height="420" Width="520">
+        Title="WindowSettings" Height="450" Width="520">
 
 
     <Window.Resources>
@@ -58,9 +58,10 @@
         <Label Grid.ColumnSpan="2" Grid.Row="0" Content="Settings" FontSize="24" HorizontalAlignment="Center"  Margin="10" />
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
-            <Label Content="Width:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
-            <Label Content="Height:" HorizontalAlignment="Right" FontSize="20"  Margin="10"/>
+            <Label Content="Framewidth:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
+            <Label Content="Frameheight:" HorizontalAlignment="Right" FontSize="20"  Margin="10"/>
             <Label Content="FPS:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
+            <Label Content="Tilesize" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
             <local:ShortcutControl Margin="10" HorizontalAlignment="Right" />
 
         </StackPanel>
@@ -69,6 +70,11 @@
             <TextBox x:Name="WidthTextBox" Text="" HorizontalAlignment="Left" Width="200" FontSize="20" Margin="10 20 0 0" />
             <TextBox x:Name="HeightTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 20 0 0"/>
             <TextBox x:Name="FPSTextBox" Text="" HorizontalAlignment="Left" Width="200"  FontSize="20" Margin="10 30 0 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="200" Margin="10 35 0 0" >
+                <Slider x:Name="SliderTileSize" HorizontalAlignment="Left" Width="150" Minimum="1" Maximum="64"  ValueChanged="SliderTileSize_ValueChanged" />
+                <Label x:Name="LabelTileSize"  Height="30" Width="30"  />
+            </StackPanel>
+          
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Margin="5">

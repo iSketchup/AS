@@ -42,7 +42,7 @@ namespace AsClass
 
             Eyedropper = new Eyedropper(colorpallet);
 
-
+            
             imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
             this.imageBackground = imageBackground;
 
