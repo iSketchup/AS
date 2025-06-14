@@ -146,7 +146,11 @@ namespace AsClass
 
         public void LoadFromGIF(string path)
         {
-            animation.LoadFromGIF(path, settings);
+            _settings = animation.LoadFromGIF(path);
+
+            imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
+
+
         }
     }
 }

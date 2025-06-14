@@ -33,8 +33,7 @@ namespace AsClass
 
             frame = new Frame(settings.FrameWidth, settings.FrameHeight);
 
-            ListView.SelectedItem = this;  // hier frame change
-
+            ListView.SelectedItem = this;
 
 
         }
@@ -47,7 +46,7 @@ namespace AsClass
 
             frame = Frame.LoadFrameFrom(path);
 
-            ListView.SelectedItem = this;  // hier frame change
+            ListView.SelectedItem = this;  
 
 
 
