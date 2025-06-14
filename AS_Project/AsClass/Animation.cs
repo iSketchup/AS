@@ -75,6 +75,18 @@ namespace AsClass
 
         }
 
+        public Animation(ListView ListviewFramebutton, SWC.Image imageDraw, string path)
+        {
+            VisibleImg = imageDraw;
+            this.listview = ListviewFramebutton;
+            ListviewFramebutton.Items.Clear();
+
+            
+
+            Update();
+
+
+        }
 
 
 
