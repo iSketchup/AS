@@ -482,16 +482,20 @@ public partial class MainWindow : Window
         }
     }
 
-        private void ButtonCopy_Click(object sender, RoutedEventArgs e)
+        
+    
+    private void ButtonCopy_Click(object sender, RoutedEventArgs e)
     {
 
-        CopiedFrame = Sigma.animation.SelectedFrame;
+        Sigma.SaveCurrentFrame("CopiedFrame.png");
 
     }
 
     private void ButtonPaste_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.animation.SelectedFrame = CopiedFrame;
+
+        Sigma.animation.SelectedFrame = AsClass.Frame.LoadFrameFrom("CopiedFrame.png");
+       
     }
 
 
@@ -513,5 +517,15 @@ public partial class MainWindow : Window
 
         }
     }
+
+    private void myListView_PreviewKeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Space || e.Key == Key.Enter)
+        {
+            e.Handled = true;
+            ButtonStopFrame_Click(sender, e);
+        }
+    }
+
 
 }

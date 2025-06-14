@@ -1,6 +1,8 @@
 ﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using System.IO;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -117,7 +119,7 @@ namespace AsClass
 
         public int Width { get; set; }
         public int Height { get; set; }
-        public int Layers { get; set; } = 1;
+       
 
 
         public WriteableBitmap wb;
@@ -129,7 +131,6 @@ namespace AsClass
             this.Height = height;
 
             wb = new(Width, Height, 96, 96, PixelFormats.Pbgra32, null);
-
         }
 
         public Frame(WriteableBitmap wbn)
@@ -208,6 +209,11 @@ namespace AsClass
 
             return image;
         }
+
+
+       
+       
+
 
 
 

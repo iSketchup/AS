@@ -131,7 +131,7 @@ namespace AsClass
 
         public void LoadFrom(string path)
         {
-            animation = new(animation.listview, animation.VisibleImg, path);
+            animation.LoadFromSingleFile(path);
         }
 
         public void SaveCurrentFrame(string path)

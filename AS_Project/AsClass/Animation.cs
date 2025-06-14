@@ -75,18 +75,6 @@ namespace AsClass
 
         }
 
-        public Animation(ListView ListviewFramebutton, SWC.Image imageDraw, string path)
-        {
-            VisibleImg = imageDraw;
-            this.listview = ListviewFramebutton;
-            ListviewFramebutton.Items.Clear();
-
-            setting = LoadFromGIF(path);
-
-            Update();
-
-
-        }
 
 
 
@@ -145,6 +133,16 @@ namespace AsClass
                 encoder.Frames.Add(BitmapFrame.Create(SelectedFrame.wb));
                 encoder.Save(stream);
             }
+        }
+
+
+        public void LoadFromSingleFile(string path)
+        {
+            listview.Items.Clear();
+
+            listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), path));
+
+            Update();
         }
 
         public void SaveToGif(string path)
