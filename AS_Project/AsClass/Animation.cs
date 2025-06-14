@@ -80,6 +80,7 @@ namespace AsClass
             VisibleImg = imageDraw;
             this.listview = ListviewFramebutton;
             ListviewFramebutton.Items.Clear();
+
             setting = LoadFromGIF(path);
 
             Update();
@@ -191,10 +192,9 @@ namespace AsClass
 
 
         public Settings LoadFromGIF(string path)
-        {
-            listview.Items.Clear();
-
+        { 
             Image<Rgba32> gif = SI.Image.Load<Rgba32>(path);
+
 
 
             int frameCount = gif.Frames.Count;
@@ -204,7 +204,6 @@ namespace AsClass
 
 
             ImageFrame<Rgba32> FirstFrame = gif.Frames[0];
-            gif.Frames.RemoveFrame(0);
 
             GifFrameMetadata metadata = FirstFrame.Metadata.GetGifMetadata();
             int frameDelay = metadata.FrameDelay;
@@ -216,7 +215,8 @@ namespace AsClass
 
             setting = new Settings(width, heigth, 1000 / frameDelay);
 
-            this.SelectedFrame = new Frame(Frame.ToWritableBitmap(FirstFrame));
+
+            listview.Items.Clear();
 
             for (int i = 0; i < frameCount; i++)
             {
