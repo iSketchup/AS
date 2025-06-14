@@ -237,6 +237,7 @@ namespace AsClass
 
             gif.Dispose();
 
+            setting.SaveToJsonFile("Settings.json");
 
             return setting;
         }
