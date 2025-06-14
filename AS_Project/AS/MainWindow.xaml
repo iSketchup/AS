@@ -112,8 +112,8 @@
                     <MenuItem Header="New" Style="{StaticResource FlatMenuItemStyle}" />
                     <MenuItem Header="Save to png"  Style="{StaticResource FlatMenuItemStyle}" Click="ButtonPNGSave_Click"/>
                     <MenuItem Header="Save to GIF" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonGIFSave_Click"/>
-                    <MenuItem Header="Load as png" Style="{StaticResource FlatMenuItemStyle}"  Click="ButtonLoadasPng"  />
-                    <MenuItem Header="Load as GIF" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonLoad_Click" />
+                    <MenuItem Header="Load from png" Style="{StaticResource FlatMenuItemStyle}"  Click="ButtonLoadasPng"  />
+                    <MenuItem Header="Load from GIF" Style="{StaticResource FlatMenuItemStyle}" Click="ButtonLoad_Click" />
                     <MenuItem Header="Exit" Style="{StaticResource FlatMenuItemStyle}" Click="MenuItem_Click_2" />
                 </MenuItem>
 
