@@ -477,7 +477,7 @@ public partial class MainWindow : Window
     {
         OpenFileDialog dialog = new OpenFileDialog();
         dialog.Title = "Bitte wähle eine Datei aus";
-        dialog.Filter = "GIF-Dateien (*.png)|*.png";
+        dialog.Filter = "png-Dateien (*.png)|*.png";
        
         if (dialog.ShowDialog() == true)
         {
