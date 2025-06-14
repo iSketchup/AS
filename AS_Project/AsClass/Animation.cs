@@ -161,7 +161,7 @@ namespace AsClass
             ImageFrame<Rgba32> firstFrame = (ImageFrame<Rgba32>)firstImage.Frames.RootFrame;
             GifFrameMetadata firstFrameMetadata = firstFrame.Metadata.GetGifMetadata();
             firstFrameMetadata.DisposalMethod = GifDisposalMethod.RestoreToBackground;
-            firstFrameMetadata.FrameDelay = 1000 / setting.FPS;
+            firstFrameMetadata.FrameDelay = 100 / setting.FPS;
             gif.Frames.AddFrame(firstFrame);
 
             gif.Frames.RemoveFrame(0);
@@ -213,7 +213,7 @@ namespace AsClass
             }
 
 
-            setting = new Settings(width, heigth, 1000 / frameDelay);
+            setting = new Settings(width, heigth, 100 / frameDelay);
 
 
             listview.Items.Clear();
