@@ -1,7 +1,9 @@
 ﻿using AsClass;
 using Microsoft.Win32;
 using Serilog;
+using SixLabors.ImageSharp.Memory;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -48,6 +50,7 @@ public partial class MainWindow : Window
 
     private Point lastDragPoint;
 
+   
 
     public MainWindow()
     {
@@ -73,7 +76,7 @@ public partial class MainWindow : Window
 
         CompositionTarget.Rendering += Loop;
 
-
+       
 
     }
 
@@ -170,14 +173,14 @@ public partial class MainWindow : Window
         if (!this.IsLoaded)
             return;
 
-        int selectedIndex = ListviewFramebuttons.SelectedIndex;
+       
 
         Sigma.animation.Update();
 
 
         foreach (FrameButton button in ListviewFramebuttons.Items)
         {
-            if (button == ListviewFramebuttons.Items[selectedIndex])
+            if (button == ListviewFramebuttons.Items[ListviewFramebuttons.Items.Count -1] )
             {
                 button.Background = Brushes.Orange;
                 button.isselected = true;
@@ -192,6 +195,7 @@ public partial class MainWindow : Window
 
             }
         }
+
 
 
     }
@@ -500,5 +504,14 @@ public partial class MainWindow : Window
         Sigma.animation.SelectedFrame = CopiedFrame;
     }
 
-    
+
+    private void ButtonDeleteFrame_Click(object sender, RoutedEventArgs e)
+    {
+        if(Sigma.animation.listview != null)
+        {
+            Sigma.animation.listview.Items.RemoveAt(Sigma.animation.SelectedIndex);
+            Sigma.animation.SelectedIndex -= 1;
+        }
+    }
+
 }
