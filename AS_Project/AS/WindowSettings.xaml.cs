@@ -74,12 +74,12 @@ namespace AS
             bool isValidFPS = int.TryParse(FPSTextBox.Text, out int FPS);
             tileSize = (int)SliderTileSize.Value;
 
-            if (string.IsNullOrEmpty(WidthTextBox.Text) || isValidWidth == false)
+            if (string.IsNullOrEmpty(WidthTextBox.Text) || isValidWidth == false || width >= 10000)
             {
                 WidthTextBox.Background = Brushes.Red;
             } 
 
-            if (string.IsNullOrEmpty(HeightTextBox.Text) || isValidHeight == false)
+            if (string.IsNullOrEmpty(HeightTextBox.Text) || isValidHeight == false|| Height >= 10000)
             {
                 HeightTextBox.Background = Brushes.Red;
             }
@@ -92,7 +92,7 @@ namespace AS
             }
 
 
-            if(string.IsNullOrEmpty(WidthTextBox.Text)==false && isValidWidth == true  && string.IsNullOrEmpty(HeightTextBox.Text) == false && isValidHeight == true && string.IsNullOrEmpty(FPSTextBox.Text) && isValidFPS == true && FPS > 0  || FPS > 0 && FPS <= 60){
+            if(string.IsNullOrEmpty(WidthTextBox.Text)==false && isValidWidth == true  && string.IsNullOrEmpty(HeightTextBox.Text) == false && isValidHeight == true && string.IsNullOrEmpty(FPSTextBox.Text) && isValidFPS == true && FPS > 0  || FPS > 0 && FPS <= 60 && width < 10000 && height< 10000){
                
                 settings = new Settings(width, height, FPS,tileSize);
 

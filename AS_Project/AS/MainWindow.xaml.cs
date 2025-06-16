@@ -506,8 +506,13 @@ public partial class MainWindow : Window
     private void ButtonPaste_Click(object sender, RoutedEventArgs e)
     {
 
-        Sigma.animation.SelectedFrame = AsClass.Frame.LoadFrameFrom("CopiedFrame.png");
-       
+        if (File.Exists("CopiedFrame.png"))
+        {
+            Sigma.animation.SelectedFrame = AsClass.Frame.LoadFrameFrom("CopiedFrame.png");
+
+        }
+
+
     }
 
 
