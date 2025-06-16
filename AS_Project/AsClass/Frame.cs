@@ -169,7 +169,7 @@ namespace AsClass
 
                         if (pixel < buffer || pixel > buffer + Height * stride) // ahhh
                             continue;
-                        if (x >= Width)
+                        if (x >= Width || x < 0 )
                             continue;
                         if (y >= Height)
                             continue;

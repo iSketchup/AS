@@ -314,6 +314,18 @@ public partial class MainWindow : Window
         canvasScale.ScaleY = newScale;
     }
 
+    private void ButtonResetCanv_Click(object sender, RoutedEventArgs e)
+    {
+        canvasTranslate.X = 1;
+        canvasTranslate.Y = 1;
+
+
+        canvasScale.ScaleX = 1;
+        canvasScale.ScaleY = 1;
+    }
+
+
+
     private void CanvDraw_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
     {
         dragging = true;
@@ -330,30 +342,10 @@ public partial class MainWindow : Window
     private void CanvDraw_MouseMove(object sender, MouseEventArgs e)
     {
 
-        if (!dragging) return;
+        if (!dragging) 
+            return;
 
         Point currentPoint = e.GetPosition(this);
-
-        //if (currentPoint.X < 0 || currentPoint.Y < 0 || currentPoint.X > CanvDraw.ActualWidth || currentPoint.Y > CanvDraw.ActualHeight)
-        //   return;
-        // bounds berechnung
-
-
-        // Mausposition relativ zum Canvas (z.B. von MouseEventArgs)
-        //Point currentPoint = e.GetPosition(myCanvas);
-
-        // Mausposition relativ zum verschobenen Inhalt
-        // double adjustedX = currentPoint.X - canvasTranslate.X;
-        // double adjustedY = currentPoint.Y - canvasTranslate.Y;
-
-        // Check, ob innerhalb der sichtbaren Canvas-Grenzen (z.B. Inhaltegröße)
-        // if (adjustedX < 0 || adjustedY < 0 || adjustedX > myCanvas.ActualWidth || adjustedY > myCanvas.ActualHeight)
-        // {
-        //    return; // Maus außerhalb des sichtbaren Inhalts -> abbrechen
-        // }
-
-
-
 
         Vector delta = currentPoint - lastDragPoint;
 
