@@ -34,11 +34,12 @@ Programm zum zeichnen und animieren von Pixelarts. Man zeichnet auf einer Writea
 
 
 ## Arbeitsteilung
-#### Luis:
-![[Chart.canvas|Chart]]
+
+
 
 ## Collage mit mindestens zwei Screenshots
-
+![](Screenshot.png)
+![](Screenshot2.png)
 ## Relevanter Programmcode:
 ```c#
   public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)
@@ -158,7 +159,7 @@ Programm zum zeichnen und animieren von Pixelarts. Man zeichnet auf einer Writea
 Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder Frame kann bearbeitet werden, und am Ende kann die Animation abgespielt oder als GIF gespeichert werden.
 
 ### 3.2. Skizzen
-![[Pasted image 20250616181853.png]]
+![](Skizze.png)
 
 
 ### 3.3. Funktionsumfang
