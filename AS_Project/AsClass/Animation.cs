@@ -148,13 +148,19 @@ namespace AsClass
         }
 
 
-        public void LoadFromSingleFile(string path)
+        public Settings LoadFromSingleFile(string path)
         {
             listview.Items.Clear();
 
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), path));
 
             Update();
+
+            setting = new Settings(SelectedFrame.Width, SelectedFrame.Height, 100 / 10);
+            setting.SaveToJsonFile("Settings.json");
+
+
+            return setting;
         }
 
         public void SaveToGif(string path)

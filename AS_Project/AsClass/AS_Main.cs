@@ -129,7 +129,8 @@ namespace AsClass
 
         public void LoadFrom(string path)
         {
-            animation.LoadFromSingleFile(path);
+            _settings = animation.LoadFromSingleFile(path);
+            imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
         }
 
         public void SaveCurrentFrame(string path)
