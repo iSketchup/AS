@@ -1,8 +1,6 @@
 ﻿using Microsoft.Win32;
-using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using Xceed.Wpf.Toolkit;
@@ -29,7 +27,7 @@ namespace AsClass
                 animation = new(animation.listview, animation.VisibleImg, value);
                 Frame.defaultBgPixelSize = settings.TileSize;
                 imageBackground.Source = Frame.BackgroundMaker(value.FrameWidth, value.FrameHeight);
-               
+
             }
         }
         public Image imageBackground { get; set; }
@@ -42,7 +40,7 @@ namespace AsClass
 
             Eyedropper = new Eyedropper(colorpallet);
 
-            
+
             imageBackground.Source = Frame.BackgroundMaker(settings.FrameWidth, settings.FrameHeight);
             this.imageBackground = imageBackground;
 
@@ -56,7 +54,7 @@ namespace AsClass
         {
             Point pos = Mouse.GetPosition(animation.VisibleImg);
 
-            if (MouseButtonPressed &&( pen.active|| pen.isEraser))
+            if (MouseButtonPressed && (pen.active || pen.isEraser))
             {
                 pen.Draw(animation.SelectedFrame, pos);
             }
@@ -65,7 +63,7 @@ namespace AsClass
             {
                 Eyedropper.GetColor((int)pos.X, (int)pos.Y, animation.SelectedFrame.wb);
             }
-                animation.Tick();
+            animation.Tick();
         }
 
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
@@ -74,10 +72,10 @@ namespace AsClass
         }
         public void ButtonEraser_Click(object sender, RoutedEventArgs e)
         {
-         
-            
+
+
             pen.ChangeColor(new SolidColorBrush(Color.FromArgb(0, 0, 0, 0)));
-          
+
 
         }
 
@@ -96,7 +94,7 @@ namespace AsClass
 
         [STAThread]
 
-        public void InserColorPallet(Label label, ColorPicker colorPicker,ScrollViewer scrollViewer)
+        public void InserColorPallet(Label label, ColorPicker colorPicker, ScrollViewer scrollViewer)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "Bitte wähle eine Datei aus";
@@ -109,7 +107,7 @@ namespace AsClass
 
 
                 Colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
-                colorpallet.initializeColorPallet(label, colorPicker,scrollViewer);
+                colorpallet.initializeColorPallet(label, colorPicker, scrollViewer);
 
 
             }

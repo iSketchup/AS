@@ -1,8 +1,6 @@
 ﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using System.IO;
-using System.Runtime.CompilerServices;
-using System.Text.Json;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -16,7 +14,7 @@ namespace AsClass
     {
 
         public static int defaultBgPixelSize = 8;
-      
+
 
         static public WriteableBitmap BackgroundMaker(int Width, int Height)
         {
@@ -119,7 +117,7 @@ namespace AsClass
 
         public int Width { get; set; }
         public int Height { get; set; }
-       
+
 
 
         public WriteableBitmap wb;
@@ -169,12 +167,12 @@ namespace AsClass
 
                         if (pixel < buffer || pixel > buffer + Height * stride) // ahhh
                             continue;
-                        if (x >= Width || x < 0 )
+                        if (x >= Width || x < 0)
                             continue;
                         if (y >= Height)
                             continue;
 
-                        
+
 
                         pixel[3] = col.A;
 
@@ -211,8 +209,8 @@ namespace AsClass
         }
 
 
-       
-       
+
+
 
 
 

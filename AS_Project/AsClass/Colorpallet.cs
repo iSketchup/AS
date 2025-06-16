@@ -56,13 +56,13 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet(Label label, ColorPicker colorPicker,ScrollViewer scrollViewer)
+        public void initializeColorPallet(Label label, ColorPicker colorPicker, ScrollViewer scrollViewer)
         {
             this.label = label;
 
             wrapPanel.Children.Clear();
 
-            wrapPanel.Width = scrollViewer.Width -20;
+            wrapPanel.Width = scrollViewer.Width - 20;
 
             foreach (SolidColorBrush color in ColorList)
             {

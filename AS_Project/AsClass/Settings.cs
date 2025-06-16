@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.IO;
 using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Media;
 
 namespace AsClass
 {
@@ -25,14 +19,14 @@ namespace AsClass
 
         }
 
-        public Settings (int frameWidth, int frameHeight, int fps)
+        public Settings(int frameWidth, int frameHeight, int fps)
         {
             FrameWidth = frameWidth;
             FrameHeight = frameHeight;
             FPS = fps;
         }
 
-        public Settings(int frameWidth, int frameHeight, int fps,int Tilesize)
+        public Settings(int frameWidth, int frameHeight, int fps, int Tilesize)
         {
             FrameWidth = frameWidth;
             FrameHeight = frameHeight;
@@ -41,16 +35,16 @@ namespace AsClass
         }
 
 
-       
+
 
 
         public void SaveToJsonFile(string filePath)
         {
             string jsonString = JsonSerializer.Serialize(this);
 
-           
-         
-            using (StreamWriter stream = new StreamWriter(filePath,false))
+
+
+            using (StreamWriter stream = new StreamWriter(filePath, false))
             {
                 stream.Write(jsonString);
             }
@@ -63,7 +57,7 @@ namespace AsClass
             if (File.Exists(filepath) == true)
             {
                 settings = null;
-                
+
                 using (StreamReader stream = new StreamReader(filepath))
                 {
                     string SerilizeData = stream.ReadToEnd();
@@ -71,7 +65,7 @@ namespace AsClass
                     settings = JsonSerializer.Deserialize<Settings>(SerilizeData);
 
                 }
-              
+
             }
             return settings;
 
