@@ -1,32 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Media.Media3D;
 
 namespace AsClass
 {
 
-    
+
     public class Eyedropper
     {
-      
+
         Colorpallet colorpallet;
 
-       
+
         public bool active = false;
 
         private Color newColor;
 
         public Eyedropper(Colorpallet colorpallet)
         {
-           this.colorpallet = colorpallet;
-          
+            this.colorpallet = colorpallet;
+
 
         }
 
@@ -47,14 +39,14 @@ namespace AsClass
 
                 byte* pixel = buffer + y * stride + x * 4;
 
-             
+
                 newColor.A = pixel[3];
 
-             
+
                 newColor.B = pixel[0];
-               
+
                 newColor.G = pixel[1];
-             
+
                 newColor.R = pixel[2];
 
 

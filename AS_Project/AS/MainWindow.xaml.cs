@@ -1,14 +1,11 @@
 ﻿using AsClass;
 using Microsoft.Win32;
 using Serilog;
-using SixLabors.ImageSharp.Memory;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Xml.Serialization;
 
 
 namespace AS;
@@ -40,7 +37,7 @@ public partial class MainWindow : Window
             }
             else
             {
-                _settings = new Settings(500, 240, 10,8);
+                _settings = new Settings(500, 240, 10, 8);
             }
         }
 
@@ -50,7 +47,7 @@ public partial class MainWindow : Window
 
     private Point lastDragPoint;
 
-   
+
 
     public MainWindow()
     {
@@ -59,7 +56,7 @@ public partial class MainWindow : Window
         settings = new Settings();
         AsClass.Frame.defaultBgPixelSize = settings.TileSize;
         Sigma = new(imageDraw, imageBackground, WrapColorPallet, ListviewFramebuttons, settings);
-       
+
         SetBackroundColor();
 
 
@@ -73,11 +70,11 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker,ScrollviewerColorpallet);
+        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker, ScrollviewerColorpallet);
 
         CompositionTarget.Rendering += Loop;
 
-     
+
 
     }
 
@@ -174,19 +171,19 @@ public partial class MainWindow : Window
         if (!this.IsLoaded)
             return;
 
-       
+
 
         Sigma.animation.Update();
 
 
-     
+
 
 
     }
 
     private void ButtonInsertColorpallet_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.InserColorPallet(LabelActiveColor, colorPicker,ScrollviewerColorpallet);
+        Sigma.InserColorPallet(LabelActiveColor, colorPicker, ScrollviewerColorpallet);
 
 
     }
@@ -200,13 +197,13 @@ public partial class MainWindow : Window
 
             if (windowSettings.ShowDialog() == true)
             {
-              
+
                 Sigma.settings = windowSettings.settings;
                 AsClass.Frame.defaultBgPixelSize = settings.TileSize;
 
                 Log.Debug("WindowSettings dialog closed with OK");
 
-              
+
             }
         }
         else
@@ -215,11 +212,11 @@ public partial class MainWindow : Window
 
             if (windowSettings.ShowDialog() == true)
             {
-               
+
                 Sigma.settings = windowSettings.settings;
                 AsClass.Frame.defaultBgPixelSize = settings.TileSize;
                 Log.Debug("WindowSettings dialog closed with OK");
-              
+
             }
         }
 
@@ -342,7 +339,7 @@ public partial class MainWindow : Window
     private void CanvDraw_MouseMove(object sender, MouseEventArgs e)
     {
 
-        if (!dragging) 
+        if (!dragging)
             return;
 
         Point currentPoint = e.GetPosition(this);
@@ -398,7 +395,7 @@ public partial class MainWindow : Window
         {
             ButtonGIFSave_Click(sender, e);
         }
-        if(Keyboard.IsKeyDown(Key.LeftCtrl) && e.Key == Key.C)
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) && e.Key == Key.C)
         {
             ButtonCopy_Click(sender, e);
         }
@@ -421,7 +418,7 @@ public partial class MainWindow : Window
         if (dialog.ShowDialog() == true)
         {
             string path = dialog.FileName;
-            
+
             Sigma.SaveToGif(path);
 
         }
@@ -474,7 +471,7 @@ public partial class MainWindow : Window
         OpenFileDialog dialog = new OpenFileDialog();
         dialog.Title = "Bitte wähle eine Datei aus";
         dialog.Filter = "png-Dateien (*.png)|*.png";
-       
+
         if (dialog.ShowDialog() == true)
         {
             string path = dialog.FileName;
@@ -494,8 +491,8 @@ public partial class MainWindow : Window
         }
     }
 
-        
-    
+
+
     private void ButtonCopy_Click(object sender, RoutedEventArgs e)
     {
 
@@ -523,14 +520,14 @@ public partial class MainWindow : Window
         {
             Sigma.animation.listview.Items.RemoveAt(ListviewFramebuttons.SelectedIndex);
             Sigma.animation.SelectedIndex -= 1;
-            for(int i = 0; i< ListviewFramebuttons.Items.Count; i++) 
+            for (int i = 0; i < ListviewFramebuttons.Items.Count; i++)
             {
                 FrameButton frameButton = (FrameButton)ListviewFramebuttons.Items[i];
-                frameButton.Content = $"{i+1}";
+                frameButton.Content = $"{i + 1}";
 
 
             }
-            ListviewFramebuttons.SelectedIndex = selectedIndex-1;
+            ListviewFramebuttons.SelectedIndex = selectedIndex - 1;
 
         }
     }
@@ -550,7 +547,7 @@ public partial class MainWindow : Window
         if (e.Key == Key.Left || e.Key == Key.Right)
         {
             e.Handled = true;
-           
+
         }
     }
 

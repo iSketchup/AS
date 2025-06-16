@@ -65,7 +65,7 @@ namespace AsClass
             VisibleImg = imageDraw;
             this.setting = setting;
             setting.FPS += 1;
-           
+
             this.listview = ListviewFramebutton;
             ListviewFramebutton.Items.Clear();
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), setting));
@@ -81,7 +81,7 @@ namespace AsClass
             this.listview = ListviewFramebutton;
             ListviewFramebutton.Items.Clear();
 
-            
+
 
             Update();
 
@@ -148,13 +148,19 @@ namespace AsClass
         }
 
 
-        public void LoadFromSingleFile(string path)
+        public Settings LoadFromSingleFile(string path)
         {
             listview.Items.Clear();
 
             listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), path));
 
             Update();
+
+            setting = new Settings(SelectedFrame.Width, SelectedFrame.Height, 100 / 10);
+            setting.SaveToJsonFile("Settings.json");
+
+
+            return setting;
         }
 
         public void SaveToGif(string path)
@@ -202,7 +208,7 @@ namespace AsClass
 
 
         public Settings LoadFromGIF(string path)
-        { 
+        {
             Image<Rgba32> gif = SI.Image.Load<Rgba32>(path);
 
 
@@ -235,9 +241,9 @@ namespace AsClass
                 ImageFrame<Rgba32> frame = gif.Frames[i];
 
                 listview.Items.Add(new FrameButton(listview, (listview.Items.Count + 1).ToString(), setting));
-                ((FrameButton)listview.Items[listview.Items.Count-1]).frame.wb = Frame.ToWritableBitmap(frame);
-                
-                
+                ((FrameButton)listview.Items[listview.Items.Count - 1]).frame.wb = Frame.ToWritableBitmap(frame);
+
+
 
             }
 

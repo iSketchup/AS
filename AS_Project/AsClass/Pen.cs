@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Media;
 
 namespace AsClass
 {
-    
-     public class Pen
+
+    public class Pen
     {
         public bool active = true;
 
         public int Size { get; set; } = 1;
 
-        public bool isEraser { get; set; } = false; 
+        public bool isEraser { get; set; } = false;
 
         public SolidColorBrush color { get; set; } =
             new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));       // Black; 
