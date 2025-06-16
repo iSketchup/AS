@@ -40,6 +40,7 @@ Programm zum zeichnen und animieren von Pixelarts. Man zeichnet auf einer Writea
 ## Collage mit mindestens zwei Screenshots
 ![](Screenshot.png)
 ![](Screenshot2.png)
+![](animation.gif)
 ## Relevanter Programmcode:
 ```c#
   public void ChangePixelColor(Point pos, SolidColorBrush brush, int Size)

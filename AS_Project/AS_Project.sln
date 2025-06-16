@@ -7,11 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AS", "AS\AS.csproj", "{ABFA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsClass", "AsClass\AsClass.csproj", "{299C3CA6-EF65-4867-AB45-14BA4EE432FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tester", "tester\tester.csproj", "{991587A0-5465-47BA-879E-C2492C880BBB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{299C3CA6-EF65-4867-AB45-14BA4EE432FF} = {299C3CA6-EF65-4867-AB45-14BA4EE432FF}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,10 +21,6 @@ Global
 		{299C3CA6-EF65-4867-AB45-14BA4EE432FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{299C3CA6-EF65-4867-AB45-14BA4EE432FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{299C3CA6-EF65-4867-AB45-14BA4EE432FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{991587A0-5465-47BA-879E-C2492C880BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{991587A0-5465-47BA-879E-C2492C880BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{991587A0-5465-47BA-879E-C2492C880BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{991587A0-5465-47BA-879E-C2492C880BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
