@@ -1,9 +1,0 @@
-----
-+List<Pic>: Frame
-
----
-
-+Animation()
-
----
-

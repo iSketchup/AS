@@ -1,9 +1,0 @@
-+Width
-+Height
-+FPS
-
----
-+Settings()
-
----
-
