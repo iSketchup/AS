@@ -226,64 +226,34 @@ Programm zum Zeichnen und Animieren von Pixelarts. Man zeichnet auf einer Writea
 
 ## 2 Projektzeitplan
 
-  
-
-| Datum | Aufgabe                         | Bearbeiter | Status (%) |
-
-| ----- | ------------------------------- | ---------- | ---------- |
-
-| 16.05 | TAB Usercontrol                 | Dominik    | 60%        |
-
-| 16.05 | Klassen/Frame/RGBA              | Luis       | 70%        |
-
-| 21.05 | GUI Layout/Menü                 | Dominik    | 90%        |
-
-| 21.05 | Bitmap fürs zeichnen            | Luis       | 100%       |
-
-| 28.05 | Bitmap bezeichenbar machen      | Luis       | 40%        |
-
-| 28.05 | GUI Layout/Menü/Klassen         | Dominik    | 100%       |
-
-| 28.05 | Backround Colors                | Dominik    | 100%       |
-
+| Datum | Aufgabe| Bearbeiter | Status (%) |
+| --- | --- | --- | ---------- |
+| 16.05 | TAB Usercontrol  | Dominik    | 60%        |
+| 16.05 | Klassen/Frame/RGBA    | Luis       | 70%        |
+| 21.05 | GUI Layout/Menü   | Dominik    | 90%        |
+| 21.05 | Bitmap fürs zeichnen | Luis       | 100%       |
+| 28.05 | Bitmap bezeichenbar machen    | Luis       | 40%        |
+| 28.05 | GUI Layout/Menü/Klassen   | Dominik    | 100%       |
+| 28.05 | Backround Colors   | Dominik    | 100%       |
 | 03.06 | ColorPallet/Colorpicker         | Dominik    | 40%        |
-
 | 03.06 | Bitmap zeichenbar machen        | Luis       | 100%       |
-
-| 04.06 | Colorpallet/Colorpicker         | Dominik    | 100%       |
-
-| 04.06 | Eraser                          | Luis       | 100%       |
-
-| 05.06 | Animation                       | Luis       | 30%        |
-
-| 05.06 | Eyedropper                      | Dominik    | 100%       |
-
-| 09.06 | Colorpallets laden              | Dominik    | 100%       |
-
-| 09.06 | Animation                       | Luis       | 80%        |
-
-| 09.06 | Settings/Serialisierung         | Dominik    | 60%        |
-
-| 10.06 | Settings/Serialisierung         | Dominik    | 100%       |
-
-| 10.06 | Animation                       | Luis       | 100%       |
-
-| 11.06 | Laden/Saven von png             | Luis       | 100%       |
-
-| 11.06 | GUI Verbesserungen              | Dominik    | 100%       |
-
-| 13.06 | Copy/Paste                      | Dominik    | 100%       |
-
-| 13.06 | Save to GIf                     | Luis       | 100%       |
-
-| 14.06 | Load GIF                        | Luis       | 100%       |
-
-| 14.06 | Copy/Paste fix                  | Dominik    | 100%       |
-
-| 15.06 | Play button gefixed             | Dominik    | 100%       |
-
-| 16.06 | Frame optimiert                 | Luis       | 100%       |
-
+| 04.06 | Colorpallet/Colorpicker   | Dominik    | 100%       |
+| 04.06 | Eraser | Luis | 100% |
+| 05.06 | Animation | Luis       | 30%        |
+| 05.06 | Eyedropper | Dominik    | 100%       |
+| 09.06 | Colorpallets laden | Dominik    | 100%       |
+| 09.06 | Animation | Luis       | 80%        |
+| 09.06 | Settings/Serialisierung | Dominik    | 60%        |
+| 10.06 | Settings/Serialisierung | Dominik    | 100%       |
+| 10.06 | Animation | Luis       | 100%       |
+| 11.06 | Laden/Saven von png | Luis | 100%       |
+| 11.06 | GUI Verbesserungen | Dominik    | 100%       |
+| 13.06 | Copy/Paste | Dominik | 100%       |
+| 13.06 | Save to GIf | Luis | 100%       |
+| 14.06 | Load GIF | Luis | 100%       |
+| 14.06 | Copy/Paste fix | Dominik    | 100%       |
+| 15.06 | Play button gefixed | Dominik    | 100%       |
+| 16.06 | Frame optimiert | Luis       | 100%       |
 | 16.06 | Border für zeichenbarer Bereich | Dominik    | 100%       |
 
   
@@ -312,30 +282,18 @@ Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder
   
   
 
-| Pixel Art Editor            | Layout ist Userfriendly und einfach zu benutzen                                                                                     |
-
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-
+| Pixel Art Editor            | Layout ist Userfriendly und einfach zu benutzen   |
+| --------------------------- | --------- |
 | Brush                       | Indem  man Linksklick auf das Brushtool und auf den Frame drückt, ändert der Brush den Pixel auf die ausgewählte Farbe um.    |
-
 | Eraser                      | Indem  man Linksklick auf das Erasertool und auf den Frame drückt, ändert der Eraser den Pixel auf Transparents 100%.           |
-
 | Farbpalette                 | Standard Farbpalette mit Basic Farben.                                                                                              |
-
 | Colorpicker                 | NuGet Packet: Extended WPF Toolkits. Hat eine zusätzliche Farbpalette und ein Fenster indem man die RGB daten selbst angeben kann. |
-
 | Kamera zoom                 | Mann kann den Frame beliebig verschieben und raus - hineinzoomen.                                                                   |
-
 | Bleibende Settings          | Die Settings sollen beim Verlassen des Programms gespeichert werden.                                                                |
-
 | Animation                   | Indem man zu einer Listview Frames hinzufügt. Kann man im Programm die Animation abspielen.                                          |
-
 | Ladbare Farbpallete         | Farbpalleten von gpl files laden.                                                                                                   |
-
 | Copy/Paste Buttons          | Copy Button: Kopiert den ausgewählten Frame. Paste Button: Fügt den kopierten Frame in den ausgewählte Frame ein.                   |
-
 | Eyedrop tool                | Wählt die Farbe aus die man auf dem Frame anklickt.                                                                                 |
-
 | Save/Load Animation zum GIF | Mann kann die fertige Animation, die man im Programm erstellt hat, als GIF speichern oder ein fertiges GIF laden.                     |
 
   
