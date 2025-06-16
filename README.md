@@ -169,9 +169,9 @@ Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder
 | Pixel Art Editor            | Layout ist Userfriendly und einfach zu benutzen                                                                                     |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Brush                       | Indem  man Linksklick auf das Buttontool drück und auf den Frame drückt ändert der Brush den Pixel auf die ausgewählte Farbe um.    |
-| Eraser                      | ndem  man Linksklick auf das Erasertool drück und auf den Frame drückt ändert der Eraser den Pixel auf transparens 100%.            |
-| Farbpallete                 | Standard Farbpallete mit Basic Farben.                                                                                              |
-| Colorpicker                 | Nuget Packet: Extended WPF Toolkits. Hat eine zusätzliche Farbpallete und eine Fenster indem man die RGB daten selbst angeben kann. |
+| Eraser                      | Indem  man Linksklick auf das Erasertool drück und auf den Frame drückt ändert der Eraser den Pixel auf Transparens 100%.           |
+| Farbpalette                 | Standard Farbpalette mit Basic Farben.                                                                                              |
+| Colorpicker                 | Nuget Packet: Extended WPF Toolkits. Hat eine zusätzliche Farbpalette und eine Fenster indem man die RGB daten selbst angeben kann. |
 | Kamera zoom                 | Mann kann den Frame beliebig verschieben und raus - hineinzoomen.                                                                   |
 | bleibende Settings          | Die Settings sollen beim verlassen des Programms gespeichert werden                                                                 |
 | Animation                   | Indem man zu einer Listview Frames hinzufügt. Kann man im Programm die Animation abspielen                                          |
@@ -199,7 +199,7 @@ Das zeichnen sowie Animieren ist sehr gut
 ### 5.1 Installationsanleitung
 
 Visual Studio
-Nuget Packete: extended.wpf.toolkit
+Nuget Packete: https://github.com/dotnetprojects/WpfExtendedToolkit.git und https://github.com/SixLabors/ImageSharp.git
 
 ### 5.2 Bedienungsanleitung
 
