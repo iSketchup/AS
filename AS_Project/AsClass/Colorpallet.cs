@@ -113,7 +113,7 @@ namespace AsClass
                         continue;
 
 
-                    string[] colorsplit = line.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                    string[] colorsplit = line.Split(new[] { ' ', '\t' });
 
 
 
