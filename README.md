@@ -93,7 +93,7 @@ Programm zum zeichnen und animieren von Pixelarts. Man zeichnet auf einer Writea
       wb.Unlock();
 ```
 
-## 1 ## Inhaltsverzeichnis
+## 1 Inhaltsverzeichnis
 
 - [Kurzbeschreibung](#kurzbeschreibung)
 - [Must Haves](#must-haves)
@@ -185,12 +185,11 @@ Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder
 
 Klassendiagramme, um die Klassen abzubilden.
 
-Wie arbeiten die Klassen miteinander? Hier könnt ihr beispielsweise Flussdiagramme verwenden, um dies abzubilden.
+Wie arbeiten die Klassen miteinander? Hier könnt ihr beispielsweise Flussdiagramme verwenden, um dies abzubilden. 
 
 ### 4.2 Umsetzungsdetails
 
-Detaillierte Beschreibung der Umsetzung mit möglichen Fehlern und Lösungen
-
+Das ganze ist umgesetzt mit einer Main-Klasse die eine animations-Klasse enthält. Die Animations-Klasse enthält wiederum eine Liste an Frames. Haupt Problem waren das speichern der Animationen in GIFs  und das wieder zurück laden aus solchen. Gelöst wurde das mit dem Nu-get Paket [Image Sharp](https://github.com/SixLabors/ImageSharp).
 ### 4.3 Ergebnisse, Interpretation (Tests)
 
 Laden und Speichern von GIFs ist flüssig sowie von PNGs 
