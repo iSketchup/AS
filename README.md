@@ -182,10 +182,7 @@ Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder
 ## 4 Pflichtenheft
 
 ### 4.1 Interner Programmaufbau (Programmlogik)
-
-Klassendiagramme, um die Klassen abzubilden.
-
-Wie arbeiten die Klassen miteinander? Hier könnt ihr beispielsweise Flussdiagramme verwenden, um dies abzubilden. 
+![[klassendiagramme.png]]
 
 ### 4.2 Umsetzungsdetails
 
