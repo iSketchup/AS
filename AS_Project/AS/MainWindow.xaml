@@ -209,18 +209,20 @@
                 </StackPanel>
                
             </StackPanel>
+            <Border BorderThickness="2" BorderBrush="Gray" Grid.Column="1" Grid.Row="1" Background="#FF424141">
+                <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseWheel="CanvDraw_MouseWheel" MouseRightButtonDown="CanvDraw_MouseRightButtonDown" MouseRightButtonUp="CanvDraw_MouseRightButtonUp" MouseMove="CanvDraw_MouseMove"  >
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform x:Name="canvasScale" ScaleX="1" ScaleY="1" />
+                            <TranslateTransform x:Name="canvasTranslate" X="0" Y="0" />
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
 
-            <Canvas x:Name="CanvDraw" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseWheel="CanvDraw_MouseWheel" MouseRightButtonDown="CanvDraw_MouseRightButtonDown" MouseRightButtonUp="CanvDraw_MouseRightButtonUp" MouseMove="CanvDraw_MouseMove" >
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform x:Name="canvasScale" ScaleX="1" ScaleY="1" />
-                        <TranslateTransform x:Name="canvasTranslate" X="0" Y="0" />
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-
-                <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor"  />
-                <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseLeftButtonDown="MouseLeftDown" MouseLeftButtonUp="MouseLeftUp"/>
-            </Canvas>
+                    <Image x:Name="imageBackground" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                    <Image x:Name="imageDraw" RenderOptions.BitmapScalingMode="NearestNeighbor" MouseLeftButtonDown="MouseLeftDown" MouseLeftButtonUp="MouseLeftUp"/>
+                </Canvas>
+            </Border>
+          
         </Grid>
 
     </Viewbox>
