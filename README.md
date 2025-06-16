@@ -182,7 +182,7 @@ Der Benutzer kann Pixelbilder zeichnen und sie in einer Timeline anordnen. Jeder
 ## 4 Pflichtenheft
 
 ### 4.1 Interner Programmaufbau (Programmlogik)
-![[klassendiagramme.png]]
+![](klassendiagramme.png)
 
 ### 4.2 Umsetzungsdetails
 
