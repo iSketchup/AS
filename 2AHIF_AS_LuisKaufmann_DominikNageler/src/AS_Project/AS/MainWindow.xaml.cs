@@ -23,6 +23,7 @@ public partial class MainWindow : Window
     private Settings _settings;
 
     private AsClass.Frame CopiedFrame;
+    public Setter test;
     public Settings settings
     {
         get
