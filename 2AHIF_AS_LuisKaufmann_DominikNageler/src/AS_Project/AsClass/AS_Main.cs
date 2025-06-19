@@ -94,7 +94,7 @@ namespace AsClass
 
         [STAThread]
 
-        public void InserColorPallet(Label label, ColorPicker colorPicker, ScrollViewer scrollViewer)
+        public void InserColorPallet(Label label, ColorCanvas colorPicker, ScrollViewer scrollViewer)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "Bitte wähle eine Datei aus";

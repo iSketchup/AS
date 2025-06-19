@@ -27,7 +27,7 @@ namespace AsClass
     new SolidColorBrush(Color.FromArgb(255, 237, 230, 200))
 };
         public Pen pen;
-        private SolidColorBrush _Activecolor;
+        private SolidColorBrush _Activecolor = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
 
         public Label label;
         public SolidColorBrush Activecolor
@@ -39,6 +39,7 @@ namespace AsClass
                 string hexColor = $"#{value.Color.A:X2}{value.Color.R:X2}{value.Color.G:X2}{value.Color.B:X2}";
                 label.Background = value;
                 label.Content = hexColor;
+                label.Foreground = new SolidColorBrush(Color.FromArgb(255, _Activecolor.Color.A, _Activecolor.Color.R, _Activecolor.Color.G));
                 _Activecolor = value;
             }
         }
@@ -56,7 +57,7 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet(Label label, ColorPicker colorPicker, ScrollViewer scrollViewer)
+        public void initializeColorPallet(Label label, ColorCanvas colorpicker, ScrollViewer scrollViewer)
         {
             this.label = label;
 
@@ -85,7 +86,7 @@ namespace AsClass
                     Activecolor = color;
                     pen.active = true;
                     pen.isEraser = false;
-                    colorPicker.SelectedColor = Activecolor.Color;
+                    colorpicker.SelectedColor = Activecolor.Color;
                 };
 
                 wrapPanel.Children.Add(button);
