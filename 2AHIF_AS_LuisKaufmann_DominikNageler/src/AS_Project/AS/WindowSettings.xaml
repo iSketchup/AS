@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AS"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="WindowSettings" Height="450" Width="520">
 
 
@@ -41,7 +42,7 @@
         </Style>
 
     </Window.Resources>
-    <Grid>
+    <Grid Background="#887969">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -62,7 +63,7 @@
             <Label Content="Frameheight:" HorizontalAlignment="Right" FontSize="20"  Margin="10"/>
             <Label Content="FPS:" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
             <Label Content="Tilesize" HorizontalAlignment="Right" FontSize="20" Margin="10"/>
-            <local:ShortcutControl Margin="10" HorizontalAlignment="Right" />
+            <local:ShortcutControl Margin="10" HorizontalAlignment="Right"  />
 
         </StackPanel>
 
@@ -74,7 +75,8 @@
                 <Slider x:Name="SliderTileSize" HorizontalAlignment="Left" Width="150" Minimum="1" Maximum="64"  ValueChanged="SliderTileSize_ValueChanged" />
                 <Label x:Name="LabelTileSize"  Height="30" Width="30"  />
             </StackPanel>
-          
+            <Button Content="Default Settings" Height="30" Width="120"  HorizontalAlignment="Left" Background="#887969" BorderBrush="Gray"  Margin="10 15 0 0" FontSize="15" Click="Button_Click"/>
+
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
@@ -83,7 +85,7 @@
            
         </StackPanel>
        
-        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_2" IsCancel="True"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Cancel" HorizontalAlignment="Left" FontSize="20" Margin="10 40 0 0" Style="{StaticResource ButtonStyle}" Click="Button_Click_2" IsCancel="True"/>
        
     </Grid>
 </Window>

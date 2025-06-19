@@ -18,22 +18,7 @@ namespace AS
         {
             InitializeComponent();
 
-            if (settings != null && File.Exists("Settings.json"))
-            {
-                settings = Settings.LoadFromJson("Settings.json");
-
-
-            }
-            else
-            {
-                settings = new Settings();
-            }
-
-            WidthTextBox.Text = settings.FrameWidth.ToString();
-            HeightTextBox.Text = settings.FrameHeight.ToString();
-            FPSTextBox.Text = settings.FPS.ToString();
-            SliderTileSize.Value = settings.TileSize;
-            LabelTileSize.Content = $"{settings.TileSize}";
+          
         }
 
         public WindowSettings(Settings settings)
@@ -112,6 +97,17 @@ namespace AS
             LabelTileSize.Content = $"{Math.Floor(SliderTileSize.Value)}";
 
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Settings Settings = new Settings();
+
+            WidthTextBox.Text = Settings.FrameWidth.ToString();
+            HeightTextBox.Text = Settings.FrameHeight.ToString();
+            FPSTextBox.Text = Settings.FPS.ToString();
+            SliderTileSize.Value = Settings.TileSize;
+            LabelTileSize.Content = $"{Settings.TileSize}";
         }
     }
 }

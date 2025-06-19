@@ -34,10 +34,10 @@
     
     <Grid>
 
-        <ToggleButton x:Name="TogglePopupButton" Height="30" Width="150" HorizontalAlignment="Left"  Background="Gray">
+        <ToggleButton x:Name="TogglePopupButton" Height="30" Width="150" HorizontalAlignment="Left"  Background="#887969">
             <StackPanel>
 
-                <Label x:Name="TabContent" Content="Shortcuts"  />
+                <Label x:Name="TabContent" Content="Shortcuts"   />
 
                 <Popup Name="myPopup" IsOpen="{Binding IsChecked, ElementName=TogglePopupButton}">
                     <Border BorderThickness="1">
