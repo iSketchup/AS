@@ -23,7 +23,7 @@ public partial class MainWindow : Window
     private Settings _settings;
 
     private AsClass.Frame CopiedFrame;
-   
+
     public Settings settings
     {
         get
@@ -78,6 +78,15 @@ public partial class MainWindow : Window
 
 
     }
+    private void Loop(object s, EventArgs e)
+    {
+        Sigma.Tick();
+
+        Sigma.MarkActiveTool(ButtonBrush, Sigma.pen.active);
+        Sigma.MarkActiveTool(ButtonEraser, Sigma.pen.isEraser);
+        Sigma.MarkActiveTool(ButtonEyedropper, Sigma.Eyedropper.active);
+        Sigma.MarkActiveTool(ButtonFill, Sigma.FillBucket.active);
+    }
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
     {
@@ -114,13 +123,16 @@ public partial class MainWindow : Window
 
     }
 
-
-    private void ButtonBrush_Click(object sender, RoutedEventArgs e)
+    private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
     {
 
-        Sigma.Eyedropper.active = false;
-        Sigma.pen.active = true;
-        Sigma.pen.isEraser = false;
+        ActiveToolChange("Eyedropper");
+        Cursor = Cursors.UpArrow;
+        Log.Debug("EyedroppClicked");
+    }
+    private void ButtonBrush_Click(object sender, RoutedEventArgs e)
+    {
+        ActiveToolChange("Pen");
         Sigma.ButtonBrush_Click(sender, e);
         Cursor = Cursors.Pen;
         Log.Debug("PenClicked");
@@ -128,13 +140,50 @@ public partial class MainWindow : Window
 
     private void ButtonEraser_Click(object sender, RoutedEventArgs e)
     {
-        Sigma.Eyedropper.active = false;
-        Sigma.pen.active = false;
-        Sigma.pen.isEraser = true;
+        ActiveToolChange("Eraser");
         Sigma.ButtonEraser_Click(sender, e);
         Cursor = Cursors.Cross;
         Log.Debug("EraserClicked");
     }
+    private void ButtonFill_Click(object sender, RoutedEventArgs e)
+    {
+        ActiveToolChange("Fill");
+        Sigma.ButtonEraser_Click(sender, e);
+        Cursor = Cursors.Cross;
+        Log.Debug("FillClicked");
+    }
+
+
+    private void ActiveToolChange(string toolName)
+    {
+
+        Sigma.Eyedropper.active = false;
+        Sigma.pen.active = false;
+        Sigma.pen.isEraser = false;
+        Sigma.FillBucket.active = false;
+
+        switch (toolName)
+        {
+            case "Eyedropper":
+                Sigma.Eyedropper.active = true;
+                break;
+
+            case "Pen":
+                Sigma.pen.active = true;
+                break;
+
+            case "Eraser":
+                Sigma.pen.isEraser = true;
+                break;
+
+            case "Fill":
+                Sigma.FillBucket.active = true;
+                break;
+        }
+
+
+    }
+
 
 
     private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
@@ -143,14 +192,6 @@ public partial class MainWindow : Window
         Log.Debug("Color changed to: {Color}", colorPicker.SelectedColor.Value);
     }
 
-    private void Loop(object s, EventArgs e)
-    {
-        Sigma.Tick();
-
-        Sigma.MarkActiveTool(ButtonBrush, Sigma.pen.active);
-        Sigma.MarkActiveTool(ButtonEraser, Sigma.pen.isEraser);
-        Sigma.MarkActiveTool(ButtonEyedropper, Sigma.Eyedropper.active);
-    }
 
     private void MouseLeftDown(object sender, MouseButtonEventArgs e)
     {
@@ -172,13 +213,7 @@ public partial class MainWindow : Window
         if (!this.IsLoaded)
             return;
 
-
-
         Sigma.animation.Update();
-
-
-
-
 
     }
 
@@ -247,7 +282,7 @@ public partial class MainWindow : Window
                     Data = Geometry.Parse("m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"),
                     Fill = Brushes.Black,
                     Margin = new Thickness(0, 0, 5, 2),
-                  
+
 
                 };
 
@@ -272,16 +307,6 @@ public partial class MainWindow : Window
                 break;
         }
     }
-
-    private void ButtonEyedropper_Click(object sender, RoutedEventArgs e)
-    {
-        Sigma.pen.active = false;
-        Sigma.Eyedropper.active = true;
-        Sigma.pen.isEraser = false;
-
-        Cursor = Cursors.UpArrow;
-    }
-
     private void MenuItem_Click_2(object sender, RoutedEventArgs e)
     {
         this.Close();

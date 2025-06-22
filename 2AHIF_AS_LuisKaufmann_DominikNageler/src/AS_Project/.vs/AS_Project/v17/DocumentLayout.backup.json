@@ -1,77 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\",
+  "WorkspaceRootPath": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\shortcutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\shortcutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\windowsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\windowsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\as_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\fillbucket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\fillbucket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\as_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\as_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\colorpallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\colorpallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\eyedropper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\eyedropper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\assets\\pause-btn.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\assets\\pause-btn.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\assets\\play-fill.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\assets\\play-fill.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\assets\\stop-fill.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\assets\\stop-fill.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\pen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\pen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\pen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\windowsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\eyedropper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\eyedropper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\shortcutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\shortcutcontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\windowsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\windowsettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\colorpallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\colorpallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\windowsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\windowsettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\as\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABFA41D6-398C-4CCC-B104-EE009DAEB30F}|AS\\AS.csproj|solutionrelative:as\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\framebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\framebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\framebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\domin\\onedrive\\dokumente\\git\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\framebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|c:\\users\\kalul\\onedrive\\dokumente\\github\\as\\2ahif_as_luiskaufmann_dominiknageler\\src\\as_project\\asclass\\framebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{299C3CA6-EF65-4867-AB45-14BA4EE432FF}|AsClass\\AsClass.csproj|solutionrelative:asclass\\framebutton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -82,16 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -101,191 +81,155 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "FillBucket.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FillBucket.cs",
+              "RelativeDocumentMoniker": "AsClass\\FillBucket.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FillBucket.cs",
+              "RelativeToolTip": "AsClass\\FillBucket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T20:22:51.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml",
               "RelativeDocumentMoniker": "AS\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml*",
-              "RelativeToolTip": "AS\\MainWindow.xaml*",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml",
+              "RelativeToolTip": "AS\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-28T12:31:13.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "AS\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\MainWindow.xaml.cs",
               "RelativeToolTip": "AS\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAQwHgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T12:31:12.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Settings.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Settings.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Settings.cs",
               "RelativeDocumentMoniker": "AsClass\\Settings.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Settings.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Settings.cs",
               "RelativeToolTip": "AsClass\\Settings.cs",
               "ViewState": "AgIAABMAAAAAAAAAAADwvzIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:45:56.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T08:45:56.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AS_Main.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\AS_Main.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\AS_Main.cs",
               "RelativeDocumentMoniker": "AsClass\\AS_Main.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\AS_Main.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\AS_Main.cs",
               "RelativeToolTip": "AsClass\\AS_Main.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAIAzwGgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAUwHgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T12:30:49.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Eyedropper.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Eyedropper.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Eyedropper.cs",
               "RelativeDocumentMoniker": "AsClass\\Eyedropper.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Eyedropper.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Eyedropper.cs",
               "RelativeToolTip": "AsClass\\Eyedropper.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAArwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T08:21:09.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "WindowSettings.xaml",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml",
               "RelativeDocumentMoniker": "AS\\WindowSettings.xaml",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml",
               "RelativeToolTip": "AS\\WindowSettings.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-19T15:15:29.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:15:29.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ShortcutControl.xaml",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\ShortcutControl.xaml",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\ShortcutControl.xaml",
               "RelativeDocumentMoniker": "AS\\ShortcutControl.xaml",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\ShortcutControl.xaml",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\ShortcutControl.xaml",
               "RelativeToolTip": "AS\\ShortcutControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-19T15:21:06.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-19T15:21:06.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "WindowSettings.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml.cs",
               "RelativeDocumentMoniker": "AS\\WindowSettings.xaml.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\WindowSettings.xaml.cs",
               "RelativeToolTip": "AS\\WindowSettings.xaml.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAowGkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T12:49:21.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T12:49:21.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Colorpallet.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Colorpallet.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Colorpallet.cs",
               "RelativeDocumentMoniker": "AsClass\\Colorpallet.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Colorpallet.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Colorpallet.cs",
               "RelativeToolTip": "AsClass\\Colorpallet.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAwwFgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:49:42.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T18:49:42.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "Pen.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Pen.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Pen.cs",
               "RelativeDocumentMoniker": "AsClass\\Pen.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Pen.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Pen.cs",
               "RelativeToolTip": "AsClass\\Pen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T08:22:49.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "play-fill.svg",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\play-fill.svg",
-              "RelativeDocumentMoniker": "AS\\Assets\\play-fill.svg",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\play-fill.svg",
-              "RelativeToolTip": "AS\\Assets\\play-fill.svg",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-19T15:35:48.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "pause-btn.svg",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\pause-btn.svg",
-              "RelativeDocumentMoniker": "AS\\Assets\\pause-btn.svg",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\pause-btn.svg",
-              "RelativeToolTip": "AS\\Assets\\pause-btn.svg",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-19T15:35:51.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "stop-fill.svg",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\stop-fill.svg",
-              "RelativeDocumentMoniker": "AS\\Assets\\stop-fill.svg",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Assets\\stop-fill.svg",
-              "RelativeToolTip": "AS\\Assets\\stop-fill.svg",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-19T15:35:34.191Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Resources.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Properties\\Resources.Designer.cs",
-              "RelativeDocumentMoniker": "AS\\Properties\\Resources.Designer.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AS\\Properties\\Resources.Designer.cs",
-              "RelativeToolTip": "AS\\Properties\\Resources.Designer.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T19:42:25.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
               "Title": "FrameButton.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml.cs",
               "RelativeDocumentMoniker": "AsClass\\FrameButton.xaml.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml.cs",
               "RelativeToolTip": "AsClass\\FrameButton.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -293,22 +237,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "FrameButton.xaml",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml",
               "RelativeDocumentMoniker": "AsClass\\FrameButton.xaml",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\FrameButton.xaml",
               "RelativeToolTip": "AsClass\\FrameButton.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-09T18:15:46.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Animation.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Animation.cs",
               "RelativeDocumentMoniker": "AsClass\\Animation.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Animation.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Animation.cs",
               "RelativeToolTip": "AsClass\\Animation.cs",
               "ViewState": "AgIAAHcAAAAAAAAAAAAswJoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -316,11 +260,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 12,
               "Title": "Frame.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Frame.cs",
+              "DocumentMoniker": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Frame.cs",
               "RelativeDocumentMoniker": "AsClass\\Frame.cs",
-              "ToolTip": "C:\\Users\\domin\\OneDrive\\Dokumente\\git\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Frame.cs",
+              "ToolTip": "C:\\Users\\kalul\\OneDrive\\Dokumente\\GitHub\\AS\\2AHIF_AS_LuisKaufmann_DominikNageler\\src\\AS_Project\\AsClass\\Frame.cs",
               "RelativeToolTip": "AsClass\\Frame.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAwwKEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
