@@ -191,6 +191,35 @@ namespace AsClass
             wb.Unlock();
 
         }
+        public SolidColorBrush GetPixelcolor(Point pos)
+        {
+            Color col;
+
+            int x = (int)pos.X;
+            int y = (int)pos.Y;
+
+            int stride = wb.BackBufferStride;
+
+            wb.Lock();
+
+            unsafe
+            {
+
+                byte* buffer = (byte*)wb.BackBuffer;
+
+                        byte* pixel = buffer + y * stride + x * 4;
+
+                        pixel[3] = col.A;
+
+                        pixel[0] = col.B;
+                        pixel[1] = col.G;
+                        pixel[2] = col.R;
+                }
+            wb.Unlock();
+
+            return new SolidColorBrush(col);
+
+        }
 
         public Image sharpImage()
         {
