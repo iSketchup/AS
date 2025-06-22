@@ -193,7 +193,7 @@ namespace AsClass
         }
         public SolidColorBrush GetPixelcolor(Point pos)
         {
-            Color col;
+            Color col = new();
 
             int x = (int)pos.X;
             int y = (int)pos.Y;

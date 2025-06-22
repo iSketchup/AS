@@ -59,8 +59,10 @@ namespace AsClass
 
             if (!MouseButtonPressed) 
                 return;
+            if (pos.X >= animation.SelectedFrame.Width || pos.X < 0 || pos.Y >= animation.SelectedFrame.Height || pos.Y < 0)
+                return;
 
-            if ((pen.active || pen.isEraser))
+                if ((pen.active || pen.isEraser))
             {
                 pen.Draw(animation.SelectedFrame, pos);
             }

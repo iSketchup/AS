@@ -16,7 +16,7 @@ namespace AsClass
         {
             SolidColorBrush oldColor = frame.GetPixelcolor(StartingPos);
 
-            if (oldColor == newColor)
+            if (oldColor.Color == newColor.Color)
                 return;
 
             Queue<Point> que = new();
@@ -25,7 +25,7 @@ namespace AsClass
             while (que.Count > 0)
             {
                 Point pos = que.Dequeue();
-                if (pos.X > frame.Width || pos.X < 0 || pos.Y > frame.Height || pos.Y < 0 || frame.GetPixelcolor(pos) != oldColor)
+                if (pos.X >= frame.Width || pos.X < 0 || pos.Y >= frame.Height || pos.Y < 0 || frame.GetPixelcolor(pos).Color != oldColor.Color)
                     continue;
                 else
                 {
