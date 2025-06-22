@@ -11,6 +11,7 @@ namespace AsClass
     {
         public Animation animation;
         public Pen pen = new();
+        public FillBucket FillBucket = new();
         public Eyedropper Eyedropper;
         public Colorpallet colorpallet;
 
@@ -66,6 +67,7 @@ namespace AsClass
             animation.Tick();
         }
 
+
         public void ButtonBrush_Click(object sender, RoutedEventArgs e)
         {
             pen.ChangeColor(colorpallet.Activecolor);
@@ -79,7 +81,10 @@ namespace AsClass
 
         }
 
+        public void ButtonFill_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
 
 
