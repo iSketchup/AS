@@ -207,14 +207,14 @@ namespace AsClass
 
                 byte* buffer = (byte*)wb.BackBuffer;
 
-                        byte* pixel = buffer + y * stride + x * 4;
+                byte* pixel = buffer + y * stride + x * 4;
 
-                        pixel[3] = col.A;
+                col.A = pixel[3];
 
-                        pixel[0] = col.B;
-                        pixel[1] = col.G;
-                        pixel[2] = col.R;
-                }
+                col.B = pixel[0];
+                col.G = pixel[1];
+                col.R = pixel[2];
+            }
             wb.Unlock();
 
             return new SolidColorBrush(col);

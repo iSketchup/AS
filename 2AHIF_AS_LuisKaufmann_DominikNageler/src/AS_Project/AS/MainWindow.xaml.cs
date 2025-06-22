@@ -148,8 +148,7 @@ public partial class MainWindow : Window
     private void ButtonFill_Click(object sender, RoutedEventArgs e)
     {
         ActiveToolChange("Fill");
-        Sigma.ButtonEraser_Click(sender, e);
-        Cursor = Cursors.Cross;
+        Cursor = Cursors.IBeam;
         Log.Debug("FillClicked");
     }
 

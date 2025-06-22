@@ -86,8 +86,12 @@ namespace AsClass
                     Activecolor = color;
                     pen.active = true;
                     pen.isEraser = false;
+
                     colorpicker.SelectedColor = Activecolor.Color;
                 };
+
+                // das ist die zeile wegen dder das änderen der ausgewählten mit einem vierten toll niuchrt funktioniert das ding hat das tool nd und änderts dadurch auch nd 
+
 
                 wrapPanel.Children.Add(button);
 

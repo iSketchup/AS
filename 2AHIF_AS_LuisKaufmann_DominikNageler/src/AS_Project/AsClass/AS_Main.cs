@@ -55,16 +55,25 @@ namespace AsClass
         {
             Point pos = Mouse.GetPosition(animation.VisibleImg);
 
-            if (MouseButtonPressed && (pen.active || pen.isEraser))
+            animation.Tick();
+
+            if (!MouseButtonPressed) 
+                return;
+
+            if ((pen.active || pen.isEraser))
             {
                 pen.Draw(animation.SelectedFrame, pos);
             }
 
-            else if (MouseButtonPressed && Eyedropper.active)
+            else if (Eyedropper.active)
             {
                 Eyedropper.GetColor((int)pos.X, (int)pos.Y, animation.SelectedFrame.wb);
             }
-            animation.Tick();
+
+            else if (FillBucket.active) {
+                FillBucket.Fill(animation.SelectedFrame, pos, colorpallet.Activecolor);
+            }
+
         }
 
 
@@ -80,17 +89,6 @@ namespace AsClass
 
 
         }
-
-        public void ButtonFill_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-
-
-
-
 
         public void AddnewFrame()
         {
