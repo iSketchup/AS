@@ -112,18 +112,25 @@ namespace AsClass
 
 
                 Colorpallet.ColorList = Colorpallet.LoadColorsFromGPL(dateipfad);
-                colorpallet.initializeColorPallet(label, colorPicker, scrollViewer);
+                colorpallet.initializeColorPallet(label, colorPicker, scrollViewer,Eyedropper,FillBucket);
 
 
             }
         }
 
-        public void MarkActiveTool(Button button, bool isactiv)
+        public void MarkActiveTool(Button button, bool isactiv,Cursor cursor)
         {
-            if (isactiv)
+            if (isactiv && button.Name != "ButtonPen")
             {
                 button.BorderBrush = Brushes.Orange;
                 button.BorderThickness = new Thickness(2);
+            }
+            else if( isactiv && button.Name == "ButtonPen"){
+
+
+                button.BorderBrush = Brushes.Orange;
+                button.BorderThickness = new Thickness(2);
+                cursor = Cursors.Pen;
             }
             else
             {

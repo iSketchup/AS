@@ -71,7 +71,7 @@ public partial class MainWindow : Window
             .CreateLogger();
 
 
-        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker, ScrollviewerColorpallet);
+        Sigma.colorpallet.initializeColorPallet(LabelActiveColor, colorPicker, ScrollviewerColorpallet,Sigma.Eyedropper,Sigma.FillBucket);
 
         CompositionTarget.Rendering += Loop;
 
@@ -82,10 +82,10 @@ public partial class MainWindow : Window
     {
         Sigma.Tick();
 
-        Sigma.MarkActiveTool(ButtonBrush, Sigma.pen.active);
-        Sigma.MarkActiveTool(ButtonEraser, Sigma.pen.isEraser);
-        Sigma.MarkActiveTool(ButtonEyedropper, Sigma.Eyedropper.active);
-        Sigma.MarkActiveTool(ButtonFill, Sigma.FillBucket.active);
+        Sigma.MarkActiveTool(ButtonBrush, Sigma.pen.active,Cursor);
+        Sigma.MarkActiveTool(ButtonEraser, Sigma.pen.isEraser,Cursor);
+        Sigma.MarkActiveTool(ButtonEyedropper, Sigma.Eyedropper.active,Cursor);
+        Sigma.MarkActiveTool(ButtonFill, Sigma.FillBucket.active, Cursor);
     }
 
     private void ButtonExita_Click(object sender, RoutedEventArgs e)
@@ -169,6 +169,7 @@ public partial class MainWindow : Window
 
             case "Pen":
                 Sigma.pen.active = true;
+               
                 break;
 
             case "Eraser":

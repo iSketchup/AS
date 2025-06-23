@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using Xceed.Wpf.Toolkit;
 
@@ -57,7 +58,7 @@ namespace AsClass
         }
 
 
-        public void initializeColorPallet(Label label, ColorCanvas colorpicker, ScrollViewer scrollViewer)
+        public void initializeColorPallet(Label label, ColorCanvas colorpicker, ScrollViewer scrollViewer,Eyedropper eyedropper,FillBucket fillBucket)
         {
             this.label = label;
 
@@ -86,6 +87,9 @@ namespace AsClass
                     Activecolor = color;
                     pen.active = true;
                     pen.isEraser = false;
+                    eyedropper.active = false;
+                    fillBucket.active = false;
+                    
 
                     colorpicker.SelectedColor = Activecolor.Color;
                 };
