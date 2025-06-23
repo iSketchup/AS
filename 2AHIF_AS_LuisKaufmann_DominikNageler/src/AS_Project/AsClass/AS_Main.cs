@@ -118,19 +118,20 @@ namespace AsClass
             }
         }
 
-        public void MarkActiveTool(Button button, bool isactiv,Cursor cursor)
+        public void MarkActiveTool(Button button, bool isactiv)
         {
-            if (isactiv && button.Name != "ButtonPen")
+            if (isactiv && button.Name != "ButtonBrush")
             {
                 button.BorderBrush = Brushes.Orange;
                 button.BorderThickness = new Thickness(2);
             }
-            else if( isactiv && button.Name == "ButtonPen"){
+            else if( isactiv && button.Name == "ButtonBrush")
+            {
 
 
                 button.BorderBrush = Brushes.Orange;
                 button.BorderThickness = new Thickness(2);
-                cursor = Cursors.Pen;
+               
             }
             else
             {
